@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */; };
 		D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */; };
-		D259B0AD27FC5FDA0026DD9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0AC27FC5FDA0026DD9E /* ViewController.swift */; };
 		D259B0B027FC5FDA0026DD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B0AE27FC5FDA0026DD9E /* Main.storyboard */; };
 		D259B0B227FC5FDB0026DD9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D259B0B127FC5FDB0026DD9E /* Assets.xcassets */; };
 		D259B0B527FC5FDB0026DD9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */; };
 		D259B0C027FC5FDB0026DD9E /* BidderBidderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0BF27FC5FDB0026DD9E /* BidderBidderTests.swift */; };
 		D259B0CA27FC5FDB0026DD9E /* BidderBidderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */; };
 		D259B0CC27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */; };
+		D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9427FD126A00D829DF /* LoginViewController.swift */; };
+		D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */; };
+		D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2E99F9A27FDA27100D829DF /* Alamofire */; };
+		D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9C27FDA58100D829DF /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,6 @@
 		D259B0A527FC5FDA0026DD9E /* BidderBidder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidderBidder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D259B0AC27FC5FDA0026DD9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D259B0AF27FC5FDA0026DD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D259B0B127FC5FDB0026DD9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D259B0B427FC5FDB0026DD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,9 @@
 		D259B0C527FC5FDB0026DD9E /* BidderBidderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BidderBidderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITests.swift; sourceTree = "<group>"; };
 		D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2E99F9427FD126A00D829DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterLoginViewController.swift; sourceTree = "<group>"; };
+		D2E99F9C27FDA58100D829DF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +105,9 @@
 		D259B0A727FC5FDA0026DD9E /* BidderBidder */ = {
 			isa = PBXGroup;
 			children = (
+				D2E99F9827FDA1AD00D829DF /* Controller */,
 				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
 				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
-				D259B0AC27FC5FDA0026DD9E /* ViewController.swift */,
 				D259B0AE27FC5FDA0026DD9E /* Main.storyboard */,
 				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
 				D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */,
@@ -127,6 +133,16 @@
 			path = BidderBidderUITests;
 			sourceTree = "<group>";
 		};
+		D2E99F9827FDA1AD00D829DF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */,
+				D2E99F9427FD126A00D829DF /* LoginViewController.swift */,
+				D2E99F9C27FDA58100D829DF /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +159,9 @@
 			dependencies = (
 			);
 			name = BidderBidder;
+			packageProductDependencies = (
+				D2E99F9A27FDA27100D829DF /* Alamofire */,
+			);
 			productName = BidderBidder;
 			productReference = D259B0A527FC5FDA0026DD9E /* BidderBidder.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +234,9 @@
 				Base,
 			);
 			mainGroup = D259B09C27FC5FDA0026DD9E;
+			packageReferences = (
+				D2E99F9927FDA27100D829DF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = D259B0A627FC5FDA0026DD9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D259B0AD27FC5FDA0026DD9E /* ViewController.swift in Sources */,
+				D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */,
 				D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */,
 				D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */,
+				D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */,
+				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D2E99F9927FDA27100D829DF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D2E99F9A27FDA27100D829DF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2E99F9927FDA27100D829DF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D259B09D27FC5FDA0026DD9E /* Project object */;
 }
