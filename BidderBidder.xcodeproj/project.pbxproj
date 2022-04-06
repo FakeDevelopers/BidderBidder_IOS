@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */; };
 		D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */; };
-		D259B0AD27FC5FDA0026DD9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0AC27FC5FDA0026DD9E /* ViewController.swift */; };
 		D259B0B027FC5FDA0026DD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B0AE27FC5FDA0026DD9E /* Main.storyboard */; };
 		D259B0B227FC5FDB0026DD9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D259B0B127FC5FDB0026DD9E /* Assets.xcassets */; };
 		D259B0B527FC5FDB0026DD9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */; };
 		D259B0C027FC5FDB0026DD9E /* BidderBidderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0BF27FC5FDB0026DD9E /* BidderBidderTests.swift */; };
 		D259B0CA27FC5FDB0026DD9E /* BidderBidderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */; };
 		D259B0CC27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */; };
+		D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9427FD126A00D829DF /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		D259B0A527FC5FDA0026DD9E /* BidderBidder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidderBidder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D259B0AC27FC5FDA0026DD9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D259B0AF27FC5FDA0026DD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D259B0B127FC5FDB0026DD9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D259B0B427FC5FDB0026DD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		D259B0C527FC5FDB0026DD9E /* BidderBidderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BidderBidderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITests.swift; sourceTree = "<group>"; };
 		D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2E99F9427FD126A00D829DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			children = (
 				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
 				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
-				D259B0AC27FC5FDA0026DD9E /* ViewController.swift */,
+				D2E99F9427FD126A00D829DF /* LoginViewController.swift */,
 				D259B0AE27FC5FDA0026DD9E /* Main.storyboard */,
 				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
 				D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */,
@@ -258,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D259B0AD27FC5FDA0026DD9E /* ViewController.swift in Sources */,
+				D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */,
 				D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */,
 				D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */,
 			);
