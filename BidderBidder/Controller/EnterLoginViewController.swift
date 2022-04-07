@@ -13,7 +13,7 @@ class EnterLoginViewController : UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
-    
+    let urlLogin:String = "http://3.38.81.213:8080/user/login"
     
     
     func isValidEmail(_ email: String) -> Bool {
@@ -54,7 +54,7 @@ class EnterLoginViewController : UIViewController {
         
         if vaildEmailValidationResult == true {
             self.present(vcName!,animated: true,completion: nil)
-            sendRestRequest(url: "http://3.38.81.213:8080/user/login", params: ["email":idTextField.text, "passwd":passwordTextField.text] as Dictionary) {
+            sendRestRequest(url: urlLogin, params: ["email":idTextField.text, "passwd":passwordTextField.text] as Dictionary) {
                 response in
                 switch response.result {
                     
@@ -81,16 +81,17 @@ extension EnterLoginViewController : UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        let isIdEmpty = idTextField.text == ""
-        let isPasswordEmpty = passwordTextField.text == ""
-        loginButton.isEnabled = !isIdEmpty && !isPasswordEmpty
+        let isIdNull = idTextField.text == ""
+        let isIdEmpty = idTextField.text == " "
+        let isPasswordNull = passwordTextField.text == ""
+        let isPasswordEmpty = passwordTextField.text == " "
+        loginButton.isEnabled = !isIdNull && !isPasswordNull && !isIdEmpty && !isPasswordEmpty
     }
 }
 
 
 func sendRestRequest(url: String, params: Parameters?, isPost: Bool = true, response: @escaping (AFDataResponse<Data?>) -> Void) -> Request {
-    let headers: HTTPHeaders = ["Accept": "application/json; charset=utf-8"]
-    return AF.request(url, method: isPost ? .post : .get, parameters: params, headers: headers).response(completionHandler: response)
+    return AF.request(url, method: isPost ? .post : .get, parameters: params).response(completionHandler: response)
 }
 
 
