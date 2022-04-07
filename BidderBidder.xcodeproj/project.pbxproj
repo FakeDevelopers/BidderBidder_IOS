@@ -107,6 +107,8 @@
 			children = (
 				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
 				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
+				D2E99F9427FD126A00D829DF /* LoginViewController.swift */,
+				D259B0AE27FC5FDA0026DD9E /* Main.storyboard */,
 				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
 				D259B0B627FC5FDB0026DD9E /* Info.plist */,
 				D2E99F9827FDA1AD00D829DF /* Controller */,
