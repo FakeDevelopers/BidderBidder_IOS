@@ -33,8 +33,16 @@ class LoginViewController : UIViewController {
 
 class CornerButton: UIButton {
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = 30
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
         
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.black.cgColor
