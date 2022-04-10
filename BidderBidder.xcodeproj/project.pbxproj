@@ -51,7 +51,7 @@
 		D259B0C527FC5FDB0026DD9E /* BidderBidderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BidderBidderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITests.swift; sourceTree = "<group>"; };
 		D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D2E99F9427FD126A00D829DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D2E99F9427FD126A00D829DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterLoginViewController.swift; sourceTree = "<group>"; };
 		D2E99F9C27FDA58100D829DF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,14 +105,12 @@
 		D259B0A727FC5FDA0026DD9E /* BidderBidder */ = {
 			isa = PBXGroup;
 			children = (
-				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
-				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
-				D2E99F9427FD126A00D829DF /* LoginViewController.swift */,
-				D259B0AE27FC5FDA0026DD9E /* Main.storyboard */,
-				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
-				D259B0B627FC5FDB0026DD9E /* Info.plist */,
 				D2E99F9827FDA1AD00D829DF /* Controller */,
 				D2E99F9E27FE66C200D829DF /* Storyboards */,
+				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
+				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
+				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
+				D259B0B627FC5FDB0026DD9E /* Info.plist */,
 			);
 			path = BidderBidder;
 			sourceTree = "<group>";
@@ -137,8 +135,8 @@
 		D2E99F9827FDA1AD00D829DF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */,
 				D2E99F9427FD126A00D829DF /* LoginViewController.swift */,
+				D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */,
 				D2E99F9C27FDA58100D829DF /* MainViewController.swift */,
 			);
 			path = Controller;

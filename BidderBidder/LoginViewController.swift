@@ -19,11 +19,6 @@ class LoginViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        [socialLoginButton1,socialLoginButton2,normalLoginButton].forEach {
-            $0?.layer.borderWidth = 1
-            $0?.layer.borderColor = UIColor.black.cgColor
-            $0?.layer.cornerRadius = 30
-        }
     }
     
     
@@ -32,5 +27,17 @@ class LoginViewController : UIViewController {
         
         //Navigation Bar 숨기기
         navigationController?.navigationBar.isHidden = true
+    }
+}
+
+
+class CornerButton: UIButton {
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = 30
     }
 }
