@@ -26,7 +26,6 @@ class EnterLoginViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loginButton.layer.cornerRadius = 30
         
         loginButton.isEnabled = false
         

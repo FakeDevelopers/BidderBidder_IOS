@@ -18,12 +18,7 @@ class LoginViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        [socialLoginButton1,socialLoginButton2,normalLoginButton].forEach {
-            $0?.layer.borderWidth = 1
-            $0?.layer.borderColor = UIColor.black.cgColor
-            $0?.layer.cornerRadius = 30
-        }
+
     }
     
     
@@ -34,3 +29,25 @@ class LoginViewController : UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
 }
+
+
+class CornerButton: UIButton {
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = 30
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = 30
+    }
+
+}
+
