@@ -26,6 +26,8 @@ class EnterLoginViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loginButton.roundCorners(cornerRadius: 50, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+        
         loginButton.isEnabled = false
         
         idTextField.delegate = self
