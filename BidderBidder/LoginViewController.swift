@@ -18,10 +18,6 @@ class LoginViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        socialLoginButton1.roundCorners(cornerRadius: 50, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
-        socialLoginButton2.roundCorners(cornerRadius: 50, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
-        normalLoginButton.roundCorners(cornerRadius: 50, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
-
 
     }
     
@@ -35,11 +31,15 @@ class LoginViewController : UIViewController {
 }
 
 
+class CornerButton: UIButton {
 
-extension UIView {
-    func roundCorners(cornerRadius: CGFloat, maskedCorners: CACornerMask) {
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.black.cgColor
-        layer.cornerRadius = 30
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = 30
     }
+
 }
+
