@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		763F0FB632F87C73AD3576A8 /* Pods_BidderBidder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B54B674255E0C1D6D85DB9C /* Pods_BidderBidder.framework */; };
 		D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */; };
 		D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */; };
 		D259B0B027FC5FDA0026DD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B0AE27FC5FDA0026DD9E /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 		D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */; };
 		D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2E99F9A27FDA27100D829DF /* Alamofire */; };
 		D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9C27FDA58100D829DF /* MainViewController.swift */; };
+		DBE1326E6B6C6239BA5FCEDB /* Pods_BidderBidder_BidderBidderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27D979CD67E3BC50E06A546 /* Pods_BidderBidder_BidderBidderUITests.framework */; };
+		FAFE3537EF0BA64158BC3040 /* Pods_BidderBidderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257F7C053EA0605C86DEEFC /* Pods_BidderBidderTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		484489C73ABAF809641DF3FE /* Pods-BidderBidder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BidderBidder.debug.xcconfig"; path = "Target Support Files/Pods-BidderBidder/Pods-BidderBidder.debug.xcconfig"; sourceTree = "<group>"; };
+		520AA0DD3F7FCCC7E1D2E6E1 /* Pods-BidderBidderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BidderBidderTests.debug.xcconfig"; path = "Target Support Files/Pods-BidderBidderTests/Pods-BidderBidderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B54B674255E0C1D6D85DB9C /* Pods_BidderBidder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BidderBidder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B9320ACCEE37242A0E45891 /* Pods-BidderBidder-BidderBidderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BidderBidder-BidderBidderUITests.debug.xcconfig"; path = "Target Support Files/Pods-BidderBidder-BidderBidderUITests/Pods-BidderBidder-BidderBidderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		83A65B39177F477C85184571 /* Pods-BidderBidderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BidderBidderTests.release.xcconfig"; path = "Target Support Files/Pods-BidderBidderTests/Pods-BidderBidderTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF2BB34BE5BD3E5508C62D0F /* Pods-BidderBidder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BidderBidder.release.xcconfig"; path = "Target Support Files/Pods-BidderBidder/Pods-BidderBidder.release.xcconfig"; sourceTree = "<group>"; };
+		D257F7C053EA0605C86DEEFC /* Pods_BidderBidderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BidderBidderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0A527FC5FDA0026DD9E /* BidderBidder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidderBidder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +64,8 @@
 		D2E99F9427FD126A00D829DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterLoginViewController.swift; sourceTree = "<group>"; };
 		D2E99F9C27FDA58100D829DF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E13006B8A3BDD2D214A32BF2 /* Pods-BidderBidder-BidderBidderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BidderBidder-BidderBidderUITests.release.xcconfig"; path = "Target Support Files/Pods-BidderBidder-BidderBidderUITests/Pods-BidderBidder-BidderBidderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E27D979CD67E3BC50E06A546 /* Pods_BidderBidder_BidderBidderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BidderBidder_BidderBidderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */,
+				763F0FB632F87C73AD3576A8 /* Pods_BidderBidder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFE3537EF0BA64158BC3040 /* Pods_BidderBidderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE1326E6B6C6239BA5FCEDB /* Pods_BidderBidder_BidderBidderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191DAA86F94B1565621C5215 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				484489C73ABAF809641DF3FE /* Pods-BidderBidder.debug.xcconfig */,
+				BF2BB34BE5BD3E5508C62D0F /* Pods-BidderBidder.release.xcconfig */,
+				6B9320ACCEE37242A0E45891 /* Pods-BidderBidder-BidderBidderUITests.debug.xcconfig */,
+				E13006B8A3BDD2D214A32BF2 /* Pods-BidderBidder-BidderBidderUITests.release.xcconfig */,
+				520AA0DD3F7FCCC7E1D2E6E1 /* Pods-BidderBidderTests.debug.xcconfig */,
+				83A65B39177F477C85184571 /* Pods-BidderBidderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC35D87AD25060A36ABA9AAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B54B674255E0C1D6D85DB9C /* Pods_BidderBidder.framework */,
+				E27D979CD67E3BC50E06A546 /* Pods_BidderBidder_BidderBidderUITests.framework */,
+				D257F7C053EA0605C86DEEFC /* Pods_BidderBidderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D259B09C27FC5FDA0026DD9E = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +127,8 @@
 				D259B0BE27FC5FDB0026DD9E /* BidderBidderTests */,
 				D259B0C827FC5FDB0026DD9E /* BidderBidderUITests */,
 				D259B0A627FC5FDA0026DD9E /* Products */,
+				191DAA86F94B1565621C5215 /* Pods */,
+				AC35D87AD25060A36ABA9AAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D259B0CF27FC5FDB0026DD9E /* Build configuration list for PBXNativeTarget "BidderBidder" */;
 			buildPhases = (
+				3DA9F6111D259EAA9B58CB5F /* [CP] Check Pods Manifest.lock */,
 				D259B0A127FC5FDA0026DD9E /* Sources */,
 				D259B0A227FC5FDA0026DD9E /* Frameworks */,
 				D259B0A327FC5FDA0026DD9E /* Resources */,
+				3C945BACB0B201DCC402464D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D259B0D227FC5FDB0026DD9E /* Build configuration list for PBXNativeTarget "BidderBidderTests" */;
 			buildPhases = (
+				2079719E4DC9E81C0737050A /* [CP] Check Pods Manifest.lock */,
 				D259B0B727FC5FDB0026DD9E /* Sources */,
 				D259B0B827FC5FDB0026DD9E /* Frameworks */,
 				D259B0B927FC5FDB0026DD9E /* Resources */,
@@ -196,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D259B0D527FC5FDB0026DD9E /* Build configuration list for PBXNativeTarget "BidderBidderUITests" */;
 			buildPhases = (
+				273091D1D8F98027D496707C /* [CP] Check Pods Manifest.lock */,
 				D259B0C127FC5FDB0026DD9E /* Sources */,
 				D259B0C227FC5FDB0026DD9E /* Frameworks */,
 				D259B0C327FC5FDB0026DD9E /* Resources */,
+				A1E0A57CEEEB6DEC2FCDF199 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +327,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2079719E4DC9E81C0737050A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BidderBidderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		273091D1D8F98027D496707C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BidderBidder-BidderBidderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C945BACB0B201DCC402464D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BidderBidder/Pods-BidderBidder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BidderBidder/Pods-BidderBidder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BidderBidder/Pods-BidderBidder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DA9F6111D259EAA9B58CB5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BidderBidder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1E0A57CEEEB6DEC2FCDF199 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BidderBidder-BidderBidderUITests/Pods-BidderBidder-BidderBidderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BidderBidder-BidderBidderUITests/Pods-BidderBidder-BidderBidderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BidderBidder-BidderBidderUITests/Pods-BidderBidder-BidderBidderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D259B0A127FC5FDA0026DD9E /* Sources */ = {
@@ -464,6 +612,7 @@
 		};
 		D259B0D027FC5FDB0026DD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 484489C73ABAF809641DF3FE /* Pods-BidderBidder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -491,6 +640,7 @@
 		};
 		D259B0D127FC5FDB0026DD9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF2BB34BE5BD3E5508C62D0F /* Pods-BidderBidder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -518,6 +668,7 @@
 		};
 		D259B0D327FC5FDB0026DD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 520AA0DD3F7FCCC7E1D2E6E1 /* Pods-BidderBidderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -537,6 +688,7 @@
 		};
 		D259B0D427FC5FDB0026DD9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83A65B39177F477C85184571 /* Pods-BidderBidderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -556,6 +708,7 @@
 		};
 		D259B0D627FC5FDB0026DD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B9320ACCEE37242A0E45891 /* Pods-BidderBidder-BidderBidderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -573,6 +726,7 @@
 		};
 		D259B0D727FC5FDB0026DD9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E13006B8A3BDD2D214A32BF2 /* Pods-BidderBidder-BidderBidderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
