@@ -23,8 +23,9 @@ class LoginViewController : UIViewController {
     }
     
     // 비밀번호 글자 입력이 시작될 때 <임시>
-    @IBAction func passwordBeginEditing(_ sender: TweeAttributedTextField) {
-    }
+    // @IBAction func passwordBeginEditing(_ sender: TweeAttributedTextField) {
+    // }
+    
     // 비밀번호 글자가 입력중 일 때 <임시>
     @IBAction func passwordWhileEditing(_ sender: TweeAttributedTextField) {
         if let userInput = sender.text {
@@ -42,8 +43,8 @@ class LoginViewController : UIViewController {
         }
     }
     // 비밀번호 글자가 입력이 끝날때 <임시>
-    @IBAction func passwordEndEditing(_ sender: TweeAttributedTextField) {
-    }
+    // @IBAction func passwordEndEditing(_ sender: TweeAttributedTextField) {
+    // }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -56,14 +57,14 @@ class LoginViewController : UIViewController {
 
 class CornerButton: UIButton {
     
-    let BDBDColor = UIColor(rgb: 0x21CEFF)
+    let skyBlueColor = UIColor(rgb: 0x21CEFF)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.layer.borderWidth = 1
-        self.layer.backgroundColor = BDBDColor.cgColor
-        self.layer.borderColor = BDBDColor.cgColor
+        self.layer.backgroundColor = skyBlueColor.cgColor
+        self.layer.borderColor = skyBlueColor.cgColor
         self.layer.cornerRadius = 3
     }
     
@@ -73,8 +74,8 @@ class CornerButton: UIButton {
         super.init(coder: coder)
         
         self.layer.borderWidth = 1
-        self.layer.backgroundColor = BDBDColor.cgColor
-        self.layer.borderColor = BDBDColor.cgColor
+        self.layer.backgroundColor = skyBlueColor.cgColor
+        self.layer.borderColor = skyBlueColor.cgColor
         self.layer.cornerRadius = 30
     }
 
