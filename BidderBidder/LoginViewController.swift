@@ -22,9 +22,7 @@ class LoginViewController : UIViewController {
 
     }
     
-    // 비밀번호 글자 입력이 시작될 때 <임시>
-    // @IBAction func passwordBeginEditing(_ sender: TweeAttributedTextField) {
-    // }
+
     
     // 비밀번호 글자가 입력중 일 때 <임시>
     @IBAction func passwordWhileEditing(_ sender: TweeAttributedTextField) {
@@ -42,9 +40,7 @@ class LoginViewController : UIViewController {
             }
         }
     }
-    // 비밀번호 글자가 입력이 끝날때 <임시>
-    // @IBAction func passwordEndEditing(_ sender: TweeAttributedTextField) {
-    // }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
