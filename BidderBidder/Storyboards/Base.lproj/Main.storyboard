@@ -3,6 +3,7 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="nUg-nE-kVu" kind="relationship" relationship="rootViewController" id="Hl8-dJ-bl6"/>
+                        <segue destination="YRn-9C-rKe" kind="relationship" relationship="rootViewController" id="crW-5M-qeW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2b-NP-WhY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -136,164 +137,98 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZC-fW-ZDN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1060" y="1050"/>
+            <point key="canvasLocation" x="-1136" y="1050"/>
         </scene>
         <!--Login View Controller-->
-        <scene sceneID="COe-Sy-SAA">
+        <scene sceneID="IbD-E1-fXG">
             <objects>
-                <viewController id="nUg-nE-kVu" customClass="LoginViewController" customModule="BidderBidder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jbl-c4-crD">
+                <viewController id="YRn-9C-rKe" customClass="LoginViewController" customModule="BidderBidder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xhs-U3-Eca">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6FA-sE-cgd">
-                                <rect key="frame" x="74" y="349.66666666666669" width="280" height="117.66666666666669"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="1Gk-1O-WDF">
+                                <rect key="frame" x="55" y="382.66666666666669" width="318" height="70.666666666666686"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 또는 아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="32J-Qa-uUv" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="54.666666666666664"/>
-                                        <color key="tintColor" red="0.56470588239999997" green="0.64313725489999995" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
-                                                <color key="value" red="0.098039215690000001" green="0.46274509800000002" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="activeLineWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="activePlaceholderTextColor">
-                                                <color key="value" red="0.098039215690000001" green="0.46274509800000002" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveLineColor">
-                                                <color key="value" red="0.56470588239999997" green="0.64313725489999995" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="inactivePlaceholderTextColor">
-                                                <color key="value" red="0.2156862745" green="0.2784313725" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
-                                                <color key="value" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="inactiveLineWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="warningLineWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="errorLineWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="errorPlaceholderColor">
-                                                <color key="value" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="warningPlaceholderColor">
-                                                <color key="value" red="0.77647058820000003" green="0.76258261120000004" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="warningLineColor">
-                                                <color key="value" red="0.77647058820000003" green="0.76258261120000004" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="warningTextColor">
-                                                <color key="value" red="0.77647058820000003" green="0.76258261120000004" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
-                                                <color key="value" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAm-j7-Hs1" customClass="UnderLineTextField" customModule="UnderLineTextField">
-                                        <rect key="frame" x="0.0" y="62.666666666666629" width="280" height="55"/>
-                                        <color key="tintColor" red="0.56470588239999997" green="0.64313725489999995" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRz-jz-bAe" customClass="TweeActiveTextField" customModule="TweeTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="318" height="18.666666666666668"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
-                                                <color key="value" red="0.098039215690000001" green="0.46274509800000002" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="activeLineWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="activePlaceholderTextColor">
-                                                <color key="value" red="0.098039215690000001" green="0.46274509800000002" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveLineColor">
-                                                <color key="value" red="0.56470588239999997" green="0.64313725489999995" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="inactivePlaceholderTextColor">
-                                                <color key="value" red="0.2156862745" green="0.2784313725" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
-                                                <color key="value" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="inactiveLineWidth">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="warningLineWidth">
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
+                                                <color key="value" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="이메일 또는 아이디"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                <color key="value" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="errorLineWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="errorPlaceholderColor">
-                                                <color key="value" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="warningPlaceholderColor">
-                                                <color key="value" red="0.77647058820000003" green="0.76258261120000004" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="warningLineColor">
-                                                <color key="value" red="0.77647058820000003" green="0.76258261120000004" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="warningTextColor">
-                                                <color key="value" red="0.77647058820000003" green="0.76258261120000004" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
-                                                <color key="value" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13o-ks-apt" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                                        <rect key="frame" x="0.0" y="53.666666666666629" width="318" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="infoTextColor">
+                                                <color key="value" name="AccentColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="infoAnimationDuration">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="infoFontSize">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderDuration">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="비밀번호"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
+                                                <color key="value" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                <color key="value" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="passwordBeginEditing:" destination="YRn-9C-rKe" eventType="editingDidBegin" id="j5w-el-ieI"/>
+                                            <action selector="passwordEndEditing:" destination="YRn-9C-rKe" eventType="editingDidEnd" id="W6I-tx-NeB"/>
+                                            <action selector="passwordWhileEditing:" destination="YRn-9C-rKe" eventType="editingChanged" id="2YY-8f-b1c"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="T9P-4s-gB0"/>
-                                </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="mCb-lM-83t">
-                                <rect key="frame" x="66" y="607" width="296" height="31"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiL-eY-ifw">
-                                        <rect key="frame" x="0.0" y="0.0" width="141" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="아이디/비밀번호 찾기"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hs-0r-5Tp">
-                                        <rect key="frame" x="155" y="0.0" width="4" height="31"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4F-cg-O2G">
-                                        <rect key="frame" x="173" y="0.0" width="123" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="회원가입"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="간편 로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIq-5P-TDC">
-                                <rect key="frame" x="175" y="717" width="78" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BDBD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEF-rv-ezO">
-                                <rect key="frame" x="127.66666666666667" y="247.99999999999997" width="172.66666666666663" height="76.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BDBD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNP-6w-maj">
+                                <rect key="frame" x="130" y="217.99999999999997" width="172.66666666666663" height="76.666666666666657"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                 <color key="textColor" red="0.12941176469999999" green="0.80784313730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5M8-16-H7r" customClass="CornerButton" customModule="BidderBidder" customModuleProvider="target">
-                                <rect key="frame" x="74" y="497" width="280" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anY-G3-GfR" customClass="CornerButton" customModule="BidderBidder" customModuleProvider="target">
+                                <rect key="frame" x="74" y="498.33333333333326" width="280" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="Mg1-bH-7Mm"/>
-                                    <constraint firstAttribute="height" constant="55" id="n8V-pQ-9vt"/>
+                                    <constraint firstAttribute="height" constant="55" id="EfK-Qn-uBw"/>
+                                    <constraint firstAttribute="width" constant="280" id="kY7-ts-a1w"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -306,85 +241,125 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="vAe-1a-aH3">
-                                <rect key="frame" x="45" y="835" width="338.33333333333331" height="20.333333333333371"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XrY-Mw-yFa">
+                                <rect key="frame" x="70.666666666666686" y="583.33333333333337" width="287" height="31"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카카오톡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgd-Qd-u6h">
-                                        <rect key="frame" x="0.0" y="0.0" width="59" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="페이스북" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="637-JH-fhs">
-                                        <rect key="frame" x="147" y="0.0" width="59" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="네이버" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfs-oK-vPW">
-                                        <rect key="frame" x="294" y="0.0" width="44.333333333333314" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSm-CP-3J2">
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="아이디/비밀번호 찾기">
+                                            <color key="baseForegroundColor" red="0.63921568630000003" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roS-dk-zdy">
+                                        <rect key="frame" x="146" y="0.0" width="141" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="회원가입">
+                                            <color key="baseForegroundColor" red="0.63921568630000003" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="KuN-3j-0w6">
-                                <rect key="frame" x="51.666666666666657" y="745" width="325" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="간편 로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEa-qA-96l">
+                                <rect key="frame" x="175.33333333333334" y="681" width="77.666666666666657" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="niS-Xh-8XE">
+                                <rect key="frame" x="86.666666666666686" y="726" width="255" height="65"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYh-GS-x1c">
-                                        <rect key="frame" x="0.0" y="0.0" width="67" height="65"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kk-Ae-tbw">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="RGW-wH-6vb"/>
+                                            <constraint firstAttribute="width" constant="65" id="tt5-Uw-lyZ"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                        <buttonConfiguration key="configuration" style="plain">
                                             <backgroundConfiguration key="background" image="pencil.circle.fill" catalog="system"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfL-Hl-WtU">
-                                        <rect key="frame" x="129" y="0.0" width="67" height="65"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yc-Gy-UYc">
+                                        <rect key="frame" x="94.999999999999986" y="0.0" width="65.000000000000014" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="36b-jm-1Uj"/>
+                                            <constraint firstAttribute="height" constant="65" id="3LD-YU-Yvg"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                        <buttonConfiguration key="configuration" style="plain">
                                             <backgroundConfiguration key="background" image="pencil.circle.fill" catalog="system"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlA-T2-YXt">
-                                        <rect key="frame" x="258" y="0.0" width="67" height="65"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrt-Dk-dqi">
+                                        <rect key="frame" x="190" y="0.0" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="YUN-ed-SKO"/>
+                                            <constraint firstAttribute="width" constant="65" id="bXx-Ur-dKs"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                        <buttonConfiguration key="configuration" style="plain">
                                             <backgroundConfiguration key="background" image="pencil.circle.fill" catalog="system"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="7MN-hV-g0H"/>
+                                    <constraint firstAttribute="height" constant="65" id="zXZ-gC-RLu"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="Ym8-Ck-0PT">
+                                <rect key="frame" x="86" y="799" width="256.33333333333331" height="20.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카카오톡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EF0-YX-TWD">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.63921568630000003" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="페이스북" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzU-Em-UBB">
+                                        <rect key="frame" x="106" y="0.0" width="59" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.63921568630000003" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="네이버" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djv-6U-ad6">
+                                        <rect key="frame" x="212" y="0.0" width="44.333333333333314" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.63921568630000003" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="yMf-kj-qnG"/>
+                        <viewLayoutGuide key="safeArea" id="YB9-pT-UGQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KuN-3j-0w6" firstAttribute="top" secondItem="pIq-5P-TDC" secondAttribute="bottom" constant="7.6666666666666288" id="9zO-Xs-pNl"/>
-                            <constraint firstItem="5M8-16-H7r" firstAttribute="top" secondItem="6FA-sE-cgd" secondAttribute="bottom" constant="29.666666666666629" id="CTG-vZ-8Z9"/>
-                            <constraint firstItem="6FA-sE-cgd" firstAttribute="top" secondItem="SEF-rv-ezO" secondAttribute="bottom" constant="25" id="Qwx-14-hv5"/>
-                            <constraint firstItem="5M8-16-H7r" firstAttribute="centerX" secondItem="yMf-kj-qnG" secondAttribute="centerX" id="T6P-0A-pEA"/>
-                            <constraint firstItem="vAe-1a-aH3" firstAttribute="top" secondItem="KuN-3j-0w6" secondAttribute="bottom" constant="25" id="UFN-Cm-mrb"/>
-                            <constraint firstItem="mCb-lM-83t" firstAttribute="top" secondItem="6FA-sE-cgd" secondAttribute="bottom" constant="139.66666666666663" id="VTw-te-Xos"/>
-                            <constraint firstItem="vAe-1a-aH3" firstAttribute="centerX" secondItem="yMf-kj-qnG" secondAttribute="centerX" id="Vuk-Ue-NnM"/>
-                            <constraint firstItem="6FA-sE-cgd" firstAttribute="centerX" secondItem="yMf-kj-qnG" secondAttribute="centerX" id="Wox-E9-fb2"/>
-                            <constraint firstItem="mCb-lM-83t" firstAttribute="centerX" secondItem="yMf-kj-qnG" secondAttribute="centerX" id="YuX-ZA-0gy"/>
-                            <constraint firstItem="SEF-rv-ezO" firstAttribute="centerX" secondItem="yMf-kj-qnG" secondAttribute="centerX" id="fgh-8R-Mck"/>
-                            <constraint firstItem="pIq-5P-TDC" firstAttribute="centerX" secondItem="yMf-kj-qnG" secondAttribute="centerX" id="nWS-LR-mNA"/>
-                            <constraint firstItem="KuN-3j-0w6" firstAttribute="centerX" secondItem="yMf-kj-qnG" secondAttribute="centerX" id="rQq-ZM-wfG"/>
-                            <constraint firstItem="SEF-rv-ezO" firstAttribute="top" secondItem="yMf-kj-qnG" secondAttribute="top" constant="160" id="xyW-Rd-Stx"/>
-                            <constraint firstItem="pIq-5P-TDC" firstAttribute="top" secondItem="mCb-lM-83t" secondAttribute="bottom" constant="79" id="zfD-Ro-3Vd"/>
+                            <constraint firstItem="Ym8-Ck-0PT" firstAttribute="top" secondItem="niS-Xh-8XE" secondAttribute="bottom" constant="8" symbolic="YES" id="5tg-uB-krV"/>
+                            <constraint firstItem="1Gk-1O-WDF" firstAttribute="centerX" secondItem="YB9-pT-UGQ" secondAttribute="centerX" id="7MI-Ac-7gJ"/>
+                            <constraint firstItem="PNP-6w-maj" firstAttribute="top" secondItem="YB9-pT-UGQ" secondAttribute="top" constant="130" id="AVa-uo-GaE"/>
+                            <constraint firstItem="anY-G3-GfR" firstAttribute="centerX" secondItem="YB9-pT-UGQ" secondAttribute="centerX" id="Aa5-zm-v26"/>
+                            <constraint firstItem="qEa-qA-96l" firstAttribute="top" secondItem="XrY-Mw-yFa" secondAttribute="bottom" constant="66.666666666666629" id="Azd-Sa-wcm"/>
+                            <constraint firstItem="1Gk-1O-WDF" firstAttribute="top" secondItem="PNP-6w-maj" secondAttribute="bottom" constant="88" id="B8h-yU-8pI"/>
+                            <constraint firstItem="Ym8-Ck-0PT" firstAttribute="centerX" secondItem="YB9-pT-UGQ" secondAttribute="centerX" id="CtF-Hu-daM"/>
+                            <constraint firstItem="anY-G3-GfR" firstAttribute="top" secondItem="1Gk-1O-WDF" secondAttribute="bottom" constant="45" id="YAH-d1-qb8"/>
+                            <constraint firstItem="YB9-pT-UGQ" firstAttribute="trailing" secondItem="1Gk-1O-WDF" secondAttribute="trailing" constant="55" id="ZGH-cB-0Wy"/>
+                            <constraint firstItem="XrY-Mw-yFa" firstAttribute="centerX" secondItem="YB9-pT-UGQ" secondAttribute="centerX" id="bPI-GC-dnR"/>
+                            <constraint firstItem="PNP-6w-maj" firstAttribute="leading" secondItem="YB9-pT-UGQ" secondAttribute="leading" constant="130" id="iXq-gz-G7X"/>
+                            <constraint firstItem="niS-Xh-8XE" firstAttribute="centerX" secondItem="YB9-pT-UGQ" secondAttribute="centerX" id="nK8-UV-swS"/>
+                            <constraint firstItem="XrY-Mw-yFa" firstAttribute="top" secondItem="anY-G3-GfR" secondAttribute="bottom" constant="30" id="p0S-PI-ilh"/>
+                            <constraint firstItem="qEa-qA-96l" firstAttribute="centerX" secondItem="YB9-pT-UGQ" secondAttribute="centerX" id="y5s-JD-442"/>
+                            <constraint firstItem="1Gk-1O-WDF" firstAttribute="leading" secondItem="YB9-pT-UGQ" secondAttribute="leading" constant="55" id="yfH-xd-GLh"/>
+                            <constraint firstItem="niS-Xh-8XE" firstAttribute="top" secondItem="qEa-qA-96l" secondAttribute="bottom" constant="24.666666666666629" id="yjA-Nw-gde"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vSU-gJ-zim"/>
+                    <navigationItem key="navigationItem" id="xrl-XG-fWq"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2AK-5e-OSc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4w-fU-KuQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="469.62616822429902" y="226.78185745140391"/>
+            <point key="canvasLocation" x="544" y="227"/>
         </scene>
         <!--일반로그인-->
         <scene sceneID="JGM-sc-Hb5">
@@ -643,22 +618,14 @@
             <point key="canvasLocation" x="2078" y="1050"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="32J-Qa-uUv">
-            <size key="intrinsicContentSize" width="4" height="11.666666666666666"/>
-        </designable>
-        <designable name="bAm-j7-Hs1">
-            <size key="intrinsicContentSize" width="4" height="10"/>
-        </designable>
-    </designables>
     <resources>
         <image name="applelogo" catalog="system" width="103" height="128"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

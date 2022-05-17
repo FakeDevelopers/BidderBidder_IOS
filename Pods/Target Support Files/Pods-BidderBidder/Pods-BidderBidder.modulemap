@@ -1,6 +1,0 @@
-framework module Pods_BidderBidder {
-  umbrella header "Pods-BidderBidder-umbrella.h"
-
-  export *
-  module * { export * }
-}
