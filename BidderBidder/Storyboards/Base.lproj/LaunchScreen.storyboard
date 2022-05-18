@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BDBD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-d6-WXm">
-                                <rect key="frame" x="120" y="344" width="174" height="77"/>
+                                <rect key="frame" x="121" y="344" width="172.5" height="77"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                 <color key="textColor" red="0.12941176469999999" green="0.80784313730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -28,8 +28,6 @@
                         <constraints>
                             <constraint firstItem="JMb-d6-WXm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0Ds-PS-L9Z"/>
                             <constraint firstItem="JMb-d6-WXm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="Xxn-8x-mwJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JMb-d6-WXm" secondAttribute="trailing" constant="120" id="hVc-yx-j7r"/>
-                            <constraint firstItem="JMb-d6-WXm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="yaR-dV-Bkj"/>
                         </constraints>
                     </view>
                 </viewController>

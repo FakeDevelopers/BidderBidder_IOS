@@ -19,10 +19,13 @@ class LoginViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
-
+    
+    // 이게 없으면 터집니다.
+    @IBAction func passwordBeginEditing(_ sender: TweeAttributedTextField) {
+    }
     
     // 비밀번호 글자가 입력중 일 때 <임시>
     @IBAction func passwordWhileEditing(_ sender: TweeAttributedTextField) {
@@ -40,6 +43,9 @@ class LoginViewController : UIViewController {
             }
         }
     }
+    // 이게 없으면 터집니다.
+    @IBAction func passwordEndEditing(_ sender: TweeAttributedTextField) {
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,14 +59,12 @@ class LoginViewController : UIViewController {
 
 class CornerButton: UIButton {
     
-    let skyBlueColor = UIColor(rgb: 0x21CEFF)
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.layer.borderWidth = 1
-        self.layer.backgroundColor = skyBlueColor.cgColor
-        self.layer.borderColor = skyBlueColor.cgColor
+        self.layer.backgroundColor = UIColor.skyBlueColor
+        self.layer.borderColor = UIColor.skyBlueColor
         self.layer.cornerRadius = 3
     }
     
@@ -70,27 +74,26 @@ class CornerButton: UIButton {
         super.init(coder: coder)
         
         self.layer.borderWidth = 1
-        self.layer.backgroundColor = skyBlueColor.cgColor
-        self.layer.borderColor = skyBlueColor.cgColor
+        self.layer.backgroundColor = UIColor.skyBlueColor
+        self.layer.borderColor = UIColor.skyBlueColor
         self.layer.cornerRadius = 30
     }
-
+    
 }
 
 extension UIColor {
-   convenience init(red: Int, green: Int, blue: Int) {
-       assert(red >= 0 && red <= 255, "Invalid red component")
-       assert(green >= 0 && green <= 255, "Invalid green component")
-       assert(blue >= 0 && blue <= 255, "Invalid blue component")
-
-       self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-   }
-
-   convenience init(rgb: Int) {
-       self.init(
-           red: (rgb >> 16) & 0xFF,
-           green: (rgb >> 8) & 0xFF,
-           blue: rgb & 0xFF
-       )
-   }
+    
+    static let skyBlueColor = UIColor(rgb: 0x21CEFF).cgColor
+    
+    convenience init(red: UInt8, green: UInt8, blue: UInt8) {
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: UInt8((rgb >> 16) & 0xFF),
+            green: UInt8((rgb >> 8) & 0xFF),
+            blue: UInt8(rgb & 0xFF)
+        )
+    }
 }

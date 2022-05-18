@@ -211,8 +211,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="passwordBeginEditing:" destination="YRn-9C-rKe" eventType="editingDidBegin" id="j5w-el-ieI"/>
-                                            <action selector="passwordEndEditing:" destination="YRn-9C-rKe" eventType="editingDidEnd" id="W6I-tx-NeB"/>
+                                            <action selector="passwordBeginEditing:" destination="YRn-9C-rKe" eventType="editingDidBegin" id="cwb-IH-YTp"/>
+                                            <action selector="passwordEndEditing:" destination="YRn-9C-rKe" eventType="editingDidEnd" id="AHz-7m-cRP"/>
                                             <action selector="passwordWhileEditing:" destination="YRn-9C-rKe" eventType="editingChanged" id="2YY-8f-b1c"/>
                                         </connections>
                                     </textField>
