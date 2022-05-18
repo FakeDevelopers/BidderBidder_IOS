@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D214F59128334FE7005AD768 /* TweeTextField in Frameworks */ = {isa = PBXBuildFile; productRef = D214F59028334FE7005AD768 /* TweeTextField */; };
+		D214F5952834D06A005AD768 /* ColorManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214F5942834D06A005AD768 /* ColorManage.swift */; };
 		D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */; };
 		D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */; };
 		D259B0B027FC5FDA0026DD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B0AE27FC5FDA0026DD9E /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D214F5942834D06A005AD768 /* ColorManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManage.swift; sourceTree = "<group>"; };
 		D259B0A527FC5FDA0026DD9E /* BidderBidder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidderBidder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				D2E99F9427FD126A00D829DF /* LoginViewController.swift */,
 				D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */,
 				D2E99F9C27FDA58100D829DF /* MainViewController.swift */,
+				D214F5942834D06A005AD768 /* ColorManage.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */,
 				D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */,
+				D214F5952834D06A005AD768 /* ColorManage.swift in Sources */,
 				D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */,
 				D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */,
 				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
