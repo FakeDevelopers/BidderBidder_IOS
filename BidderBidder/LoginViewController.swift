@@ -76,7 +76,7 @@ class CornerButton: UIButton {
         self.layer.borderWidth = 1
         self.layer.backgroundColor = UIColor.skyBlueColor
         self.layer.borderColor = UIColor.skyBlueColor
-        self.layer.cornerRadius = 30
+        self.layer.cornerRadius = 25
     }
     
 }
