@@ -303,10 +303,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="18.666666666666668"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SZs-tb-ndd" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="0.0" y="0.0" width="130" height="18.666666666666668"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="130" id="r5q-c8-V5y"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="143" height="18.666666666666668"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -332,7 +329,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ic4-Le-WDf" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="137" y="0.0" width="143" height="18.666666666666668"/>
+                                                <rect key="frame" x="150" y="0.0" width="130" height="18.666666666666668"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="511-90-5G3"/>
                                                 </constraints>
@@ -657,9 +654,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pm1-4b-m0p"/>
-                    <connections>
-                        <outlet property="testTextField" destination="3pg-V8-RIF" id="cGu-5z-gGF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eN1-ua-K0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
