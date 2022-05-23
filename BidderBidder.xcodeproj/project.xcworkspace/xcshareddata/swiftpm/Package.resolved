@@ -8,6 +8,15 @@
         "branch" : "master",
         "revision" : "6eeff3c57e02f07c8494433aed8bf90532010089"
       }
+    },
+    {
+      "identity" : "tweetextfield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/oleghnidets/TweeTextField.git",
+      "state" : {
+        "revision" : "b712e44c1fe4020ee20f9d494572a9762ea5a59c",
+        "version" : "1.6.3"
+      }
     }
   ],
   "version" : 2
