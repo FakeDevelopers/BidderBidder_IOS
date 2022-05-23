@@ -20,7 +20,6 @@
 		D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9427FD126A00D829DF /* LoginViewController.swift */; };
 		D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */; };
 		D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2E99F9A27FDA27100D829DF /* Alamofire */; };
-		D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9C27FDA58100D829DF /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D2E99F9427FD126A00D829DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterLoginViewController.swift; sourceTree = "<group>"; };
-		D2E99F9C27FDA58100D829DF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +139,6 @@
 			children = (
 				D2E99F9427FD126A00D829DF /* LoginViewController.swift */,
 				D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */,
-				D2E99F9C27FDA58100D829DF /* MainViewController.swift */,
 				D214F5942834D06A005AD768 /* ColorManage.swift */,
 			);
 			path = Controller;
@@ -300,7 +297,6 @@
 				D214F5952834D06A005AD768 /* ColorManage.swift in Sources */,
 				D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */,
 				D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */,
-				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
