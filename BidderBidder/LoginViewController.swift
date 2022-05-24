@@ -15,6 +15,7 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var socialLoginButton1: UIButton!
     @IBOutlet weak var socialLoginButton2: UIButton!
     @IBOutlet weak var normalLoginButton: UIButton!
+    @IBOutlet weak var testTextField: TweeActiveTextField!
     
     
     override func viewDidLoad() {
@@ -54,6 +55,10 @@ class LoginViewController : UIViewController {
         //Navigation Bar 숨기기
         navigationController?.navigationBar.isHidden = true
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+         self.view.endEditing(true)
+   }
 }
 
 
