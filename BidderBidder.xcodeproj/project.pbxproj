@@ -21,6 +21,7 @@
 		D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */; };
 		D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2E99F9A27FDA27100D829DF /* Alamofire */; };
 		D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9C27FDA58100D829DF /* MainViewController.swift */; };
+		D2FCCA192849B5AB002005BC /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FCCA182849B5AB002005BC /* ProductViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,15 +49,16 @@
 		D259B0AF27FC5FDA0026DD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D259B0B127FC5FDB0026DD9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D259B0B427FC5FDB0026DD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D259B0B627FC5FDB0026DD9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D259B0BB27FC5FDB0026DD9E /* BidderBidderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BidderBidderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0BF27FC5FDB0026DD9E /* BidderBidderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderTests.swift; sourceTree = "<group>"; };
 		D259B0C527FC5FDB0026DD9E /* BidderBidderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BidderBidderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITests.swift; sourceTree = "<group>"; };
 		D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2DEBBB32849BCD600437F3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2E99F9427FD126A00D829DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterLoginViewController.swift; sourceTree = "<group>"; };
 		D2E99F9C27FDA58100D829DF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D2FCCA182849B5AB002005BC /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +111,10 @@
 		D259B0A727FC5FDA0026DD9E /* BidderBidder */ = {
 			isa = PBXGroup;
 			children = (
-				D2E99F9827FDA1AD00D829DF /* Controller */,
 				D2E99F9E27FE66C200D829DF /* Storyboards */,
-				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
-				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
-				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
-				D259B0B627FC5FDB0026DD9E /* Info.plist */,
+				D2FCCA1628489B91002005BC /* Supporting File */,
+				D2E99F9827FDA1AD00D829DF /* Controller */,
+				D2FCCA1728489BB9002005BC /* Cell */,
 			);
 			path = BidderBidder;
 			sourceTree = "<group>";
@@ -151,9 +151,28 @@
 			isa = PBXGroup;
 			children = (
 				D259B0AE27FC5FDA0026DD9E /* Main.storyboard */,
-				D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D2FCCA1628489B91002005BC /* Supporting File */ = {
+			isa = PBXGroup;
+			children = (
+				D2DEBBB32849BCD600437F3D /* Info.plist */,
+				D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */,
+				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
+				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
+				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
+			);
+			path = "Supporting File";
+			sourceTree = "<group>";
+		};
+		D2FCCA1728489BB9002005BC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2FCCA182849B5AB002005BC /* ProductViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FCCA192849B5AB002005BC /* ProductViewCell.swift in Sources */,
 				D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */,
 				D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */,
 				D214F5952834D06A005AD768 /* ColorManage.swift in Sources */,
@@ -479,7 +499,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 98BADNDQ42;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BidderBidder/Info.plist;
+				INFOPLIST_FILE = "BidderBidder/Supporting File/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -507,7 +527,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 98BADNDQ42;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BidderBidder/Info.plist;
+				INFOPLIST_FILE = "BidderBidder/Supporting File/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

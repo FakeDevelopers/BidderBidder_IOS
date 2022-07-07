@@ -88,10 +88,14 @@ extension EnterLoginViewController : UITextFieldDelegate {
     }
 }
 
-
-func sendRestRequest(url: String, params: Parameters?, isPost: Bool = true, response: @escaping (AFDataResponse<Data?>) -> Void) -> Request {
-    return AF.request(url, method: isPost ? .post : .get, parameters: params).response(completionHandler: response)
+extension UIViewController {
+    func sendRestRequest(url: String, params: Parameters?, isPost: Bool = true, response: @escaping (AFDataResponse<Data?>) -> Void) -> Request {
+        return AF.request(url, method: isPost ? .post : .get, parameters: params).response(completionHandler: response)
+    }
 }
+
+
+
 
 
 
