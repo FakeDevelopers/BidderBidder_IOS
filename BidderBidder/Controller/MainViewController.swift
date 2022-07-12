@@ -13,10 +13,10 @@ class MainViewController : UIViewController {
     @IBOutlet weak var productListTableView: UITableView!
     @IBOutlet weak var loadMoreBtn: UIButton!
     
-    var productList: [Product] = []
-    var listCount: Int = 20
-    var checkListCount: Int = 20
-    var startNumber: Int64 = -1
+    let productList: [Product] = []
+    let listCount: Int = 20
+    let checkListCount: Int = 20
+    let startNumber: Int64 = -1
     var checkBool: Bool = false
     var listInterval: Int = 800
     let refresh = UIRefreshControl()
