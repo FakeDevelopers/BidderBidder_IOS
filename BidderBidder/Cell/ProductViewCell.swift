@@ -16,33 +16,12 @@ struct Product: Codable{
     var tick: Int64
     var expirationDate: String
     var bidderCount : Int
-
-    
-}
-
-extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
-        contentMode = mode
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else { return }
-            DispatchQueue.main.async() { [weak self] in
-                self?.image = image
-            }
-        }.resume()
-    }
-    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
-        guard let url = URL(string: link) else { return }
-        downloaded(from: url, contentMode: mode)
-    }
 }
 
 class ProductViewCell: UITableViewCell {
     static let identifier = "ProductViewCell"
+    static let domainURL = "http://bidderbidderapi.kro.kr"
+    static let sandbox = "8080"
     
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var productName: UILabel!
@@ -64,7 +43,7 @@ class ProductViewCell: UITableViewCell {
     }
     
     func setCell(product: Product) {
-        thumbnail.downloaded(from: "http://bidderbidderapi.kro.kr:8080"+product.thumbnail)
+        thumbnail.downloaded(from: ProductViewCell.domainURL+":"+ProductViewCell.sandbox+product.thumbnail)
         productName.text = product.productTitle
         if product.hopePrice == nil {
             hopePrice.text = " "

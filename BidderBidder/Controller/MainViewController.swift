@@ -9,8 +9,6 @@ import UIKit
 import Alamofire
 
 class MainViewController : UIViewController {
-    static let identifier = "MainViewController"
-    
     
     @IBOutlet weak var productListTableView: UITableView!
     @IBOutlet weak var loadMoreBtn: UIButton!
@@ -20,7 +18,7 @@ class MainViewController : UIViewController {
     var checkListCount: Int = 20
     var startNumber: Int64 = -1
     var checkNum: Int = 0
-    var checkNumRefresh: Int = 0
+    var listInterval: Int = 800
     let refresh = UIRefreshControl()
     
     
@@ -105,12 +103,9 @@ extension MainViewController {
 
 extension MainViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height - 800
-        if checkNum == 1{
-            if offsetY > contentHeight - scrollView.frame.height {
-                getProductList()
-            }
+        let contentHeight = scrollView.contentSize.height - CGFloat(listInterval)
+        if checkNum == 1 && scrollView.contentOffset.y > contentHeight - scrollView.frame.height {
+            getProductList()
         }
         
     }
@@ -133,9 +128,3 @@ extension MainViewController: UITableViewDataSource {
     }
     
 }
-
-
-
-
-
-
