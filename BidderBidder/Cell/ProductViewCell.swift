@@ -20,6 +20,9 @@ struct Product: Codable{
 
 class ProductViewCell: UITableViewCell {
     static let identifier = "ProductViewCell"
+    static let domainURL = "http://bidderbidderapi.kro.kr"
+    static let sandbox = "8080"
+    
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var hopePrice: UILabel!
@@ -40,7 +43,7 @@ class ProductViewCell: UITableViewCell {
     }
     
     func setCell(product: Product) {
-        thumbnail.downloaded(from: Constant.domainURL+":"+Constant.sandbox+product.thumbnail)
+        thumbnail.downloaded(from: ProductViewCell.domainURL+":"+ProductViewCell.sandbox+product.thumbnail)
         productName.text = product.productTitle
         if product.hopePrice == nil {
             hopePrice.text = " "
