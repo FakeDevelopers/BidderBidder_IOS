@@ -13,12 +13,12 @@ class MainViewController : UIViewController {
     @IBOutlet weak var productListTableView: UITableView!
     @IBOutlet weak var loadMoreBtn: UIButton!
     
-    let productList: [Product] = []
-    let listCount: Int = 20
-    let checkListCount: Int = 20
-    let startNumber: Int64 = -1
+    var productList: [Product] = []
+    var listCount: Int = 20
+    var checkListCount: Int = 20
+    var startNumber: Int64 = -1
     var checkBool: Bool = false
-    var listInterval: Int = 800
+    let listInterval: CGFloat = 800
     let refresh = UIRefreshControl()
     
     
@@ -40,7 +40,7 @@ class MainViewController : UIViewController {
     }
     
     func getProductList() {
-        sendRestRequest(url:"http://bidderbidderapi.kro.kr:8080/product/getInfiniteProductList", params:["searchWord":"","listCount":listCount,"startNumber":startNumber,"serachType":2]  , isPost: false) { [self]
+        sendRestRequest(url:Constant.domainURL+":"+Constant.sandbox+"/product/getInfiniteProductList", params:["searchWord":"","listCount":listCount,"startNumber":startNumber,"serachType":2]  , isPost: false) { [self]
             response in
             switch response.result {
             case .success(let data):
@@ -103,7 +103,7 @@ extension MainViewController {
 
 extension MainViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let contentHeight = scrollView.contentSize.height - CGFloat(listInterval)
+        let contentHeight = scrollView.contentSize.height - listInterval
         if checkBool && scrollView.contentOffset.y > contentHeight - scrollView.frame.height {
             getProductList()
         }
