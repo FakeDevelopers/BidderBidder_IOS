@@ -47,7 +47,7 @@ class MainViewController : UIViewController {
                 let jsonData = data!
                 do {
                     let decoder = JSONDecoder()
-                    var bringData = try decoder.decode([Product].self, from: jsonData)
+                    let bringData = try decoder.decode([Product].self, from: jsonData)
                     self.productList.append(contentsOf: bringData)
                     self.listCount = bringData.count
                     self.startNumber = (bringData.last?.productId ?? 0)
