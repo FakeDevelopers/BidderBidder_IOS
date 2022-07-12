@@ -15,13 +15,11 @@ class EnterLoginViewController : UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     let urlLogin:String = "http://3.38.81.213:8080/user/login"
     
-    
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +34,6 @@ class EnterLoginViewController : UIViewController {
         
         
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -87,15 +84,3 @@ extension EnterLoginViewController : UITextFieldDelegate {
         loginButton.isEnabled = !isIdNull && !isPasswordNull && !isIdEmpty && !isPasswordEmpty
     }
 }
-
-extension UIViewController {
-    func sendRestRequest(url: String, params: Parameters?, isPost: Bool = true, response: @escaping (AFDataResponse<Data?>) -> Void) -> Request {
-        return AF.request(url, method: isPost ? .post : .get, parameters: params).response(completionHandler: response)
-    }
-}
-
-
-
-
-
-
