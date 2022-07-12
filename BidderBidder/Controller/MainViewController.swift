@@ -17,7 +17,7 @@ class MainViewController : UIViewController {
     var listCount: Int = 20
     var checkListCount: Int = 20
     var startNumber: Int64 = -1
-    var checkNum: Int = 0
+    var checkBool: Bool = false
     var listInterval: Int = 800
     let refresh = UIRefreshControl()
     
@@ -34,7 +34,7 @@ class MainViewController : UIViewController {
     
     @IBAction func loadMore(_ sender: Any) {
         getProductList()
-        checkNum += 1
+        checkBool = true
         loadMoreBtn.isEnabled = false
         loadMoreBtn.tintColor = UIColor.clear
     }
@@ -104,7 +104,7 @@ extension MainViewController {
 extension MainViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let contentHeight = scrollView.contentSize.height - CGFloat(listInterval)
-        if checkNum == 1 && scrollView.contentOffset.y > contentHeight - scrollView.frame.height {
+        if checkBool == true && scrollView.contentOffset.y > contentHeight - scrollView.frame.height {
             getProductList()
         }
         
