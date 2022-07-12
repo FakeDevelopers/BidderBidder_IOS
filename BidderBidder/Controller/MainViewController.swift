@@ -104,7 +104,7 @@ extension MainViewController {
 extension MainViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let contentHeight = scrollView.contentSize.height - CGFloat(listInterval)
-        if checkBool == true && scrollView.contentOffset.y > contentHeight - scrollView.frame.height {
+        if checkBool && scrollView.contentOffset.y > contentHeight - scrollView.frame.height {
             getProductList()
         }
         
