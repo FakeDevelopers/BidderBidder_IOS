@@ -190,6 +190,9 @@
 				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
 				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
 				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
+				D214F5942834D06A005AD768 /* ColorManage.swift */,
+				D289D7DA287D8429003CB987 /* UIImageView.swift */,
+				D289D7DC287D85F4003CB987 /* UIViewController.swift */,
 			);
 			path = "Supporting File";
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				B3B7D9CF287FDBD300BD7BC8 /* WritingViewController.swift in Sources */,
 				D289D7DD287D85F4003CB987 /* UIViewController.swift in Sources */,
 				B3B7D9CF287FDBD300BD7BC8 /* WritingViewController.swift in Sources */,
+				D289D7DD287D85F4003CB987 /* UIViewController.swift in Sources */,
 				D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */,
 				D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */,
 				D214F5952834D06A005AD768 /* ColorManage.swift in Sources */,

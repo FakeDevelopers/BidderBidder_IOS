@@ -15,10 +15,10 @@ class MainViewController : UIViewController {
     
     var productList: [Product] = []
     var listCount: Int = 20
-    let checkListCount: Int = 20
+    var checkListCount: Int = 20
     var startNumber: Int64 = -1
-    var checkBool: Bool = false
-    let listInterval: CGFloat = 800
+    var checkNum: Int = 0
+    var listInterval: Int = 800
     let refresh = UIRefreshControl()
     
     
@@ -34,41 +34,41 @@ class MainViewController : UIViewController {
     
     @IBAction func loadMore(_ sender: Any) {
         getProductList()
-        checkBool = true
+        checkNum += 1
         loadMoreBtn.isEnabled = false
         loadMoreBtn.tintColor = UIColor.clear
     }
     
     func getProductList() {
-            sendRestRequest(url:"http://bidderbidderapi.kro.kr:8080/product/getPageProductList", params:["searchWord":"","listCount":listCount,"startNumber":startNumber,"serachType":2]  , isPost: false) { [self]
-                response in
-                switch response.result {
-                case .success(let data):
-                    let jsonData = data!
-                    do {
-                        let decoder = JSONDecoder()
-                        let bringData = try decoder.decode([Product].self, from: jsonData)
-                        self.productList.append(contentsOf: bringData)
-                        self.listCount = bringData.count
-                        self.startNumber = (bringData.last?.productId ?? 0)
-                        self.productListTableView.reloadData()
-                        if listCount < checkListCount {
-                            loadMoreBtn.isEnabled = false
-                            loadMoreBtn.tintColor = UIColor.clear
-                        }
+        sendRestRequest(url:"http://bidderbidderapi.kro.kr:8080/product/getInfiniteProductList", params:["searchWord":"","listCount":listCount,"startNumber":startNumber,"serachType":2]  , isPost: false) { [self]
+            response in
+            switch response.result {
+            case .success(let data):
+                let jsonData = data!
+                do {
+                    let decoder = JSONDecoder()
+                    var bringData = try decoder.decode([Product].self, from: jsonData)
+                    self.productList.append(contentsOf: bringData)
+                    self.listCount = bringData.count
+                    self.startNumber = (bringData.last?.productId ?? 0)
+                    self.productListTableView.reloadData()
+                    if listCount < checkListCount {
+                        loadMoreBtn.isEnabled = false
+                        loadMoreBtn.tintColor = UIColor.clear
                     }
-                    catch {
-                        print(error)
-                    }
-                    
-                case .failure(let error):
-                    print("통신 실패 : ",(String(describing:
-                                                error.errorDescription)))
                 }
+                catch {
+                    print(error)
+                }
+                
+            case .failure(let error):
+                print("통신 실패 : ",(String(describing:
+                                            error.errorDescription)))
             }
         }
-        
     }
+    
+}
 
 // RefreshControl
 extension MainViewController {
@@ -103,8 +103,8 @@ extension MainViewController {
 
 extension MainViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let contentHeight = scrollView.contentSize.height - listInterval
-        if checkBool && scrollView.contentOffset.y > contentHeight - scrollView.frame.height {
+        let contentHeight = scrollView.contentSize.height - CGFloat(listInterval)
+        if checkNum == 1 && scrollView.contentOffset.y > contentHeight - scrollView.frame.height {
             getProductList()
         }
         
