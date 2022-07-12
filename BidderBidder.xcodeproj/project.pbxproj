@@ -203,6 +203,7 @@
 				D214F5942834D06A005AD768 /* ColorManage.swift */,
 				D289D7DA287D8429003CB987 /* UIImageView.swift */,
 				D289D7DC287D85F4003CB987 /* UIViewController.swift */,
+				D289D7DE287D9665003CB987 /* Constant.swift */,
 			);
 			path = "Supporting File";
 			sourceTree = "<group>";
