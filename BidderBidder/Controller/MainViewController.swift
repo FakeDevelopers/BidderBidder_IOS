@@ -15,7 +15,7 @@ class MainViewController : UIViewController {
     
     var productList: [Product] = []
     var listCount: Int = 20
-    var checkListCount: Int = 20
+    let checkListCount: Int = 20
     var startNumber: Int64 = -1
     var checkBool: Bool = false
     let listInterval: CGFloat = 800
