@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3B7D9CD287FDBBD00BD7BC8 /* WritingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B7D9CC287FDBBD00BD7BC8 /* WritingStruct.swift */; };
+		B3B7D9CF287FDBD300BD7BC8 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B7D9CE287FDBD300BD7BC8 /* WritingViewController.swift */; };
 		D214F59128334FE7005AD768 /* TweeTextField in Frameworks */ = {isa = PBXBuildFile; productRef = D214F59028334FE7005AD768 /* TweeTextField */; };
 		D214F5952834D06A005AD768 /* ColorManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214F5942834D06A005AD768 /* ColorManage.swift */; };
 		D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B3B7D9CC287FDBBD00BD7BC8 /* WritingStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingStruct.swift; sourceTree = "<group>"; };
+		B3B7D9CE287FDBD300BD7BC8 /* WritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		D214F5942834D06A005AD768 /* ColorManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManage.swift; sourceTree = "<group>"; };
 		D259B0A527FC5FDA0026DD9E /* BidderBidder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidderBidder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 				D2E99F9427FD126A00D829DF /* LoginViewController.swift */,
 				D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */,
 				D2E99F9C27FDA58100D829DF /* MainViewController.swift */,
+				B3B7D9CE287FDBD300BD7BC8 /* WritingViewController.swift */,
 				D214F5942834D06A005AD768 /* ColorManage.swift */,
 			);
 			path = Controller;
@@ -160,6 +165,7 @@
 			children = (
 				D2DEBBB32849BCD600437F3D /* Info.plist */,
 				D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */,
+				B3B7D9CC287FDBBD00BD7BC8 /* WritingStruct.swift */,
 				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
 				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
 				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
@@ -315,12 +321,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2FCCA192849B5AB002005BC /* ProductViewCell.swift in Sources */,
+				B3B7D9CF287FDBD300BD7BC8 /* WritingViewController.swift in Sources */,
 				D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */,
 				D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */,
 				D214F5952834D06A005AD768 /* ColorManage.swift in Sources */,
 				D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */,
 				D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */,
 				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
+				B3B7D9CD287FDBBD00BD7BC8 /* WritingStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

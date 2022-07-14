@@ -42,35 +42,35 @@ class MainViewController : UIViewController {
     }
     
     func getProductList() {
-        sendRestRequest(url:"http://bidderbidderapi.kro.kr:8080/product/getInfiniteProductList", params:["searchWord":"","listCount":listCount,"startNumber":startNumber,"serachType":2]  , isPost: false) { [self]
-            response in
-            switch response.result {
-            case .success(let data):
-                let jsonData = data!
-                do {
-                    let decoder = JSONDecoder()
-                    var bringData = try decoder.decode([Product].self, from: jsonData)
-                    self.productList.append(contentsOf: bringData)
-                    self.listCount = bringData.count
-                    self.startNumber = (bringData.last?.productId ?? 0)
-                    self.productListTableView.reloadData()
-                    if listCount < checkListCount {
-                        loadMoreBtn.isEnabled = false
-                        loadMoreBtn.tintColor = UIColor.clear
+            sendRestRequest(url:"http://bidderbidderapi.kro.kr:8080/product/getPageProductList", params:["searchWord":"","listCount":listCount,"startNumber":startNumber,"serachType":2]  , isPost: false) { [self]
+                response in
+                switch response.result {
+                case .success(let data):
+                    let jsonData = data!
+                    do {
+                        let decoder = JSONDecoder()
+                        let bringData = try decoder.decode([Product].self, from: jsonData)
+                        self.productList.append(contentsOf: bringData)
+                        self.listCount = bringData.count
+                        self.startNumber = (bringData.last?.productId ?? 0)
+                        self.productListTableView.reloadData()
+                        if listCount < checkListCount {
+                            loadMoreBtn.isEnabled = false
+                            loadMoreBtn.tintColor = UIColor.clear
+                        }
                     }
+                    catch {
+                        print(error)
+                    }
+                    
+                case .failure(let error):
+                    print("통신 실패 : ",(String(describing:
+                                                error.errorDescription)))
                 }
-                catch {
-                    print(error)
-                }
-                
-            case .failure(let error):
-                print("통신 실패 : ",(String(describing:
-                                            error.errorDescription)))
             }
         }
+        
     }
-    
-}
 
 // RefreshControl
 extension MainViewController {
