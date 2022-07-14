@@ -8,6 +8,7 @@
 import UIKit
 import TweeTextField
 import SwiftUI
+import FirebaseAuth
 
 class LoginViewController : UIViewController {
     
@@ -16,6 +17,7 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var socialLoginButton2: UIButton!
     @IBOutlet weak var normalLoginButton: UIButton!
     @IBOutlet weak var testTextField: TweeActiveTextField!
+    @IBOutlet weak var verificationNumberTextField: TweeActiveTextField!
     
     
     override func viewDidLoad() {
@@ -23,7 +25,43 @@ class LoginViewController : UIViewController {
         
     }
     
+    @IBAction func sendVerifyNumber(_ sender: Any) {
+        print(testTextField.text!)
+        PhoneAuthProvider.provider()
+            .verifyPhoneNumber("+82 \(testTextField.text!)", uiDelegate: nil) { (verificationID, error) in
+                if let id = verificationID {
+                    UserDefaults.standard.set("\(id)", forKey: "verificationID")
+                }
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+            }
+    }
     
+    @IBAction func verificiationButton(_ sender: Any) {
+        guard let verificationID = UserDefaults.standard.string(forKey: "verificationID"), let verificationCode = verificationNumberTextField.text else {
+            return
+        }
+        
+        let credential = PhoneAuthProvider.provider().credential(
+            withVerificationID: verificationID,
+            verificationCode: verificationCode
+        )
+        
+        logIn(credential: credential)
+    }
+    
+    func logIn(credential: PhoneAuthCredential) {
+        Auth.auth().signIn(with: credential) { authResult, error in
+            if let error = error {
+                print(error.localizedDescription)
+                print("LogIn Failed...")
+            }
+            print("LogIn Success!!")
+            print("\(authResult!)")
+        }
+    }
     // 이게 없으면 터집니다.
     @IBAction func passwordBeginEditing(_ sender: TweeAttributedTextField) {
     }
@@ -57,8 +95,8 @@ class LoginViewController : UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-         self.view.endEditing(true)
-   }
+        self.view.endEditing(true)
+    }
 }
 
 
@@ -83,6 +121,6 @@ class CornerButton: UIButton {
         self.layer.borderColor = UIColor.skyBlueColor
         self.layer.cornerRadius = 25
     }
-     
+    
 }
 
