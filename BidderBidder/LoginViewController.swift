@@ -56,9 +56,11 @@ class LoginViewController : UIViewController {
             if let error = error {
                 print(error.localizedDescription)
                 print("LogIn Failed...")
+            } else {
+                print("LogIn Success!!")
+                print("\(authResult!)")
             }
-            print("LogIn Success!!")
-            print("\(authResult!)")
+            
         }
     }
     // 이게 없으면 터집니다.

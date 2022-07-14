@@ -397,6 +397,9 @@
                                     </attributedString>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="2VA-h6-OtF" kind="show" id="YAJ-yr-qp7"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="XrY-Mw-yFa">
                                 <rect key="frame" x="79" y="550.66666666666663" width="232" height="30"/>
@@ -922,6 +925,9 @@
             <point key="canvasLocation" x="660" y="226.77725118483411"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YAJ-yr-qp7"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
