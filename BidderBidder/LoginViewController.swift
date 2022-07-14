@@ -34,7 +34,6 @@ class LoginViewController : UIViewController {
                 }
                 if let error = error {
                     print(error.localizedDescription)
-                    return
                 }
             }
     }
