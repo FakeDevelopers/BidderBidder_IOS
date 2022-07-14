@@ -55,20 +55,9 @@ class MainViewController : UIViewController {
                     if listCount < checkListCount {
                         loadMoreBtn.isEnabled = false
                         loadMoreBtn.tintColor = UIColor.clear
-                    }
-                }
-                catch {
-                    print(error)
-                }
-                
-            case .failure(let error):
-                print("통신 실패 : ",(String(describing:
-                                            error.errorDescription)))
             }
         }
     }
-    
-}
 
 // RefreshControl
 extension MainViewController {

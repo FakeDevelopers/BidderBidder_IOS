@@ -10,10 +10,6 @@ import Alamofire
 
 class WritingViewController: UIViewController, UITextViewDelegate{
     
-    struct Constant {
-        static let DomainURL:String = "http://3.38.81.213:8080"
-    }
-    
     @IBOutlet weak var productTitleTextField: UITextField!
     @IBOutlet weak var hopePriceTextField: UITextField!
     @IBOutlet weak var openingBidTextField: UITextField!
@@ -49,7 +45,7 @@ class WritingViewController: UIViewController, UITextViewDelegate{
             "productContent": productContent!
         ]
         
-        sendRestRequest(url: Constant.DomainURL + "/product/write", params: parameters as Dictionary) {
+        sendRestRequest(url: "http://3.38.81.213:8080/product/write", params: parameters as Dictionary) {
                         response in
                         switch response.result {
                             
