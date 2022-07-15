@@ -552,11 +552,11 @@
             <objects>
                 <viewController id="PfP-g9-hB0" customClass="LoginViewController" customModule="BidderBidder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2yr-b6-AOC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pz-qH-Vyt">
-                                <rect key="frame" x="41.666666666666671" y="230.33333333333334" width="228.66666666666663" height="76.666666666666657"/>
+                                <rect key="frame" x="41.666666666666671" y="248.66666666666666" width="228.66666666666663" height="76.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="228.5" id="Li0-y7-XTz"/>
                                 </constraints>
@@ -567,13 +567,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조금만 더 힘내면 비더비더를 만나보실 수 있어요!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzu-Qr-5Ax">
-                                <rect key="frame" x="41.333333333333329" y="317.33333333333331" width="229.66666666666669" height="13.333333333333314"/>
+                                <rect key="frame" x="41.333333333333329" y="339.33333333333331" width="229.66666666666669" height="13.333333333333314"/>
                                 <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="12"/>
                                 <color key="textColor" red="0.63921568630000003" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="3T1-OY-Qb7">
-                                <rect key="frame" x="45" y="376.66666666666669" width="300" height="194.66666666666669"/>
+                                <rect key="frame" x="45" y="409" width="300" height="194.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="mM3-fW-C7i">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="18.666666666666668"/>
@@ -635,7 +635,7 @@
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAh-jb-0am" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                        <rect key="frame" x="0.0" y="58.666666666666622" width="300" height="18.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="58.666666666666679" width="300" height="18.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -661,7 +661,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dAQ-b4-6wK" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                        <rect key="frame" x="0.0" y="117.33333333333331" width="300" height="18.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="117.33333333333337" width="300" height="18.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -687,7 +687,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uwZ-HW-87o" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                        <rect key="frame" x="0.0" y="175.99999999999994" width="300" height="18.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="176" width="300" height="18.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -718,7 +718,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jf-QN-Xnw" customClass="CornerButton" customModule="BidderBidder" customModuleProvider="target">
-                                <rect key="frame" x="55" y="666.33333333333337" width="280" height="50"/>
+                                <rect key="frame" x="55" y="713.66666666666663" width="280" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4bl-wt-o18"/>
                                     <constraint firstAttribute="width" constant="280" id="ZZf-uS-Sdh"/>
@@ -742,7 +742,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPJ-79-u5R">
-                                <rect key="frame" x="293" y="429.33333333333331" width="52" height="30"/>
+                                <rect key="frame" x="293" y="461.66666666666669" width="52" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="중복확인">
@@ -818,7 +818,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="verificiationButton:" destination="zL3-oU-iM4" eventType="touchUpInside" id="kxM-W4-91w"/>
-                                    <segue destination="PfP-g9-hB0" kind="show" id="YZa-sd-aiV"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pg-V8-RIF" customClass="TweeActiveTextField" customModule="TweeTextField">
@@ -879,19 +878,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QWr-jS-v4N">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWr-jS-v4N">
                                 <rect key="frame" x="315" y="381.33333333333331" width="30" height="29"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="인증">
-                                            <attributes>
-                                                <font key="NSFont" size="14" name="AppleSDGothicNeo-SemiBold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="titleColor" red="0.12941176469999999" green="0.80784313730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="인증"/>
                                 <connections>
                                     <action selector="sendVerifyNumber:" destination="zL3-oU-iM4" eventType="touchUpInside" id="JbB-La-pfI"/>
                                 </connections>
@@ -924,6 +915,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="pm1-4b-m0p"/>
                     <connections>
+                        <outlet property="certificationButton" destination="QWr-jS-v4N" id="Boj-rA-ymh"/>
                         <outlet property="testTextField" destination="3pg-V8-RIF" id="cGu-5z-gGF"/>
                         <outlet property="timerLabel" destination="jr7-zy-Ova" id="J4f-YW-8bO"/>
                         <outlet property="verificationNumberTextField" destination="mY0-vw-2yJ" id="r1e-tw-v4G"/>

@@ -19,9 +19,9 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var testTextField: TweeActiveTextField!
     @IBOutlet weak var verificationNumberTextField: TweeActiveTextField!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var certificationButton: UIButton!
     
     var limitTime: Int = 180
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,7 @@ class LoginViewController : UIViewController {
                     print(error.localizedDescription)
                 }
             }
+        certificationButton.setTitle("재전송", for: .normal)
     }
     
     @IBAction func verificiationButton(_ sender: Any) {
@@ -60,6 +61,7 @@ class LoginViewController : UIViewController {
     func logIn(credential: PhoneAuthCredential) {
         Auth.auth().signIn(with: credential) { authResult, error in
             if let error = error {
+                self.alertVerify()
                 print(error.localizedDescription)
                 print("LogIn Failed...")
             } else {
@@ -89,8 +91,17 @@ class LoginViewController : UIViewController {
             perform(#selector(getSetTime), with: nil, afterDelay: 1.0)
         }
         else if limitTime == 0 {
+            certificationButton.setTitle("인증", for: .normal)
             timerLabel.isHidden = true
         }
+    }
+    
+    func alertVerify(){
+        let alert = UIAlertController(title: "", message: "인증 실패했습니다.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated:true, completion: nil)
     }
     
     // 이게 없으면 터집니다.
@@ -128,6 +139,8 @@ class LoginViewController : UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
     }
+    
+    
 }
 
 

@@ -40,7 +40,7 @@ class ProductViewCell: UITableViewCell {
     }
     
     func setCell(product: Product) {
-        thumbnail.downloaded(from: Constant.domainURL+":"+Constant.sandbox+product.thumbnail)
+        thumbnail.downloaded(from: Constant.domainURL+product.thumbnail)
         productName.text = product.productTitle
         if product.hopePrice == nil {
             hopePrice.text = " "
