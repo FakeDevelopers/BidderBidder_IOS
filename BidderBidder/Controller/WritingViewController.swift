@@ -26,7 +26,7 @@ class WritingViewController: UIViewController, UITextViewDelegate{
         let expirationDate = expirationDateTextField.text
         let productContent = productContentTextView.text
         
-        let writingStruct = WritingStruct(productTitle: productTitle, hopePrice: hopePrice, openingBid: openingBid, tick: tick, expirationDate: expirationDate, productContent: productContent)
+        let writingStruct = WritingStruct(productTitle: productTitle, openingBid: openingBid, tick: tick, expirationDate: expirationDate, productContent: productContent, hopePrice: hopePrice)
         
         UserDefaults.standard.set(try? PropertyListEncoder().encode(writingStruct), forKey: "writingStruct")
         

@@ -18,12 +18,12 @@ struct WritingStruct: Codable {
     let hopePrice: String?
     
     
-    public init(productTitle: String?, hopePrice: String?, openingBid: String?, tick: String?, expirationDate: String?, productContent: String?){
+    public init(productTitle: String?, openingBid: String?, tick: String?, expirationDate: String?, productContent: String?, hopePrice: String?){
         self.productTitle = productTitle
-        self.hopePrice = hopePrice
         self.openingBid = openingBid
         self.tick = tick
         self.expirationDate = expirationDate
         self.productContent = productContent
+        self.hopePrice = hopePrice
     }
 }
