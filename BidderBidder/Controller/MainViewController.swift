@@ -22,7 +22,6 @@ class MainViewController : UIViewController {
     let refresh = UIRefreshControl()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         productListTableView.dataSource = self
@@ -40,7 +39,7 @@ class MainViewController : UIViewController {
     }
     
     func getProductList() {
-        sendRestRequest(url:Constant.domainURL+":"+Constant.sandbox+"/product/getInfiniteProductList", params:["searchWord":"","listCount":listCount,"startNumber":startNumber,"serachType":2]  , isPost: false) { [self]
+        sendRestRequest(url:Constant.domainURL+"/product/getInfiniteProductList", params:["searchWord":"","listCount":listCount,"startNumber":startNumber,"serachType":2]  , isPost: false) { [self]
             response in
             switch response.result {
             case .success(let data):

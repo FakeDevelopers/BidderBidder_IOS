@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350709C2881155D000A6CA1 /* WritingViewController.swift */; };
+		B350709F28812479000A6CA1 /* WritingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350709E28812479000A6CA1 /* WritingStruct.swift */; };
+		B35070A128812B87000A6CA1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35070A028812B87000A6CA1 /* Constant.swift */; };
 		D214F59128334FE7005AD768 /* TweeTextField in Frameworks */ = {isa = PBXBuildFile; productRef = D214F59028334FE7005AD768 /* TweeTextField */; };
 		D214F5952834D06A005AD768 /* ColorManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214F5942834D06A005AD768 /* ColorManage.swift */; };
 		D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */; };
@@ -19,7 +22,6 @@
 		D259B0CC27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */; };
 		D289D7DB287D8429003CB987 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289D7DA287D8429003CB987 /* UIImageView.swift */; };
 		D289D7DD287D85F4003CB987 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289D7DC287D85F4003CB987 /* UIViewController.swift */; };
-		D289D7DF287D9665003CB987 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289D7DE287D9665003CB987 /* Constant.swift */; };
 		D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9427FD126A00D829DF /* LoginViewController.swift */; };
 		D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */; };
 		D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2E99F9A27FDA27100D829DF /* Alamofire */; };
@@ -45,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B350709C2881155D000A6CA1 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
+		B350709E28812479000A6CA1 /* WritingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingStruct.swift; sourceTree = "<group>"; };
+		B35070A028812B87000A6CA1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D214F5942834D06A005AD768 /* ColorManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManage.swift; sourceTree = "<group>"; };
 		D259B0A527FC5FDA0026DD9E /* BidderBidder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidderBidder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +64,6 @@
 		D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D289D7DA287D8429003CB987 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		D289D7DC287D85F4003CB987 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		D289D7DE287D9665003CB987 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = ../../../../Documents/Constant.swift; sourceTree = "<group>"; };
 		D2DEBBB32849BCD600437F3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2E99F9427FD126A00D829DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterLoginViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				D2E99F9427FD126A00D829DF /* LoginViewController.swift */,
 				D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */,
 				D2E99F9C27FDA58100D829DF /* MainViewController.swift */,
+				B350709C2881155D000A6CA1 /* WritingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,7 +176,8 @@
 				D214F5942834D06A005AD768 /* ColorManage.swift */,
 				D289D7DA287D8429003CB987 /* UIImageView.swift */,
 				D289D7DC287D85F4003CB987 /* UIViewController.swift */,
-				D289D7DE287D9665003CB987 /* Constant.swift */,
+				B350709E28812479000A6CA1 /* WritingStruct.swift */,
+				B35070A028812B87000A6CA1 /* Constant.swift */,
 			);
 			path = "Supporting File";
 			sourceTree = "<group>";
@@ -326,13 +332,15 @@
 				D289D7DB287D8429003CB987 /* UIImageView.swift in Sources */,
 				D2FCCA192849B5AB002005BC /* ProductViewCell.swift in Sources */,
 				D289D7DD287D85F4003CB987 /* UIViewController.swift in Sources */,
+				B350709F28812479000A6CA1 /* WritingStruct.swift in Sources */,
 				D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */,
 				D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */,
 				D214F5952834D06A005AD768 /* ColorManage.swift in Sources */,
 				D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */,
-				D289D7DF287D9665003CB987 /* Constant.swift in Sources */,
 				D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */,
+				B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */,
 				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
+				B35070A128812B87000A6CA1 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
