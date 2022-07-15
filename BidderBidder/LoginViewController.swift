@@ -18,6 +18,9 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var normalLoginButton: UIButton!
     @IBOutlet weak var testTextField: TweeActiveTextField!
     @IBOutlet weak var verificationNumberTextField: TweeActiveTextField!
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    var limitTime: Int = 180
     
     
     override func viewDidLoad() {
@@ -26,7 +29,10 @@ class LoginViewController : UIViewController {
     }
     
     @IBAction func sendVerifyNumber(_ sender: Any) {
+        timerLabel.isHidden = false
+        getSetTime()
         print(testTextField.text!)
+        Auth.auth().languageCode = "kr"
         PhoneAuthProvider.provider()
             .verifyPhoneNumber("+82 \(testTextField.text!)", uiDelegate: nil) { (verificationID, error) in
                 if let id = verificationID {
@@ -63,6 +69,30 @@ class LoginViewController : UIViewController {
             
         }
     }
+    
+    @objc func getSetTime() {
+        secToTime(sec: limitTime)
+        limitTime -= 1
+    }
+    
+    func secToTime(sec: Int) {
+        let minute = (sec % 3600) / 60
+        let second = (sec % 3600) % 60
+        
+        if second < 10 {
+            timerLabel.text = String(minute) + ":" + "0"+String(second)
+        } else {
+            timerLabel.text = String(minute) + ":" + String(second)
+        }
+        
+        if limitTime != 0 {
+            perform(#selector(getSetTime), with: nil, afterDelay: 1.0)
+        }
+        else if limitTime == 0 {
+            timerLabel.isHidden = true
+        }
+    }
+    
     // 이게 없으면 터집니다.
     @IBAction func passwordBeginEditing(_ sender: TweeAttributedTextField) {
     }

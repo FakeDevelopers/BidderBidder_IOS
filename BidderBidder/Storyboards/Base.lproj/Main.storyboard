@@ -827,7 +827,7 @@
                                     <constraint firstAttribute="width" constant="300" id="IP6-Z0-4aw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" smartDashesType="yes"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" smartDashesType="yes"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="activeLineWidth">
                                         <real key="value" value="1"/>
@@ -856,7 +856,7 @@
                                     <constraint firstAttribute="width" constant="300" id="RHf-hQ-Np6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="activeLineWidth">
                                         <real key="value" value="1"/>
@@ -896,6 +896,12 @@
                                     <action selector="sendVerifyNumber:" destination="zL3-oU-iM4" eventType="touchUpInside" id="JbB-La-pfI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jr7-zy-Ova">
+                                <rect key="frame" x="345" y="483.33333333333331" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rDI-jS-oZj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -905,8 +911,10 @@
                             <constraint firstItem="3pg-V8-RIF" firstAttribute="centerY" secondItem="X0M-0R-6d4" secondAttribute="centerY" id="Bhw-c6-Hps"/>
                             <constraint firstItem="22W-PC-gqq" firstAttribute="centerX" secondItem="X0M-0R-6d4" secondAttribute="centerX" id="DQH-0X-amm"/>
                             <constraint firstItem="Yqx-TU-cYw" firstAttribute="centerY" secondItem="X0M-0R-6d4" secondAttribute="centerY" multiplier="4.2/5" id="Glv-Op-anw"/>
+                            <constraint firstItem="jr7-zy-Ova" firstAttribute="trailing" secondItem="mY0-vw-2yJ" secondAttribute="trailing" id="IWp-Wh-fcl"/>
                             <constraint firstItem="47C-qj-uSF" firstAttribute="centerX" secondItem="X0M-0R-6d4" secondAttribute="centerX" multiplier="4/5" id="K1E-Of-1qH"/>
                             <constraint firstItem="47C-qj-uSF" firstAttribute="centerY" secondItem="X0M-0R-6d4" secondAttribute="centerY" multiplier="3.5/5" id="MBz-N0-f8g"/>
+                            <constraint firstItem="jr7-zy-Ova" firstAttribute="bottom" secondItem="mY0-vw-2yJ" secondAttribute="bottom" id="Ujb-XT-9Gq"/>
                             <constraint firstItem="mY0-vw-2yJ" firstAttribute="centerY" secondItem="X0M-0R-6d4" secondAttribute="centerY" multiplier="6/5" id="YP5-K6-pUf"/>
                             <constraint firstItem="QWr-jS-v4N" firstAttribute="trailing" secondItem="3pg-V8-RIF" secondAttribute="trailing" id="Z59-ah-kvS"/>
                             <constraint firstItem="mY0-vw-2yJ" firstAttribute="centerX" secondItem="X0M-0R-6d4" secondAttribute="centerX" id="Zbk-tO-FYN"/>
@@ -917,6 +925,7 @@
                     <navigationItem key="navigationItem" id="pm1-4b-m0p"/>
                     <connections>
                         <outlet property="testTextField" destination="3pg-V8-RIF" id="cGu-5z-gGF"/>
+                        <outlet property="timerLabel" destination="jr7-zy-Ova" id="J4f-YW-8bO"/>
                         <outlet property="verificationNumberTextField" destination="mY0-vw-2yJ" id="r1e-tw-v4G"/>
                     </connections>
                 </viewController>
