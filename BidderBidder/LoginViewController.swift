@@ -32,7 +32,7 @@ class LoginViewController : UIViewController {
         timerLabel.isHidden = false
         getSetTime()
         print(testTextField.text!)
-        Auth.auth().languageCode = "kr"
+        Auth.auth().useAppLanguage()
         PhoneAuthProvider.provider()
             .verifyPhoneNumber("+82 \(testTextField.text!)", uiDelegate: nil) { (verificationID, error) in
                 if let id = verificationID {
@@ -90,7 +90,7 @@ class LoginViewController : UIViewController {
         if limitTime != 0 {
             perform(#selector(getSetTime), with: nil, afterDelay: 1.0)
         }
-        else if limitTime == 0 {
+        else {
             certificationButton.setTitle("인증", for: .normal)
             timerLabel.isHidden = true
         }
