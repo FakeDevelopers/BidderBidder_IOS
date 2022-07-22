@@ -10,9 +10,12 @@
 		B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350709C2881155D000A6CA1 /* WritingViewController.swift */; };
 		B350709F28812479000A6CA1 /* WritingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350709E28812479000A6CA1 /* WritingStruct.swift */; };
 		B35070A128812B87000A6CA1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35070A028812B87000A6CA1 /* Constant.swift */; };
+		B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = B38E073B288AF70D00CCD402 /* YPImagePicker */; };
+		B3ADA4D3288B9B9000DF8C52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3ADA4D2288B9B9000DF8C52 /* GoogleService-Info.plist */; };
+		B3F5A60D288EDC9800965D33 /* WritingPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A60C288EDC9800965D33 /* WritingPostService.swift */; };
+		B3F5A60F2890257000965D33 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A60E2890257000965D33 /* NetworkResult.swift */; };
 		D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */; };
 		D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D1B287EAEEB00EAB426 /* FirebaseAuth */; };
-		D2075D1E287EB04B00EAB426 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2075D1D287EB04B00EAB426 /* GoogleService-Info.plist */; };
 		D214F59128334FE7005AD768 /* TweeTextField in Frameworks */ = {isa = PBXBuildFile; productRef = D214F59028334FE7005AD768 /* TweeTextField */; };
 		D214F5952834D06A005AD768 /* ColorManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214F5942834D06A005AD768 /* ColorManage.swift */; };
 		D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */; };
@@ -53,7 +56,9 @@
 		B350709C2881155D000A6CA1 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		B350709E28812479000A6CA1 /* WritingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingStruct.swift; sourceTree = "<group>"; };
 		B35070A028812B87000A6CA1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		D2075D1D287EB04B00EAB426 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B3ADA4D2288B9B9000DF8C52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B3F5A60C288EDC9800965D33 /* WritingPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPostService.swift; sourceTree = "<group>"; };
+		B3F5A60E2890257000965D33 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		D2075D1F287FD1F200EAB426 /* BidderBidder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BidderBidder.entitlements; sourceTree = "<group>"; };
 		D214F5942834D06A005AD768 /* ColorManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManage.swift; sourceTree = "<group>"; };
 		D259B0A527FC5FDA0026DD9E /* BidderBidder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidderBidder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */,
+				B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */,
 				D214F59128334FE7005AD768 /* TweeTextField in Frameworks */,
 				D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */,
 				D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */,
@@ -130,10 +136,10 @@
 			children = (
 				D2075D1F287FD1F200EAB426 /* BidderBidder.entitlements */,
 				D2DEBBB32849BCD600437F3D /* Info.plist */,
-				D2075D1D287EB04B00EAB426 /* GoogleService-Info.plist */,
 				D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */,
 				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
 				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
+				B3ADA4D2288B9B9000DF8C52 /* GoogleService-Info.plist */,
 				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
 				D2E99F9E27FE66C200D829DF /* Storyboards */,
 				D2FCCA1628489B91002005BC /* Supporting File */,
@@ -187,6 +193,8 @@
 				D289D7DC287D85F4003CB987 /* UIViewController.swift */,
 				B350709E28812479000A6CA1 /* WritingStruct.swift */,
 				B35070A028812B87000A6CA1 /* Constant.swift */,
+				B3F5A60C288EDC9800965D33 /* WritingPostService.swift */,
+				B3F5A60E2890257000965D33 /* NetworkResult.swift */,
 			);
 			path = "Supporting File";
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 				D214F59028334FE7005AD768 /* TweeTextField */,
 				D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */,
 				D2075D1B287EAEEB00EAB426 /* FirebaseAuth */,
+				B38E073B288AF70D00CCD402 /* YPImagePicker */,
 			);
 			productName = BidderBidder;
 			productReference = D259B0A527FC5FDA0026DD9E /* BidderBidder.app */;
@@ -297,6 +306,7 @@
 				D2E99F9927FDA27100D829DF /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D214F58F28334FE7005AD768 /* XCRemoteSwiftPackageReference "TweeTextField" */,
 				D2075D18287EAEEB00EAB426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 			);
 			productRefGroup = D259B0A627FC5FDA0026DD9E /* Products */;
 			projectDirPath = "";
@@ -315,7 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D259B0B527FC5FDB0026DD9E /* LaunchScreen.storyboard in Resources */,
-				D2075D1E287EB04B00EAB426 /* GoogleService-Info.plist in Resources */,
+				B3ADA4D3288B9B9000DF8C52 /* GoogleService-Info.plist in Resources */,
 				D259B0B227FC5FDB0026DD9E /* Assets.xcassets in Resources */,
 				D259B0B027FC5FDA0026DD9E /* Main.storyboard in Resources */,
 			);
@@ -354,6 +364,8 @@
 				B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */,
 				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
 				B35070A128812B87000A6CA1 /* Constant.swift in Sources */,
+				B3F5A60D288EDC9800965D33 /* WritingPostService.swift in Sources */,
+				B3F5A60F2890257000965D33 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +707,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		D2075D18287EAEEB00EAB426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -722,6 +742,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B38E073B288AF70D00CCD402 /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
+		};
 		D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D2075D18287EAEEB00EAB426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
