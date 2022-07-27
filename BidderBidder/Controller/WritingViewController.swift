@@ -118,11 +118,12 @@ extension WritingViewController {
             return formatter.string(from: addTime)
         }
         
+        
         // MARK: - ServerPost code
-        WritingPostService.shared.postWritingData(productTitle: productTitle!, category: "Food", openingBid: openingBid!, tick: tick!, expirationDate: timePlus(), productContent: productTitle!, hopePrice: hopePrice!, files: imgList) { result in
+        WritingPostService.shared.postWritingData(productTitle: productTitle!, category: "Food", openingBid: openingBid!, tick: tick!, expirationDate: timePlus(), productContent: productTitle!, hopePrice: hopePrice!, files: imgList, represidentPicture: 0) { result in
             switch result {
-                        case .success:
-                            print("success")
+                        case .success(let msg):
+                            print("success", msg)
                         case .requestErr(let msg):
                             print("requestERR", msg)
                         case .pathErr:

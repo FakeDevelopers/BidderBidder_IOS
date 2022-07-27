@@ -22,10 +22,13 @@ struct WritingPostService {
                          productContent: String,
                          hopePrice: Int,
                          files: [UIImage],
+                         represidentPicture: Int,
                          completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let header : HTTPHeaders = [
-                    "Content-Type" : "multipart/form-data"
+                "Content-Type" : "multipart/form-data",
+                "Content-Type" : "application/json",
+                //"jwt" : UserDefaults.standard.value(forKey: "jwt") as! String
         ]
         
         let params: [String: Any] = [
@@ -35,7 +38,8 @@ struct WritingPostService {
             "openingBid": openingBid,
             "tick": tick,
             "expirationDate": expirationDate,
-            "productContent": productTitle
+            "productContent": productTitle,
+            "represidentPicture": represidentPicture
         ]
         
         AF.upload(multipartFormData: { (multipartFormData) in
@@ -51,16 +55,18 @@ struct WritingPostService {
                                 multipartFormData.append("\(value)".data(using: .utf8, allowLossyConversion: false)!, withName: "\(key)")
                         }
             
-        }, to: Constant.domainURL + "/product/write"
+        }, to: "\(Constant.domainURL)/product/write"
                 ,usingThreshold: UInt64.init()
                 ,method: .post
-                ,headers: header).responseString { response in
-                    switch response.result {
-                        case .success(_):
-                            print("success")
-                        case .failure(let error):
-                            print("Error while querying database: \(String(describing: error))")
-                        }
-                    }
+                  ,headers: header).responseString (completionHandler: { (response) in
+            print(response)
+            
+            if let err = response.error{    //응답 에러
+                print(err)
+                return
+            }
+            print("success")
+            
+        })
     }
 }
