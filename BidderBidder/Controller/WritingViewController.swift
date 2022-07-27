@@ -20,73 +20,109 @@ class WritingViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var expirationDateTextField: UITextField!
     @IBOutlet weak var productContentTextView: UITextView!
     
-    @IBOutlet weak var imageFiles: UIImageView!
+    //imageFiles
+    @IBOutlet var imageFiles: [UIImageView]!
     @IBOutlet weak var filesSelectButton: UIButton!
     var arrFiles: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.imageFiles.layer.cornerRadius = 10
+        //self.imageFiles.layer.cornerRadius = 10
         self.filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
     }
 
     @objc fileprivate func onFilesSelectButton() {
         print("ViewController - onFilesSelectButton() called")
-        //카메라 라이브러리 setting
-        var config = YPImagePickerConfiguration()
-        config.library.maxNumberOfItems = 3
-        
-        // camera filter 없애기
-        config.showsPhotoFilters = false
-        //사진이 선택 되었을 때
-        let picker = YPImagePicker(configuration: config)
-        picker.didFinishPicking { [unowned picker] items, _ in
-            if let photo = items.singlePhoto {
-                print(photo.fromCamera) // Image source (camera or library)
-                print(photo.image) // Final image selected by the user
-                print(photo.originalImage) // original image selected by the user, unfiltered
-                print(photo.modifiedImage) // Transformed image, can be nil
-                print(photo.exifMeta) // Print exif meta data of original image.
+        filesPicker()
+    }
     
-                //선택한 이미지로 변경
-                self.imageFiles.image = photo.image
-                self.arrFiles.append(photo.image)
-                
+    // MARK: - YPImagePicker
+    func filesPicker() {
+        var config = YPImagePickerConfiguration()
+        
+        config.showsPhotoFilters = false
+        config.library.maxNumberOfItems = 3
+        config.shouldSaveNewPicturesToAlbum = true
+        config.startOnScreen = .library
+        config.wordings.libraryTitle = "갤러리"
+        config.maxCameraZoomFactor = 2.0
+        config.gallery.hidesRemoveButton = false
+        config.hidesBottomBar = false
+        config.hidesStatusBar = false
+        //config.overlayView = UIView()
+        
+        let picker = YPImagePicker(configuration: config)
+        
+        picker.didFinishPicking { [unowned picker] items, cancelled in
+            
+            if cancelled {
+                picker.dismiss(animated: true, completion: nil)
+                return
             }
-            //사진 선택 창 닫기
-            picker.dismiss(animated: true, completion: nil)
+            
+            var i: Int = 0
+            
+            for item in items {
+                switch item {
+                case .photo(let photo):
+                    self.imageFiles[i].image = photo.image
+                    self.arrFiles.append(photo.image)
+                    
+                case .video(let video):
+                    print(video)
+                }
+                
+                i = i+1
+            }
+            self.filesSelectButton.isHidden = true
+            picker.dismiss(animated: true)
         }
         present(picker, animated: true, completion: nil)
     }
     
+    // MARK: - tapSaveButton
     @IBAction func tapSaveButton(_ sender: Any) {
+        postServer()
+    }
+}
+
+
+// MARK: - Server
+extension WritingViewController {
+    
+    func postServer() {
         let productTitle = productTitleTextField.text
         let hopePrice = Int(hopePriceTextField.text!)
         let openingBid = Int(openingBidTextField.text!)
         let tick = Int(tickTextField.text!)
         let expirationDate = Double(expirationDateTextField.text!)
         let productContent = productContentTextView.text
-        //let files = imageFiles.image
         
+        var imgList: [UIImage] = []
+        for imgView in imageFiles {
+            if imgView.image != nil {
+                imgList.append(imgView.image!)
+            }
+        }
+        
+        //expirationDate
         func timePlus() -> String{
             
             let now = Date()
-            let oneHourLater = now.addingTimeInterval(+(expirationDate! * 3600))
-            //TimeInterval은 초를 의미한다.
-            //60 - 1분
-            //3600 - 1시간
-            //86400 - 24시간 하루
+            let addTime = now.addingTimeInterval(+(expirationDate! * 3600))
             let formatter = DateFormatter()
             
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            return formatter.string(from: oneHourLater)
+            print(formatter.string(from: addTime))
+            return formatter.string(from: addTime)
         }
         
-        WritingPostService.shared.postWritingData(productTitle: productTitle!, category: "String", openingBid: openingBid!, tick: tick!, expirationDate: timePlus(), productContent: productTitle!, hopePrice: hopePrice!, files: arrFiles) { result in
+        // MARK: - ServerPost code
+        WritingPostService.shared.postWritingData(productTitle: productTitle!, category: "Food", openingBid: openingBid!, tick: tick!, expirationDate: timePlus(), productContent: productTitle!, hopePrice: hopePrice!, files: imgList) { result in
             switch result {
-                        case .success(let msg):
-                            print("success", msg)
+                        case .success:
+                            print("success")
                         case .requestErr(let msg):
                             print("requestERR", msg)
                         case .pathErr:
@@ -99,4 +135,3 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         }
     }
 }
-

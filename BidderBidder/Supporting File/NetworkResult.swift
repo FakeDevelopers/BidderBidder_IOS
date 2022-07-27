@@ -8,7 +8,7 @@
 //서버 통신 결과 핸들링
 
 enum NetworkResult<T> {
-    case success(T)
+    case success
     case requestErr(T)
     case pathErr
     case serverErr

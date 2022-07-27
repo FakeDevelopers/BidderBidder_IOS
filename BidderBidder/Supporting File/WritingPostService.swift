@@ -54,7 +54,7 @@ struct WritingPostService {
         }, to: Constant.domainURL + "/product/write"
                 ,usingThreshold: UInt64.init()
                 ,method: .post
-                ,headers: header).response { response in
+                ,headers: header).responseString { response in
                     switch response.result {
                         case .success(_):
                             print("success")

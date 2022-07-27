@@ -123,16 +123,24 @@
                                     <action selector="tapSaveButton:" destination="EQr-CV-CJw" eventType="touchUpInside" id="A8c-dN-FNT"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SXr-6C-ydt">
+                                <rect key="frame" x="28" y="74" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="za6-9t-rIY">
+                                <rect key="frame" x="128" y="74" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="79y-oe-hJX">
+                                <rect key="frame" x="229" y="74" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpr-ZM-Xj5">
                                 <rect key="frame" x="28" y="74" width="85" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SXr-6C-ydt">
-                                <rect key="frame" x="134" y="74" width="85" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D2E-h1-6Ce"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -142,11 +150,13 @@
                         <outlet property="expirationDateTextField" destination="0cs-Dl-rd4" id="cjw-27-qWn"/>
                         <outlet property="filesSelectButton" destination="Kpr-ZM-Xj5" id="HdN-xf-et9"/>
                         <outlet property="hopePriceTextField" destination="HOx-Lj-nX3" id="ffZ-Fi-xVR"/>
-                        <outlet property="imageFiles" destination="SXr-6C-ydt" id="hDz-xa-axx"/>
                         <outlet property="openingBidTextField" destination="CLO-B9-mmH" id="UPn-xk-iEe"/>
                         <outlet property="productContentTextView" destination="g4q-rl-pQ7" id="hec-wv-TC6"/>
                         <outlet property="productTitleTextField" destination="o3D-sB-MkX" id="Iez-sg-Hwk"/>
                         <outlet property="tickTextField" destination="okX-T6-S4T" id="RDf-mW-IzG"/>
+                        <outletCollection property="imageFiles" destination="SXr-6C-ydt" collectionClass="NSMutableArray" id="sCm-4L-MNw"/>
+                        <outletCollection property="imageFiles" destination="za6-9t-rIY" collectionClass="NSMutableArray" id="cyX-QV-U9r"/>
+                        <outletCollection property="imageFiles" destination="79y-oe-hJX" collectionClass="NSMutableArray" id="Iq2-En-YwW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZb-kz-uLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
