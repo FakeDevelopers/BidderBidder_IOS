@@ -65,11 +65,25 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         let hopePrice = Int(hopePriceTextField.text!)
         let openingBid = Int(openingBidTextField.text!)
         let tick = Int(tickTextField.text!)
-        let expirationDate = Int(expirationDateTextField.text!)
+        let expirationDate = Double(expirationDateTextField.text!)
         let productContent = productContentTextView.text
         //let files = imageFiles.image
         
-        WritingPostService.shared.postWritingData(productTitle: productTitle!, category: "String", openingBid: openingBid!, tick: tick!, expirationDate: expirationDate!, productContent: productTitle!, hopePrice: hopePrice!, files: arrFiles) { result in
+        func timePlus() -> String{
+            
+            let now = Date()
+            let oneHourLater = now.addingTimeInterval(+(expirationDate! * 3600))
+            //TimeInterval은 초를 의미한다.
+            //60 - 1분
+            //3600 - 1시간
+            //86400 - 24시간 하루
+            let formatter = DateFormatter()
+            
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            return formatter.string(from: oneHourLater)
+        }
+        
+        WritingPostService.shared.postWritingData(productTitle: productTitle!, category: "String", openingBid: openingBid!, tick: tick!, expirationDate: timePlus(), productContent: productTitle!, hopePrice: hopePrice!, files: arrFiles) { result in
             switch result {
                         case .success(let msg):
                             print("success", msg)

@@ -18,7 +18,7 @@ struct WritingPostService {
                          category: String,
                          openingBid: Int,
                          tick: Int,
-                         expirationDate: Int,
+                         expirationDate: String,
                          productContent: String,
                          hopePrice: Int,
                          files: [UIImage],
