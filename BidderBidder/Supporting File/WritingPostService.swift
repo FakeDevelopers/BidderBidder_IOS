@@ -58,15 +58,15 @@ struct WritingPostService {
         }, to: "\(Constant.domainURL)/product/write"
                 ,usingThreshold: UInt64.init()
                 ,method: .post
-                  ,headers: header).responseString (completionHandler: { (response) in
-            print(response)
+                ,headers: header).response { (response) in
             
             if let err = response.error{    //응답 에러
                 print(err)
                 return
             }
             print("success")
+            print(response)
             
-        })
+        }
     }
 }
