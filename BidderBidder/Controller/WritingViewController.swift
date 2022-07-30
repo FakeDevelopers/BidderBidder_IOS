@@ -27,11 +27,11 @@ class WritingViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         //self.imageFiles.layer.cornerRadius = 10
         self.filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
     }
 
+    // MARK: - FilesSelectButton
     @objc fileprivate func onFilesSelectButton() {
         print("ViewController - onFilesSelectButton() called")
         filesPicker()
@@ -113,14 +113,14 @@ extension WritingViewController {
             let addTime = now.addingTimeInterval(+(expirationDate! * 3600))
             let formatter = DateFormatter()
             
-            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            formatter.dateFormat = "yyyy-MM-dd HH:mm"
             print(formatter.string(from: addTime))
             return formatter.string(from: addTime)
         }
         
         
         // MARK: - ServerPost code
-        WritingPostService.shared.postWritingData(productTitle: productTitle!, category: "Food", openingBid: openingBid!, tick: tick!, expirationDate: timePlus(), productContent: productTitle!, hopePrice: hopePrice!, files: imgList, represidentPicture: 0) { result in
+        WritingPostService.shared.postWritingData(productTitle: productTitle!, category: 0, openingBid: openingBid!, tick: tick!, expirationDate: timePlus(), productContent: productTitle!, hopePrice: hopePrice!, files: imgList, representPicture: 0) { result in
             switch result {
                         case .success(let msg):
                             print("success", msg)

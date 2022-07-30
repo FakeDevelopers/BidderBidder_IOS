@@ -15,37 +15,35 @@ struct WritingPostService {
     static let shared = WritingPostService()
     
     func postWritingData(productTitle: String,
-                         category: String,
+                         category: Int,
                          openingBid: Int,
                          tick: Int,
                          expirationDate: String,
                          productContent: String,
                          hopePrice: Int,
-                         files: [UIImage],
-                         represidentPicture: Int,
+                         files: [UIImage?],
+                         representPicture: Int,
                          completion: @escaping (NetworkResult<Any>) -> Void) {
-        
+        //KeychainSwift().set(access_key, forKey: "access_key")
         let header : HTTPHeaders = [
                 "Content-Type" : "multipart/form-data",
-                "Content-Type" : "application/json",
-                //"jwt" : UserDefaults.standard.value(forKey: "jwt") as! String
         ]
         
         let params: [String: Any] = [
-            "productTitle": productTitle,
-            "hopePrice": hopePrice,
             "category": category,
-            "openingBid": openingBid,
-            "tick": tick,
             "expirationDate": expirationDate,
+            "hopePrice": hopePrice,
+            "openingBid": openingBid,
             "productContent": productTitle,
-            "represidentPicture": represidentPicture
+            "productTitle": productTitle,
+            "representPicture": representPicture,
+            "tick": tick
         ]
         
         AF.upload(multipartFormData: { (multipartFormData) in
             
             for image in files {
-                            if let image = image.jpegData(compressionQuality: 1) {
+                            if let image = image?.jpegData(compressionQuality: 1) {
                                 multipartFormData.append(image, withName: "files", fileName: "\(files).jpg", mimeType: "image/jpeg") // jpeg 파일로 전송
                             }
             }
@@ -55,10 +53,11 @@ struct WritingPostService {
                                 multipartFormData.append("\(value)".data(using: .utf8, allowLossyConversion: false)!, withName: "\(key)")
                         }
             
-        }, to: "\(Constant.domainURL)/product/write"
+        }, to: Constant.domainURL + "/product/write"
                 ,usingThreshold: UInt64.init()
                 ,method: .post
-                ,headers: header).response { (response) in
+                ,headers: header).validate(statusCode: 200..<300)
+                                 .response { (response) in
             
             if let err = response.error{    //응답 에러
                 print(err)
