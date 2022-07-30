@@ -27,6 +27,7 @@ class WritingViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         //self.imageFiles.layer.cornerRadius = 10
         self.filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
     }

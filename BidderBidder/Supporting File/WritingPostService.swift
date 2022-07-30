@@ -56,9 +56,7 @@ struct WritingPostService {
         }, to: Constant.domainURL + "/product/write"
                 ,usingThreshold: UInt64.init()
                 ,method: .post
-                ,headers: header).validate(statusCode: 200..<300)
-                                 .response { (response) in
-            
+                ,headers: header).response { (response) in
             if let err = response.error{    //응답 에러
                 print(err)
                 return
