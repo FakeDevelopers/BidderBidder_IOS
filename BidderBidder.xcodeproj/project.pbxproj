@@ -14,7 +14,6 @@
 		B3F5A60D288EDC9800965D33 /* WritingPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A60C288EDC9800965D33 /* WritingPostService.swift */; };
 		B3F5A60F2890257000965D33 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A60E2890257000965D33 /* NetworkResult.swift */; };
 		B3F68ECD2891875D001170F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3F68ECC2891875D001170F1 /* GoogleService-Info.plist */; };
-		B3F68ECF28946D39001170F1 /* token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F68ECE28946D39001170F1 /* token.swift */; };
 		D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */; };
 		D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D1B287EAEEB00EAB426 /* FirebaseAuth */; };
 		D214F59128334FE7005AD768 /* TweeTextField in Frameworks */ = {isa = PBXBuildFile; productRef = D214F59028334FE7005AD768 /* TweeTextField */; };
@@ -60,7 +59,6 @@
 		B3F5A60C288EDC9800965D33 /* WritingPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPostService.swift; sourceTree = "<group>"; };
 		B3F5A60E2890257000965D33 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		B3F68ECC2891875D001170F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B3F68ECE28946D39001170F1 /* token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = token.swift; sourceTree = "<group>"; };
 		D2075D1F287FD1F200EAB426 /* BidderBidder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BidderBidder.entitlements; sourceTree = "<group>"; };
 		D214F5942834D06A005AD768 /* ColorManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManage.swift; sourceTree = "<group>"; };
 		D259B0A527FC5FDA0026DD9E /* BidderBidder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidderBidder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,7 +195,6 @@
 				B35070A028812B87000A6CA1 /* Constant.swift */,
 				B3F5A60C288EDC9800965D33 /* WritingPostService.swift */,
 				B3F5A60E2890257000965D33 /* NetworkResult.swift */,
-				B3F68ECE28946D39001170F1 /* token.swift */,
 			);
 			path = "Supporting File";
 			sourceTree = "<group>";
@@ -355,7 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F68ECF28946D39001170F1 /* token.swift in Sources */,
 				D289D7DB287D8429003CB987 /* UIImageView.swift in Sources */,
 				D2FCCA192849B5AB002005BC /* ProductViewCell.swift in Sources */,
 				D289D7DD287D85F4003CB987 /* UIViewController.swift in Sources */,

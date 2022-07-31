@@ -65,6 +65,7 @@ class WritingViewController: UIViewController, UITextViewDelegate {
             var i: Int = 0
             
             for item in items {
+                
                 switch item {
                 case .photo(let photo):
                     self.imageFiles[i].image = photo.image
@@ -73,7 +74,6 @@ class WritingViewController: UIViewController, UITextViewDelegate {
                 case .video(let video):
                     print(video)
                 }
-                
                 i = i+1
             }
             self.filesSelectButton.isHidden = true
@@ -87,8 +87,6 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         postServer()
     }
 }
-
-
 // MARK: - Server
 extension WritingViewController {
     
@@ -100,8 +98,11 @@ extension WritingViewController {
         let expirationDate = Double(expirationDateTextField.text!)
         let productContent = productContentTextView.text
         
+        //files
         var imgList: [UIImage] = []
+        
         for imgView in imageFiles {
+            
             if imgView.image != nil {
                 imgList.append(imgView.image!)
             }

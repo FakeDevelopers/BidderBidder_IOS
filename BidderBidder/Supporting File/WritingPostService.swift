@@ -45,6 +45,7 @@ struct WritingPostService {
             for image in files {
                             if let image = image?.jpegData(compressionQuality: 1) {
                                 multipartFormData.append(image, withName: "files", fileName: "\(files).jpg", mimeType: "image/jpeg") // jpeg 파일로 전송
+                                //print(image)
                             }
             }
             
@@ -54,16 +55,15 @@ struct WritingPostService {
                         }
             
         }, to: Constant.domainURL + "/product/write"
-                ,usingThreshold: UInt64.init()
-                ,method: .post
-                ,headers: header).response { (response) in
+                //,usingThreshold: UInt64.init()
+                  ,method: .post
+                  ,headers: header).response(completionHandler: { (response) in
             if let err = response.error{    //응답 에러
                 print(err)
                 return
             }
             print("success")
             print(response)
-            
-        }
+        })
     }
 }
