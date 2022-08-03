@@ -22,7 +22,6 @@ class MainViewController : UIViewController {
     let refresh = UIRefreshControl()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         productListTableView.dataSource = self
