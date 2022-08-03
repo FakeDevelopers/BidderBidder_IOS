@@ -13,7 +13,6 @@
 		B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = B38E073B288AF70D00CCD402 /* YPImagePicker */; };
 		B3F5A60D288EDC9800965D33 /* WritingPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A60C288EDC9800965D33 /* WritingPostService.swift */; };
 		B3F5A60F2890257000965D33 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A60E2890257000965D33 /* NetworkResult.swift */; };
-		B3F68ECD2891875D001170F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3F68ECC2891875D001170F1 /* GoogleService-Info.plist */; };
 		D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */; };
 		D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D1B287EAEEB00EAB426 /* FirebaseAuth */; };
 		D214F59128334FE7005AD768 /* TweeTextField in Frameworks */ = {isa = PBXBuildFile; productRef = D214F59028334FE7005AD768 /* TweeTextField */; };
@@ -58,7 +57,6 @@
 		B35070A028812B87000A6CA1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B3F5A60C288EDC9800965D33 /* WritingPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPostService.swift; sourceTree = "<group>"; };
 		B3F5A60E2890257000965D33 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
-		B3F68ECC2891875D001170F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D2075D1F287FD1F200EAB426 /* BidderBidder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BidderBidder.entitlements; sourceTree = "<group>"; };
 		D214F5942834D06A005AD768 /* ColorManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManage.swift; sourceTree = "<group>"; };
 		D259B0A527FC5FDA0026DD9E /* BidderBidder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidderBidder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,7 +138,6 @@
 				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
 				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
 				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
-				B3F68ECC2891875D001170F1 /* GoogleService-Info.plist */,
 				D2E99F9E27FE66C200D829DF /* Storyboards */,
 				D2FCCA1628489B91002005BC /* Supporting File */,
 				D2E99F9827FDA1AD00D829DF /* Controller */,
@@ -326,7 +323,6 @@
 			files = (
 				D259B0B527FC5FDB0026DD9E /* LaunchScreen.storyboard in Resources */,
 				D259B0B227FC5FDB0026DD9E /* Assets.xcassets in Resources */,
-				B3F68ECD2891875D001170F1 /* GoogleService-Info.plist in Resources */,
 				D259B0B027FC5FDA0026DD9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
