@@ -120,9 +120,19 @@ extension WritingViewController {
             return formatter.string(from: addTime)
         }
         
+        let params: [String: Any] = [
+                    "category": 0,
+                    "expirationDate": timePlus(),
+                    "hopePrice": hopePrice!,
+                    "openingBid": openingBid!,
+                    "productContent": productContent!,
+                    "productTitle": productTitle!,
+                    "representPicture": 0,
+                    "tick": tick!
+                ]
         
         // MARK: - ServerPost code
-        WritingPostService.shared.postWritingData(productTitle: productTitle!, category: 0, openingBid: openingBid!, tick: tick!, expirationDate: timePlus(), productContent: productTitle!, hopePrice: hopePrice!, files: imgList, representPicture: 0) { result in
+        postWritingData(url: Constant.domainURL + "/product/write", params: params, files: imgList) { result in
             switch result {
                         case .success(let msg):
                             print("success", msg)
