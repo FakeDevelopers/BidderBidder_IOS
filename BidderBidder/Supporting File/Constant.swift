@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 struct Constant: Codable{
-    static let domainURL = "http://bidderbidderapi.kro.kr:80"
+    static let domainURL = "http://bidderbidderapi.kro.kr:8080"
 }

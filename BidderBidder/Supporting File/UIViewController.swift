@@ -15,7 +15,7 @@ extension UIViewController {
     }
     
     //writing post
-    func postWritingData(url: String, params: Parameters, files: [UIImage?], completion: @escaping (NetworkResult<Any>) -> Void) {
+    func postWritingData(url: String, params: Parameters, hopePrice: Int?, files: [UIImage?], completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let header : HTTPHeaders = [
             "Content-Type" : "multipart/form-data",
@@ -33,12 +33,19 @@ extension UIViewController {
                 multipartFormData.append("\(value)".data(using: .utf8, allowLossyConversion: false)!, withName: "\(key)")
             }
             
+            if let price = hopePrice {
+                multipartFormData.append("\(price)".data(using: .utf8, allowLossyConversion: false)!, withName: "hopePrice")
+            }else {
+                multipartFormData.append(Data(), withName: "hopePrice")
+            }
+                
         }, to: url, method: .post, headers: header).response(completionHandler: { (response) in
             if let err = response.error{    //응답 에러
                 print(err)
                 return
             }
             print("success")
+            print(response)
         })
     }
     

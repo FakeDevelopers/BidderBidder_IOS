@@ -92,7 +92,7 @@ extension WritingViewController {
     
     func postServer() {
         let productTitle = productTitleTextField.text
-        let hopePrice = Int(hopePriceTextField.text!)
+        let hopePrice = hopePriceTextField.text ?? ""
         let openingBid = Int(openingBidTextField.text!)
         let tick = Int(tickTextField.text!)
         let expirationDate = Double(expirationDateTextField.text!)
@@ -123,7 +123,6 @@ extension WritingViewController {
         let params: [String: Any] = [
                     "category": 0,
                     "expirationDate": timePlus(),
-                    "hopePrice": hopePrice!,
                     "openingBid": openingBid!,
                     "productContent": productContent!,
                     "productTitle": productTitle!,
@@ -132,7 +131,7 @@ extension WritingViewController {
                 ]
         
         // MARK: - ServerPost code
-        postWritingData(url: Constant.domainURL + "/product/write", params: params, files: imgList) { result in
+        postWritingData(url: Constant.domainURL + "/product/write", params: params, hopePrice: Int(hopePrice), files: imgList) { result in
             switch result {
                         case .success(let msg):
                             print("success", msg)
