@@ -12,23 +12,22 @@ import SwiftUI
 import Foundation
 
 class WritingViewController: UIViewController, UITextViewDelegate {
-    
+
     @IBOutlet weak var productTitleTextField: UITextField!
     @IBOutlet weak var hopePriceTextField: UITextField!
     @IBOutlet weak var openingBidTextField: UITextField!
     @IBOutlet weak var tickTextField: UITextField!
     @IBOutlet weak var expirationDateTextField: UITextField!
     @IBOutlet weak var productContentTextView: UITextView!
-    
-    //imageFiles
+
+    // imageFiles
     @IBOutlet var imageFiles: [UIImageView]!
     @IBOutlet weak var filesSelectButton: UIButton!
     var arrFiles: [UIImage] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //self.imageFiles.layer.cornerRadius = 10
         self.filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
     }
 
@@ -37,11 +36,11 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         print("ViewController - onFilesSelectButton() called")
         filesPicker()
     }
-    
+
     // MARK: - YPImagePicker
     func filesPicker() {
         var config = YPImagePickerConfiguration()
-        
+
         config.showsPhotoFilters = false
         config.library.maxNumberOfItems = 3
         config.shouldSaveNewPicturesToAlbum = true
@@ -51,24 +50,23 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         config.gallery.hidesRemoveButton = false
         config.hidesBottomBar = false
         config.hidesStatusBar = false
-        //config.overlayView = UIView()
-        
+
         let picker = YPImagePicker(configuration: config)
-        
+
         picker.didFinishPicking { [unowned picker] items, cancelled in
-            
+
             if cancelled {
                 picker.dismiss(animated: true, completion: nil)
                 return
             }
-            
+
             for index in 0..<items.count {
-                
+
                 switch items[index] {
                 case .photo(let photo):
                     self.imageFiles[index].image = photo.image
                     self.arrFiles.append(photo.image)
-                    
+
                 case .video(let video):
                     print(video)
                 }
@@ -78,7 +76,7 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         }
         present(picker, animated: true, completion: nil)
     }
-    
+
     // MARK: - tapSaveButton
     @IBAction func tapSaveButton(_ sender: Any) {
         postServer()
@@ -86,7 +84,7 @@ class WritingViewController: UIViewController, UITextViewDelegate {
 }
 // MARK: - Server
 extension WritingViewController {
-    
+
     func postServer() {
         let productTitle = productTitleTextField.text
         let hopePrice: Int? = Int(hopePriceTextField.text ?? "")
@@ -94,30 +92,30 @@ extension WritingViewController {
         let tick = Int(tickTextField.text!)
         let expirationDate = Double(expirationDateTextField.text!)
         let productContent = productContentTextView.text
-        
-        //files
+
+        // files
         var imgList: [UIImage] = []
-        
+
         for imgView in imageFiles {
-            
+
             if imgView.image != nil {
                 imgList.append(imgView.image!)
             }
         }
-        
-        //expirationDate
-        func timePlus() -> String{
-            
+
+        // expirationDate
+        func timePlus() -> String {
+
             let now = Date()
             let addTime = now.addingTimeInterval(+(expirationDate! * 3600))
             let formatter = DateFormatter()
-            
+
             formatter.dateFormat = "yyyy-MM-dd HH:mm"
             print(formatter.string(from: addTime))
-            
+
             return formatter.string(from: addTime)
         }
-        
+
         let params: [String: Any?] = [
                     "category": 0,
                     "expirationDate": timePlus(),
@@ -128,7 +126,7 @@ extension WritingViewController {
                     "representPicture": 0,
                     "tick": tick
                 ]
-        
+
         // MARK: - ServerPost code
         postWritingData(url: Constant.domainURL + "/product/write", params: params, files: imgList) { result in
             switch result {
