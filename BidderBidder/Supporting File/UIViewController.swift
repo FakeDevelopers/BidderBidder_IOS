@@ -43,7 +43,6 @@ extension UIViewController {
                 return
             }
             print("success")
-            print(response)
         })
     }
     

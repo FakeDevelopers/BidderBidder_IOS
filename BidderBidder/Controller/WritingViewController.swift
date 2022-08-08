@@ -62,19 +62,16 @@ class WritingViewController: UIViewController, UITextViewDelegate {
                 return
             }
             
-            var i: Int = 0
-            
-            for item in items {
+            for index in 0..<items.count {
                 
-                switch item {
+                switch items[index] {
                 case .photo(let photo):
-                    self.imageFiles[i].image = photo.image
+                    self.imageFiles[index].image = photo.image
                     self.arrFiles.append(photo.image)
                     
                 case .video(let video):
                     print(video)
                 }
-                i = i+1
             }
             self.filesSelectButton.isHidden = true
             picker.dismiss(animated: true)
