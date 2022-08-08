@@ -15,7 +15,7 @@ extension UIViewController {
     }
     
     //writing post
-    func postWritingData(url: String, params: Parameters, hopePrice: Int?, files: [UIImage?], completion: @escaping (NetworkResult<Any>) -> Void) {
+    func postWritingData(url: String, params: Dictionary<String, Any?>, files: [UIImage?], completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let header : HTTPHeaders = [
             "Content-Type" : "multipart/form-data",
@@ -30,13 +30,11 @@ extension UIViewController {
             }
             
             for (key, value) in params {
-                multipartFormData.append("\(value)".data(using: .utf8, allowLossyConversion: false)!, withName: "\(key)")
-            }
-            
-            if let price = hopePrice {
-                multipartFormData.append("\(price)".data(using: .utf8, allowLossyConversion: false)!, withName: "hopePrice")
-            }else {
-                multipartFormData.append(Data(), withName: "hopePrice")
+                if let value = value{
+                    multipartFormData.append("\(String(describing: value))".data(using: .utf8, allowLossyConversion: false)!, withName: "\(key)")
+                } else {
+                    multipartFormData.append(Data(), withName: "\(key)")
+                }
             }
                 
         }, to: url, method: .post, headers: header).response(completionHandler: { (response) in
