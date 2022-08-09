@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
-struct Constant: Codable {
-    static let domainURL = "http://bidderbidderapi.kro.kr:8080"
+struct Constant {
+    static let domainURL: String = Bundle.main.object(forInfoDictionaryKey: "domainURL") as! String
+    static let writeURL: String = Bundle.main.object(forInfoDictionaryKey: "writeURL") as! String
 }

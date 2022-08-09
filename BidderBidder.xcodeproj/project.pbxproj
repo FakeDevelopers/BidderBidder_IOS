@@ -52,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debugConfig.xcconfig; sourceTree = "<group>"; };
 		B31E462D28A182F9008D9A5E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B350709C2881155D000A6CA1 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		B35070A028812B87000A6CA1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -133,6 +134,7 @@
 		D259B0A727FC5FDA0026DD9E /* BidderBidder */ = {
 			isa = PBXGroup;
 			children = (
+				B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */,
 				D2075D1F287FD1F200EAB426 /* BidderBidder.entitlements */,
 				D2DEBBB32849BCD600437F3D /* Info.plist */,
 				D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */,
@@ -555,6 +557,7 @@
 		};
 		D259B0D027FC5FDB0026DD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -574,7 +577,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = KY55F55FY5.com.fakeDevelopers.BidderBidder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fakeDevelopers.BidderBidder.BidderBidder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -603,7 +606,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = KY55F55FY5.com.fakeDevelopers.BidderBidder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fakeDevelopers.BidderBidder.BidderBidder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -613,6 +616,7 @@
 		};
 		D259B0D327FC5FDB0026DD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -651,6 +655,7 @@
 		};
 		D259B0D627FC5FDB0026DD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

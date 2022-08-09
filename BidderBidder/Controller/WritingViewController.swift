@@ -128,7 +128,7 @@ extension WritingViewController {
                 ]
 
         // MARK: - ServerPost code
-        postWritingData(url: Constant.domainURL + "/product/write", params: params, files: imgList) { result in
+        postWritingData(url: Constant.domainURL + Constant.writeURL, params: params, files: imgList) { result in
             switch result {
                         case .success(let msg):
                             print("success", msg)
