@@ -54,7 +54,7 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         let picker = YPImagePicker(configuration: config)
 
         picker.didFinishPicking { [unowned picker] items, cancelled in
-
+            
             if cancelled {
                 picker.dismiss(animated: true, completion: nil)
                 return

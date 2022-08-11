@@ -25,7 +25,7 @@ extension UIViewController {
 
             for image in files {
                 if let image = image?.jpegData(compressionQuality: 1) {
-                    multipartFormData.append(image, withName: "files", fileName: "\(files).jpg", mimeType: "image/jpeg") // jpeg 파일로 전송
+                    multipartFormData.append(image, withName: "files", fileName: "\(image).jpg", mimeType: "image/jpeg")
                 }
             }
 
