@@ -10,5 +10,5 @@
 #include "debugConfig.xcconfig"
 
 //Server URL
-domainURL = http:/$()/bidderbidderapi.kro.kr:8080
+domainURL = http:/$()/bidderbidderapi.kro.kr:80
 writeURL = /product/write

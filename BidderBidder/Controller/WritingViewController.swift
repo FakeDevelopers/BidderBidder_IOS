@@ -11,7 +11,7 @@ import YPImagePicker
 import SwiftUI
 import Foundation
 
-class WritingViewController: UIViewController, UITextViewDelegate {
+class WritingViewController: UIViewController {
 
     @IBOutlet weak var productTitleTextField: UITextField!
     @IBOutlet weak var hopePriceTextField: UITextField!
@@ -19,15 +19,45 @@ class WritingViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var tickTextField: UITextField!
     @IBOutlet weak var expirationDateTextField: UITextField!
     @IBOutlet weak var productContentTextView: UITextView!
-
+    
+    @IBOutlet weak var priceLable_1: UILabel!
+    @IBOutlet weak var priceLable_2: UILabel!
+    @IBOutlet weak var priceLable_3: UILabel!
+    
+    var placeholderLabel : UILabel!
+    
     // imageFiles
-    @IBOutlet var imageFiles: [UIImageView]!
     @IBOutlet weak var filesSelectButton: UIButton!
-    var arrFiles: [UIImage] = []
+    var arrFiles: [UIImage]! = []
+    @IBOutlet weak var filesCollectionView: UICollectionView!
+    
+    // MARK: - count text
+        lazy var remainCountLabel: UILabel = {
+            let label = UILabel()
+            label.textColor = .black
+            label.text = "0/1000"
+            label.font = .systemFont(ofSize: 30)
+            label.textColor = .lightGray
+            label.textAlignment = .center
+
+            return label
+        }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+        //textViewPlaceholder
+        productContentTextView.delegate = self
+        placeholderLabel = UILabel()
+        placeholderLabel.text = "물품에 대한 정보를 작성해주세요!"
+        placeholderLabel.font = .italicSystemFont(ofSize: (productContentTextView.font?.pointSize)!)
+        placeholderLabel.sizeToFit()
+        productContentTextView.addSubview(placeholderLabel)
+        placeholderLabel.frame.origin = CGPoint(x: 5, y: (productContentTextView.font?.pointSize)! / 2)
+        placeholderLabel.textColor = .tertiaryLabel
+        placeholderLabel.isHidden = !productContentTextView.text.isEmpty
+        
+        //filesSelectButton
         self.filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
     }
 
@@ -64,14 +94,14 @@ class WritingViewController: UIViewController, UITextViewDelegate {
 
                 switch items[index] {
                 case .photo(let photo):
-                    self.imageFiles[index].image = photo.image
                     self.arrFiles.append(photo.image)
-
+                    DispatchQueue.main.async {
+                        self.filesCollectionView.reloadData()
+                    }
                 case .video(let video):
                     print(video)
                 }
             }
-            self.filesSelectButton.isHidden = true
             picker.dismiss(animated: true)
         }
         present(picker, animated: true, completion: nil)
@@ -82,6 +112,30 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         postServer()
     }
 }
+
+// MARK: - placeHolder
+extension WritingViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+            placeholderLabel.isHidden = !textView.text.isEmpty
+        }
+}
+
+// MARK: - collectionViewDataSource
+extension WritingViewController: UICollectionViewDataSource{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        arrFiles.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WritingFilesCell", for: indexPath) as? WritingFilesCell else {
+            return UICollectionViewCell()
+        }
+        cell.files.image = arrFiles[indexPath.row]
+        return cell
+    }
+}
+
 // MARK: - Server
 extension WritingViewController {
 
@@ -96,10 +150,10 @@ extension WritingViewController {
         // files
         var imgList: [UIImage] = []
 
-        for imgView in imageFiles {
+        for img in arrFiles {
 
-            if imgView.image != nil {
-                imgList.append(imgView.image!)
+            if img != nil {
+                imgList.append(img)
             }
         }
 
