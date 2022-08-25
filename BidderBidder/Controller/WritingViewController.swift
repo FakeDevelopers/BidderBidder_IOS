@@ -20,9 +20,16 @@ class WritingViewController: UIViewController {
     @IBOutlet weak var expirationDateTextField: UITextField!
     @IBOutlet weak var productContentTextView: UITextView!
     
-    @IBOutlet weak var priceLable_1: UILabel!
-    @IBOutlet weak var priceLable_2: UILabel!
-    @IBOutlet weak var priceLable_3: UILabel!
+    @IBOutlet weak var priceLabel_1: UILabel!
+    @IBOutlet weak var priceLabel_2: UILabel!
+    @IBOutlet weak var priceLabel_3: UILabel!
+    
+    @IBOutlet weak var textCountLabel: UILabel! = {
+        let label = UILabel()
+        label.textColor = .placeholderText
+        label.text = "0/1000"
+        return label
+    }()
     
     var placeholderLabel : UILabel!
     
@@ -31,21 +38,41 @@ class WritingViewController: UIViewController {
     var arrFiles: [UIImage]! = []
     @IBOutlet weak var filesCollectionView: UICollectionView!
     
-    // MARK: - count text
-        lazy var remainCountLabel: UILabel = {
-            let label = UILabel()
-            label.textColor = .black
-            label.text = "0/1000"
-            label.font = .systemFont(ofSize: 30)
-            label.textColor = .lightGray
-            label.textAlignment = .center
-
-            return label
-        }()
-
+    // MARK: - textFieldDidChange
+    @objc func textFieldDidChange(textField: UITextField) {
+        if textField == hopePriceTextField {
+            if textField.text == "" {
+                priceLabel_1.textColor = .placeholderText
+            } else {
+                priceLabel_1.textColor = .black
+                
+            }
+        }
+        else if textField == openingBidTextField {
+            if textField.text == "" {
+                priceLabel_2.textColor = .placeholderText
+            } else {
+                priceLabel_2.textColor = .black
+                
+            }
+        } else {
+            if textField.text == "" {
+                priceLabel_3.textColor = .placeholderText
+            } else {
+                priceLabel_3.textColor = .black
+                
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        // textField 변경 시 priceLabel 설정
+        self.hopePriceTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        self.openingBidTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        self.tickTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
         //textViewPlaceholder
         productContentTextView.delegate = self
         placeholderLabel = UILabel()
@@ -113,11 +140,28 @@ class WritingViewController: UIViewController {
     }
 }
 
-// MARK: - placeHolder
+// MARK: - textView setting
 extension WritingViewController: UITextViewDelegate {
+    
     func textViewDidChange(_ textView: UITextView) {
-            placeholderLabel.isHidden = !textView.text.isEmpty
+        placeholderLabel.isHidden = !textView.text.isEmpty
+        var currentText = textView.text ?? ""
+        
+        if currentText.count > 1000 {
+            currentText.removeLast()
+            textCountLabel.text = "1000/1000"
+        } else {
+            textCountLabel.text = "\(currentText.count)/1000"
         }
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    let newLength = textView.text.count - range.length + text.count
+    if newLength > 1000 {
+    return false
+        }
+    return true
+    }
 }
 
 // MARK: - collectionViewDataSource

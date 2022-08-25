@@ -63,19 +63,13 @@
         <scene sceneID="UPY-eh-K6D">
             <objects>
                 <viewController id="EQr-CV-CJw" customClass="WritingViewController" customModule="BidderBidder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ztr-kA-7mZ">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="ztr-kA-7mZ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zv0-uw-zqn" userLabel="content">
                                 <rect key="frame" x="0.0" y="62" width="390" height="643"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oT-XG-UcT">
-                                        <rect key="frame" x="339" y="631" width="33" height="12"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="10"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wI1-0z-aXe">
                                         <rect key="frame" x="15" y="455" width="352" height="162"/>
                                         <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="14"/>
@@ -200,7 +194,7 @@
                                         <buttonConfiguration key="configuration" style="plain" image="camera.fill" catalog="system" buttonSize="mini"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyM-h0-nhk">
-                                        <rect key="frame" x="41" y="59" width="21" height="12"/>
+                                        <rect key="frame" x="41" y="59.333333333333321" width="21" height="11.666666666666664"/>
                                         <attributedString key="attributedText">
                                             <fragment content="0/10">
                                                 <attributes>
@@ -260,6 +254,13 @@
                                         <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="14"/>
                                         <color key="textColor" systemColor="placeholderTextColor"/>
                                         <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oT-XG-UcT">
+                                        <rect key="frame" x="331" y="631" width="59" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="10"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -416,11 +417,12 @@
                         <outlet property="filesSelectButton" destination="Pft-yS-eQW" id="5Hz-oe-Wmv"/>
                         <outlet property="hopePriceTextField" destination="91c-QH-WYl" id="J1R-u9-k7Z"/>
                         <outlet property="openingBidTextField" destination="eLt-oj-baH" id="Qyz-Hg-bdX"/>
-                        <outlet property="priceLable_1" destination="sB1-b5-pz9" id="y79-Z1-y69"/>
-                        <outlet property="priceLable_2" destination="A6X-fR-9l6" id="Zui-4S-StP"/>
-                        <outlet property="priceLable_3" destination="A6X-fR-9l6" id="dZv-ZN-fkS"/>
+                        <outlet property="priceLabel_1" destination="sB1-b5-pz9" id="33E-n1-qqh"/>
+                        <outlet property="priceLabel_2" destination="crd-1F-XBr" id="kLh-dU-v8P"/>
+                        <outlet property="priceLabel_3" destination="A6X-fR-9l6" id="oVa-hq-Lqo"/>
                         <outlet property="productContentTextView" destination="wI1-0z-aXe" id="tCe-Tv-nTb"/>
                         <outlet property="productTitleTextField" destination="Pzx-VR-pOA" id="ysw-VA-Din"/>
+                        <outlet property="textCountLabel" destination="0oT-XG-UcT" id="ILM-oW-dxQ"/>
                         <outlet property="tickTextField" destination="uRG-94-MxE" id="2P2-s0-M9S"/>
                     </connections>
                 </viewController>
@@ -1284,7 +1286,7 @@
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
-        <image name="closeBtn" width="20.5" height="20.5"/>
+        <image name="closeBtn" width="20.333333969116211" height="20.333333969116211"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="icloud.fill" catalog="system" width="128" height="88"/>
