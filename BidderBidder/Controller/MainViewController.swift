@@ -55,18 +55,22 @@ class MainViewController : UIViewController {
                         loadMoreBtn.isEnabled = false
                         loadMoreBtn.tintColor = UIColor.clear
                     }
-                }
-                catch {
+                } catch {
                     print(error)
                 }
-                
+
             case .failure(let error):
-                print("통신 실패 : ",(String(describing:
-                                            error.errorDescription)))
+                print("통신 실패 : ", (String(describing:
+                error.errorDescription)))
             }
         }
     }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let productViewController = segue.destination as! ProductDetailViewController
+        let indexPath = sender as! IndexPath
+        productViewController.productId = productList[indexPath.row].productId
+    }
 }
 
 // RefreshControl
@@ -106,7 +110,10 @@ extension MainViewController: UITableViewDelegate {
         if checkBool && scrollView.contentOffset.y > contentHeight - scrollView.frame.height {
             getProductList()
         }
-        
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailProductSegue", sender: indexPath)
     }
 }
 
@@ -123,6 +130,7 @@ extension MainViewController: UITableViewDataSource {
         
         cell.setCell(product: productList[indexPath.row])
         cell.selectionStyle = .none // 셀 선택시 회색으로 선택 표시해주는거 없애기
+
         return cell
     }
     
