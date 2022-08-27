@@ -106,7 +106,7 @@ class ProductDetailViewController: UIViewController {
         bidders = productInfo.bids
 
         if (bidders.count > 0) {
-            var gesture = UITapGestureRecognizer(target: self, action: #selector(showBidderRanging))
+            var gesture = UITapGestureRecognizer(target: self, action: #selector(showBidderRanking))
             bidderListButtom.isUserInteractionEnabled = true
             bidderListButtom.addGestureRecognizer(gesture)
             bidderRankingTableView.reloadData()
@@ -131,11 +131,11 @@ class ProductDetailViewController: UIViewController {
         }
     }
 
-    @objc func showBidderRanging() {
+    @objc func showBidderRanking() {
         rankingView.isHidden = false
     }
 
-    @IBAction func closeBidderRanging(_ sender: Any) {
+    @IBAction func closeBidderRanking(_ sender: Any) {
         rankingView.isHidden = true
     }
 }
