@@ -50,10 +50,8 @@ class ProductDetailViewController: UIViewController {
             switch response.result {
             case .success(let value):
                 initiallizeInfo(value!)
-                break;
             default:
                 dismiss(animated: true)
-                break;
             }
         }
     }
