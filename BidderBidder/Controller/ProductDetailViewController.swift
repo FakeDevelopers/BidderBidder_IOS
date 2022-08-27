@@ -47,10 +47,13 @@ class ProductDetailViewController: UIViewController {
 
             sellerProfileImageView.downloaded(from: "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg") // 요건 임시로 넣어둔 링크입니다! 일부로 상수로 안만든거예요 ㅋㅋㅋ
 
-            if response.result == .success(let value){
+            switch response.result {
+            case .success(let value):
                 initiallizeInfo(value!)
-            }else{
-                 dismiss(animated: true)
+                break;
+            default:
+                dismiss(animated: true)
+                break;
             }
         }
     }
