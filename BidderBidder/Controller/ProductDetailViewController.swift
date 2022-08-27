@@ -47,14 +47,10 @@ class ProductDetailViewController: UIViewController {
 
             sellerProfileImageView.downloaded(from: "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg") // 요건 임시로 넣어둔 링크입니다! 일부로 상수로 안만든거예요 ㅋㅋㅋ
 
-            switch response.result {
-            case .success(let value):
-
+            if response.result == .success(let value){
                 initiallizeInfo(value!)
-                break;
-            default:
-                dismiss(animated: true)
-                break;
+            }else{
+                 dismiss(animated: true)
             }
         }
     }
@@ -68,7 +64,8 @@ class ProductDetailViewController: UIViewController {
 
     private func initiallizeInfo(_ value: Data) {
         let decoder = JSONDecoder()
-        let productInfo = try! decoder.decode(productInfo.self, from: value)
+        let productInfo = (try? decoder.decode(productInfo.self, from: value))!
+        
 
         productTitleLabel.text = productInfo.productTitle
 
@@ -106,7 +103,7 @@ class ProductDetailViewController: UIViewController {
         bidders = productInfo.bids
 
         if (bidders.count > 0) {
-            var gesture = UITapGestureRecognizer(target: self, action: #selector(showBidderRanking))
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(showBidderRanking))
             bidderListButtom.isUserInteractionEnabled = true
             bidderListButtom.addGestureRecognizer(gesture)
             bidderRankingTableView.reloadData()
