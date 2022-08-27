@@ -465,7 +465,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="ox6-cE-Ouv"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUn-UO-0ne" customClass="Rounded">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUn-UO-0ne" customClass="RoundedCornerImageView" customModule="BidderBidder" customModuleProvider="target">
                                                 <rect key="frame" x="19.666666666666671" y="244.66666666666663" width="39" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="QUn-UO-0ne" secondAttribute="height" id="KOD-bc-yVR"/>
