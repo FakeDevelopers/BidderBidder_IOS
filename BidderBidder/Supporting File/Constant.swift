@@ -13,4 +13,6 @@ struct Constant {
     static let writeURL: String = Bundle.main.object(forInfoDictionaryKey: "writeURL") as! String
 
     static let EXPIRED_MESSAGE = "마감"
+    
+    static let DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm"
 }

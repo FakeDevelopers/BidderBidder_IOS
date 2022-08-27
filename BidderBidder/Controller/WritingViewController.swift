@@ -110,7 +110,7 @@ extension WritingViewController {
             let addTime = now.addingTimeInterval(+(expirationDate! * 3600))
             let formatter = DateFormatter()
 
-            formatter.dateFormat = "yyyy-MM-dd HH:mm"
+            formatter.dateFormat = Constant.DATE_TIME_FORMAT
             print(formatter.string(from: addTime))
 
             return formatter.string(from: addTime)
