@@ -5,36 +5,34 @@
 //  Created by 김성현 on 2022/04/06.
 //
 
-import UIKit
-import TweeTextField
-import SwiftUI
 import FirebaseAuth
+import SwiftUI
+import TweeTextField
+import UIKit
 
-class LoginViewController : UIViewController {
-    
-    @IBOutlet weak var myPasswordTextField: TweeAttributedTextField!
-    @IBOutlet weak var socialLoginButton1: UIButton!
-    @IBOutlet weak var socialLoginButton2: UIButton!
-    @IBOutlet weak var normalLoginButton: UIButton!
-    @IBOutlet weak var testTextField: TweeActiveTextField!
-    @IBOutlet weak var verificationNumberTextField: TweeActiveTextField!
-    @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var certificationButton: UIButton!
-    
+class LoginViewController: UIViewController {
+    @IBOutlet var myPasswordTextField: TweeAttributedTextField!
+    @IBOutlet var socialLoginButton1: UIButton!
+    @IBOutlet var socialLoginButton2: UIButton!
+    @IBOutlet var normalLoginButton: UIButton!
+    @IBOutlet var testTextField: TweeActiveTextField!
+    @IBOutlet var verificationNumberTextField: TweeActiveTextField!
+    @IBOutlet var timerLabel: UILabel!
+    @IBOutlet var certificationButton: UIButton!
+
     var limitTime: Int = 180
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
-    @IBAction func sendVerifyNumber(_ sender: Any) {
+
+    @IBAction func sendVerifyNumber(_: Any) {
         timerLabel.isHidden = false
         getSetTime()
         print(testTextField.text!)
         Auth.auth().useAppLanguage()
         PhoneAuthProvider.provider()
-            .verifyPhoneNumber("+82 \(testTextField.text!)", uiDelegate: nil) { (verificationID, error) in
+            .verifyPhoneNumber("+82 \(testTextField.text!)", uiDelegate: nil) { verificationID, error in
                 if let id = verificationID {
                     UserDefaults.standard.set("\(id)", forKey: "verificationID")
                 }
@@ -44,20 +42,20 @@ class LoginViewController : UIViewController {
             }
         certificationButton.setTitle("재전송", for: .normal)
     }
-    
-    @IBAction func verificiationButton(_ sender: Any) {
+
+    @IBAction func verificiationButton(_: Any) {
         guard let verificationID = UserDefaults.standard.string(forKey: "verificationID"), let verificationCode = verificationNumberTextField.text else {
             return
         }
-        
+
         let credential = PhoneAuthProvider.provider().credential(
             withVerificationID: verificationID,
             verificationCode: verificationCode
         )
-        
+
         logIn(credential: credential)
     }
-    
+
     func logIn(credential: PhoneAuthCredential) {
         Auth.auth().signIn(with: credential) { authResult, error in
             if let error = error {
@@ -68,46 +66,44 @@ class LoginViewController : UIViewController {
                 print("LogIn Success!!")
                 print("\(authResult!)")
             }
-            
         }
     }
-    
+
     @objc func getSetTime() {
         secToTime(sec: limitTime)
         limitTime -= 1
     }
-    
+
     func secToTime(sec: Int) {
         let minute = (sec % 3600) / 60
         let second = (sec % 3600) % 60
-        
+
         if second < 10 {
-            timerLabel.text = String(minute) + ":" + "0"+String(second)
+            timerLabel.text = String(minute) + ":" + "0" + String(second)
         } else {
             timerLabel.text = String(minute) + ":" + String(second)
         }
-        
+
         if limitTime != 0 {
             perform(#selector(getSetTime), with: nil, afterDelay: 1.0)
-        }
-        else {
+        } else {
             certificationButton.setTitle("인증", for: .normal)
             timerLabel.isHidden = true
         }
     }
-    
-    func alertVerify(){
+
+    func alertVerify() {
         let alert = UIAlertController(title: "", message: "인증 실패했습니다.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
         }))
-        self.present(alert, animated:true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
-    
-    // 이게 없으면 터집니다.
-    @IBAction func passwordBeginEditing(_ sender: TweeAttributedTextField) {
+
+    @IBAction func passwordBeginEditing(_: TweeAttributedTextField) {
+        // 이게 없으면 터집니다.
     }
-    
+
     // 비밀번호 글자가 입력중 일 때 <임시>
     @IBAction func passwordWhileEditing(_ sender: TweeAttributedTextField) {
         if let userInput = sender.text {
@@ -124,47 +120,39 @@ class LoginViewController : UIViewController {
             }
         }
     }
-    // 이게 없으면 터집니다.
-    @IBAction func passwordEndEditing(_ sender: TweeAttributedTextField) {
+
+    @IBAction func passwordEndEditing(_: TweeAttributedTextField) {
+        // 이게 없으면 터집니다.
     }
-    
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //Navigation Bar 숨기기
+
+        // Navigation Bar 숨기기
         navigationController?.navigationBar.isHidden = true
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        self.view.endEditing(true)
-    }
-    
-    
-}
 
+    override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
+        view.endEditing(true)
+    }
+}
 
 class CornerButton: UIButton {
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.layer.borderWidth = 1
-        self.layer.backgroundColor = UIColor.skyBlueColor
-        self.layer.borderColor = UIColor.skyBlueColor
-        self.layer.cornerRadius = 3
+
+        layer.borderWidth = 1
+        layer.backgroundColor = UIColor.skyBlueColor
+        layer.borderColor = UIColor.skyBlueColor
+        layer.cornerRadius = 3
     }
-    
-    
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
-        self.layer.borderWidth = 1
-        self.layer.backgroundColor = UIColor.skyBlueColor
-        self.layer.borderColor = UIColor.skyBlueColor
-        self.layer.cornerRadius = 25
-    }
-    
-}
 
+        layer.borderWidth = 1
+        layer.backgroundColor = UIColor.skyBlueColor
+        layer.borderColor = UIColor.skyBlueColor
+        layer.cornerRadius = 25
+    }
+}

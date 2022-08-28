@@ -20,6 +20,7 @@ excluded: # SwiftLint 검사에서 제외할 파일 경로
     - Pods
     - ProjectName/AppDelegate.swift
     - ProjectName/SceneDelegate.swift
+    - /home/runner/work/BidderBidder_IOS/BidderBidder_IOS/swift-format/
     
     #- warning, error 모두 있는 규칙 -#
 
