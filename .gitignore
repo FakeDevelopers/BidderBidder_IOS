@@ -152,7 +152,7 @@ xcuserdata
 
 ### Xcode Patch ###
 *.xcodeproj/*
-!*.xcodeproj/BidderBidder.pbxproj
+!*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
