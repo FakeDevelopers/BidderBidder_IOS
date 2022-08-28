@@ -42,6 +42,6 @@ class Util {
             }
             return "\(sec)초"
         }
-        return Constant.EXPIRED_MESSAGE
+        return Constant.expiredMessage
     }
 }

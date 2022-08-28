@@ -81,7 +81,7 @@ class ProductDetailViewController: UIViewController {
         bidderSizeLabel.text = Util.intToMoneyFormat(productInfo.bidderCount) + "명"
 
         let formatter = DateFormatter()
-        formatter.dateFormat = Constant.DATE_TIME_FORMAT
+        formatter.dateFormat = Constant.dateTimeFormat
 
         remainSeconds = Int64(formatter.date(from: productInfo.expirationDate)!.timeIntervalSinceNow)
         if remainSeconds <= 0 {
@@ -92,7 +92,7 @@ class ProductDetailViewController: UIViewController {
 
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] timer in
                 let reaminTime = Util.getRemainTime(remainSeconds)
-                if reaminTime == Constant.EXPIRED_MESSAGE {
+                if reaminTime == Constant.expiredMessage {
                     timer.invalidate()
                 }
             })
