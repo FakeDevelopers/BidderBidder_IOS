@@ -18,21 +18,37 @@ permissions:
   contents: write
 
 jobs:
-  lint:
-    name: Lint
+  swift-format-lint:
     runs-on: ubuntu-latest
+    name: Swift-Format
     steps:
-      - name: Checkout Code
+      - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Restore swift build cache
+        uses: actions/cache@v1
         with:
-          # Full git history is needed to get a proper list of changed files
-          fetch-depth: 0
+          path: .build
+          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-spm-
+      - name: swift build
+        run: |
+          if [ -d ".build" ]; then
+            if ! [ -x "$(command -v swift-format)" ]; then
+              sudo cp -f .build/release/swift-format /usr/local/bin/swift-format
+            fi
+          else
+            git clone -b release/5.6 https://github.com/apple/swift-format.git
+            cd swift-format
+            swift build --disable-sandbox -c release
+            mv .build .. && cd ..
+            sudo cp -f .build/release/swift-format /usr/local/bin/swift-format
+          fi
       - name: Lint
-        uses: mtgto/swift-format-action@main
+        uses: Iron-Ham/swift-format-linter-action@v5
         with:
-          # Please comment out if you won't specify configuration file
-          configuration_file: .swift-format
-          # default is false
-          all_files: false
-          # default is -1 (infinity)
-          max_warnings: -1
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # Optional parameters. Note that these are formatted as JSON array strings
+          excludes: '["/home/runner/work/BidderBidder_IOS/BidderBidder_IOS/swift-format/"]'
+          # exclude-types: '[".graphql.swift"]'
