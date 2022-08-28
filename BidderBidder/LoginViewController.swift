@@ -100,8 +100,9 @@ class LoginViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 
-    // 이게 없으면 터집니다.
-    @IBAction func passwordBeginEditing(_: TweeAttributedTextField) {}
+
+    @IBAction func passwordBeginEditing(_: TweeAttributedTextField) {// 이게 없으면 터집니다.
+         }
 
     // 비밀번호 글자가 입력중 일 때 <임시>
     @IBAction func passwordWhileEditing(_ sender: TweeAttributedTextField) {
@@ -120,8 +121,10 @@ class LoginViewController: UIViewController {
         }
     }
 
-    // 이게 없으면 터집니다.
-    @IBAction func passwordEndEditing(_: TweeAttributedTextField) {}
+
+    @IBAction func passwordEndEditing(_: TweeAttributedTextField) {
+        // 이게 없으면 터집니다.
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
