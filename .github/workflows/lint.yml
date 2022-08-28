@@ -52,5 +52,5 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # Optional parameters. Note that these are formatted as JSON array strings
-          excludes: '["**/swift-format/"]'
+          excludes: '["swift-format/"]'
           # exclude-types: '[".graphql.swift"]'
