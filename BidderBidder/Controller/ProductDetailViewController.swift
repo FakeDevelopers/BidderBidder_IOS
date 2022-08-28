@@ -5,31 +5,31 @@
 import UIKit
 
 class ProductDetailViewController: UIViewController {
-    @IBOutlet weak var productTitleLabel: UILabel!
+    @IBOutlet var productTitleLabel: UILabel!
 
-    @IBOutlet weak var hopePriceLabel: UILabel!
-    @IBOutlet weak var hopePriceContainerView: UIView!
-    @IBOutlet weak var hopePriceConstraint: NSLayoutConstraint!
+    @IBOutlet var hopePriceLabel: UILabel!
+    @IBOutlet var hopePriceContainerView: UIView!
+    @IBOutlet var hopePriceConstraint: NSLayoutConstraint!
 
-    @IBOutlet weak var minimumPriceLabel: UILabel!
-    @IBOutlet weak var tickLabel: UILabel!
-    @IBOutlet weak var bidderSizeLabel: UILabel!
-    @IBOutlet weak var remainTimeLabel: UILabel!
-    @IBOutlet weak var remainTimeStatusLabel: UILabel! // 마감이 되지 않으면 "마감까지"라고 뜨지만 마감이 되었으면 "마감"이라고 뜬다
+    @IBOutlet var minimumPriceLabel: UILabel!
+    @IBOutlet var tickLabel: UILabel!
+    @IBOutlet var bidderSizeLabel: UILabel!
+    @IBOutlet var remainTimeLabel: UILabel!
+    @IBOutlet var remainTimeStatusLabel: UILabel! // 마감이 되지 않으면 "마감까지"라고 뜨지만 마감이 되었으면 "마감"이라고 뜬다
 
-    @IBOutlet weak var bidderListButtom: UIImageView!
-    @IBOutlet weak var sellerNameLabel: UILabel!
-    @IBOutlet weak var sellerLocationLabel: UILabel!
+    @IBOutlet var bidderListButtom: UIImageView!
+    @IBOutlet var sellerNameLabel: UILabel!
+    @IBOutlet var sellerLocationLabel: UILabel!
 
-    @IBOutlet weak var explainTextView: UITextView!
-    @IBOutlet weak var sellerProfileImageView: UIImageView!
+    @IBOutlet var explainTextView: UITextView!
+    @IBOutlet var sellerProfileImageView: UIImageView!
 
-    @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var mainImageHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var mainImageView: UIImageView!
+    @IBOutlet var mainImageHeightConstraint: NSLayoutConstraint!
 
-    @IBOutlet weak var bidderRankingTableView: UITableView!
+    @IBOutlet var bidderRankingTableView: UITableView!
 
-    @IBOutlet weak var rankingView: RoundedCornerView!
+    @IBOutlet var rankingView: RoundedCornerView!
     var productId: Int64!
     var remainSeconds: Int64!
     var inited = false
@@ -41,23 +41,22 @@ class ProductDetailViewController: UIViewController {
         explainTextView.translatesAutoresizingMaskIntoConstraints = true
         explainTextView.isScrollEnabled = false
 
-
         sendRestRequest(url: Constant.domainURL + "/product/getProductInfo/\(productId!)", params: nil, isPost: false) { [self]
-        response in
+            response in
 
-            sellerProfileImageView.downloaded(from: "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg") // 요건 임시로 넣어둔 링크입니다! 일부로 상수로 안만든거예요 ㅋㅋㅋ
+                sellerProfileImageView.downloaded(from: "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg") // 요건 임시로 넣어둔 링크입니다! 일부로 상수로 안만든거예요 ㅋㅋㅋ
 
-            switch response.result {
-            case .success(let value):
-                initiallizeInfo(value!)
-            default:
-                dismiss(animated: true)
-            }
+                switch response.result {
+                case let .success(value):
+                    initiallizeInfo(value!)
+                default:
+                    dismiss(animated: true)
+                }
         }
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        if (!inited) {
+    override func viewDidAppear(_: Bool) {
+        if !inited {
             showProgress()
             inited = true
         }
@@ -66,11 +65,10 @@ class ProductDetailViewController: UIViewController {
     private func initiallizeInfo(_ value: Data) {
         let decoder = JSONDecoder()
         let productInfo = (try? decoder.decode(productInfo.self, from: value))!
-        
 
         productTitleLabel.text = productInfo.productTitle
 
-        if (productInfo.hopePrice == nil) {
+        if productInfo.hopePrice == nil {
             hopePriceContainerView.isHidden = true
             hopePriceConstraint.isActive = false
             minimumPriceLabel.topAnchor.constraint(equalTo: productTitleLabel.topAnchor, constant: 50).isActive = true
@@ -86,7 +84,7 @@ class ProductDetailViewController: UIViewController {
         formatter.dateFormat = Constant.DATE_TIME_FORMAT
 
         remainSeconds = Int64(formatter.date(from: productInfo.expirationDate)!.timeIntervalSinceNow)
-        if (remainSeconds <= 0) {
+        if remainSeconds <= 0 {
             remainTimeLabel.isHidden = true
             remainTimeStatusLabel.text = "마감"
         } else {
@@ -94,7 +92,7 @@ class ProductDetailViewController: UIViewController {
 
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] timer in
                 let reaminTime = Util.getRemainTime(remainSeconds)
-                if (reaminTime == Constant.EXPIRED_MESSAGE) {
+                if reaminTime == Constant.EXPIRED_MESSAGE {
                     timer.invalidate()
                 }
             })
@@ -103,14 +101,14 @@ class ProductDetailViewController: UIViewController {
         explainTextView.text = productInfo.productContent
         bidders = productInfo.bids
 
-        if (bidders.count > 0) {
+        if bidders.count > 0 {
             let gesture = UITapGestureRecognizer(target: self, action: #selector(showBidderRanking))
             bidderListButtom.isUserInteractionEnabled = true
             bidderListButtom.addGestureRecognizer(gesture)
             bidderRankingTableView.reloadData()
         }
 
-        if (productInfo.images.count > 0) {
+        if productInfo.images.count > 0 {
             mainImageView.downloaded(from: Constant.domainURL + productInfo.images[0]) { [self] in
 
                 dismissProgress()
@@ -124,7 +122,7 @@ class ProductDetailViewController: UIViewController {
     }
 
     deinit {
-        if (timer != nil && timer.isValid) {
+        if timer != nil, timer.isValid {
             timer.invalidate()
         }
     }
@@ -133,22 +131,19 @@ class ProductDetailViewController: UIViewController {
         rankingView.isHidden = false
     }
 
-    @IBAction func closeBidderRanking(_ sender: Any) {
+    @IBAction func closeBidderRanking(_: Any) {
         rankingView.isHidden = true
     }
 }
 
-extension ProductDetailViewController: UITableViewDelegate {
-
-}
+extension ProductDetailViewController: UITableViewDelegate {}
 
 extension ProductDetailViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bidders.count
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        bidders.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BidderRankingCell.identifier) as? BidderRankingCell else {
             return UITableViewCell()
         }
@@ -159,5 +154,3 @@ extension ProductDetailViewController: UITableViewDataSource {
         return cell
     }
 }
-
-

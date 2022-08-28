@@ -12,22 +12,22 @@ extension UIImageView {
     func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit, completion: (() -> Void)? = nil) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
-                    guard
-                            let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                            let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                            let data = data, error == nil,
-                            let image = UIImage(data: data)
-                    else {
-                        return
-                    }
-                    DispatchQueue.main.async() { [weak self] in
-                        self?.image = image
-                        if let completion = completion {
-                            completion()
-                        }
-                    }
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+            else {
+                return
+            }
+            DispatchQueue.main.async { [weak self] in
+                self?.image = image
+                if let completion = completion {
+                    completion()
                 }
-                .resume()
+            }
+        }
+        .resume()
     }
 
     func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit, completion: (() -> Void)? = nil) {
@@ -39,9 +39,9 @@ extension UIImageView {
 }
 
 class RoundedCornerImageView: UIImageView {
-    open override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
-        self.layer.cornerRadius = 8.0
-        self.clipsToBounds = true
+        layer.cornerRadius = 8.0
+        clipsToBounds = true
     }
 }

@@ -5,16 +5,12 @@
 import UIKit
 
 class ProgressPopup: UIViewController {
-
     static var instance: ProgressPopup!
-    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet var indicator: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         indicator.transform = CGAffineTransform(scaleX: 3, y: 3)
         indicator.startAnimating()
-
     }
-
-
 }

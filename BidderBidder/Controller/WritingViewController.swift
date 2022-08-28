@@ -5,39 +5,40 @@
 //  Created by 김예림 on 2022/07/15.
 //
 
-import UIKit
 import Alamofire
-import YPImagePicker
-import SwiftUI
 import Foundation
+import SwiftUI
+import UIKit
+import YPImagePicker
 
 class WritingViewController: UIViewController, UITextViewDelegate {
-
-    @IBOutlet weak var productTitleTextField: UITextField!
-    @IBOutlet weak var hopePriceTextField: UITextField!
-    @IBOutlet weak var openingBidTextField: UITextField!
-    @IBOutlet weak var tickTextField: UITextField!
-    @IBOutlet weak var expirationDateTextField: UITextField!
-    @IBOutlet weak var productContentTextView: UITextView!
+    @IBOutlet var productTitleTextField: UITextField!
+    @IBOutlet var hopePriceTextField: UITextField!
+    @IBOutlet var openingBidTextField: UITextField!
+    @IBOutlet var tickTextField: UITextField!
+    @IBOutlet var expirationDateTextField: UITextField!
+    @IBOutlet var productContentTextView: UITextView!
 
     // imageFiles
     @IBOutlet var imageFiles: [UIImageView]!
-    @IBOutlet weak var filesSelectButton: UIButton!
+    @IBOutlet var filesSelectButton: UIButton!
     var arrFiles: [UIImage] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
+        filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
     }
 
     // MARK: - FilesSelectButton
+
     @objc fileprivate func onFilesSelectButton() {
         print("ViewController - onFilesSelectButton() called")
         filesPicker()
     }
 
     // MARK: - YPImagePicker
+
     func filesPicker() {
         var config = YPImagePickerConfiguration()
 
@@ -54,20 +55,19 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         let picker = YPImagePicker(configuration: config)
 
         picker.didFinishPicking { [unowned picker] items, cancelled in
-            
+
             if cancelled {
                 picker.dismiss(animated: true, completion: nil)
                 return
             }
 
-            for index in 0..<items.count {
-
+            for index in 0 ..< items.count {
                 switch items[index] {
-                case .photo(let photo):
+                case let .photo(photo):
                     self.imageFiles[index].image = photo.image
                     self.arrFiles.append(photo.image)
 
-                case .video(let video):
+                case let .video(video):
                     print(video)
                 }
             }
@@ -78,13 +78,15 @@ class WritingViewController: UIViewController, UITextViewDelegate {
     }
 
     // MARK: - tapSaveButton
-    @IBAction func tapSaveButton(_ sender: Any) {
+
+    @IBAction func tapSaveButton(_: Any) {
         postServer()
     }
 }
-// MARK: - Server
-extension WritingViewController {
 
+// MARK: - Server
+
+extension WritingViewController {
     func postServer() {
         let productTitle = productTitleTextField.text
         let hopePrice: Int? = Int(hopePriceTextField.text ?? "")
@@ -97,7 +99,6 @@ extension WritingViewController {
         var imgList: [UIImage] = []
 
         for imgView in imageFiles {
-
             if imgView.image != nil {
                 imgList.append(imgView.image!)
             }
@@ -105,7 +106,6 @@ extension WritingViewController {
 
         // expirationDate
         func timePlus() -> String {
-
             let now = Date()
             let addTime = now.addingTimeInterval(+(expirationDate! * 3600))
             let formatter = DateFormatter()
@@ -117,30 +117,31 @@ extension WritingViewController {
         }
 
         let params: [String: Any?] = [
-                    "category": 0,
-                    "expirationDate": timePlus(),
-                    "hopePrice": hopePrice,
-                    "openingBid": openingBid,
-                    "productContent": productContent,
-                    "productTitle": productTitle,
-                    "representPicture": 0,
-                    "tick": tick
-                ]
+            "category": 0,
+            "expirationDate": timePlus(),
+            "hopePrice": hopePrice,
+            "openingBid": openingBid,
+            "productContent": productContent,
+            "productTitle": productTitle,
+            "representPicture": 0,
+            "tick": tick,
+        ]
 
         // MARK: - ServerPost code
+
         postWritingData(url: Constant.domainURL + Constant.writeURL, params: params, files: imgList) { result in
             switch result {
-                        case .success(let msg):
-                            print("success", msg)
-                        case .requestErr(let msg):
-                            print("requestERR", msg)
-                        case .pathErr:
-                            print("pathERR")
-                        case .serverErr:
-                            print("serverERR")
-                        case .networkFail:
-                            print("networkFail")
-                        }
+            case let .success(msg):
+                print("success", msg)
+            case let .requestErr(msg):
+                print("requestERR", msg)
+            case .pathErr:
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
         }
     }
 }
