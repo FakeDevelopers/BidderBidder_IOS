@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: { _, _ in
+            // 디버깅용 로그찍는 로직밖에 없어서 지웠습니다 - 김한빈
         })
         application.registerForRemoteNotifications()
         return true
