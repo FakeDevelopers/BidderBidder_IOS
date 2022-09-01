@@ -33,8 +33,8 @@ class WritingViewController: UIViewController {
     
     @IBOutlet weak var filesCountLabel: UILabel! = {
         let label = UILabel()
-        label.textColor = .placeholderText
-        label.text = "0/10"
+        label.textColor = .lightGray
+        label.text = "0"
         return label
     }()
     
@@ -140,7 +140,8 @@ class WritingViewController: UIViewController {
             }
             picker.dismiss(animated: true)
             self.filesCount += items.count
-            self.filesCountLabel.text = "\(self.filesCount)/10"
+            self.filesCountLabel.textColor = UIColor(red: 0.13, green: 0.81, blue: 1.00, alpha: 1.00)
+            self.filesCountLabel.text = "\(self.filesCount)"
         }
         present(picker, animated: true, completion: nil)
     }
