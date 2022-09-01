@@ -31,7 +31,16 @@ class WritingViewController: UIViewController {
         return label
     }()
     
+    @IBOutlet weak var filesCountLabel: UILabel! = {
+        let label = UILabel()
+        label.textColor = .placeholderText
+        label.text = "0/10"
+        return label
+    }()
+    
     var placeholderLabel : UILabel!
+    
+    var filesCount = 0
     
     // imageFiles
     @IBOutlet weak var filesSelectButton: UIButton!
@@ -130,6 +139,8 @@ class WritingViewController: UIViewController {
                 }
             }
             picker.dismiss(animated: true)
+            self.filesCount += items.count
+            self.filesCountLabel.text = "\(self.filesCount)/10"
         }
         present(picker, animated: true, completion: nil)
     }
@@ -142,7 +153,7 @@ class WritingViewController: UIViewController {
 
 // MARK: - textView setting
 extension WritingViewController: UITextViewDelegate {
-    
+    //글자 수
     func textViewDidChange(_ textView: UITextView) {
         placeholderLabel.isHidden = !textView.text.isEmpty
         var currentText = textView.text ?? ""
@@ -150,6 +161,7 @@ extension WritingViewController: UITextViewDelegate {
         if currentText.count > 1000 {
             currentText.removeLast()
             textCountLabel.text = "1000/1000"
+            textCountLabel.textColor = .systemRed
         } else {
             textCountLabel.text = "\(currentText.count)/1000"
         }
