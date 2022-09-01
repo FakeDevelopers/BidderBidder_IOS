@@ -17,6 +17,7 @@
 		AF4EDD4C28B9CEC600D933D8 /* BidderRankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EDD4B28B9CEC600D933D8 /* BidderRankingCell.swift */; };
 		AF4EDD5128B9D05C00D933D8 /* Bidder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EDD5028B9D05C00D933D8 /* Bidder.swift */; };
 		AF4EDD5328B9D07300D933D8 /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EDD5228B9D07300D933D8 /* ProductInfo.swift */; };
+		AF68720328C10657008D12AE /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = AF68720228C10657008D12AE /* Toast */; };
 		B31E462E28A182F9008D9A5E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B31E462D28A182F9008D9A5E /* .swiftlint.yml */; };
 		B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350709C2881155D000A6CA1 /* WritingViewController.swift */; };
 		B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = B38E073B288AF70D00CCD402 /* YPImagePicker */; };
@@ -97,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF68720328C10657008D12AE /* Toast in Frameworks */,
 				D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */,
 				B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */,
 				D214F59128334FE7005AD768 /* TweeTextField in Frameworks */,
@@ -255,6 +257,7 @@
 				D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */,
 				D2075D1B287EAEEB00EAB426 /* FirebaseAuth */,
 				B38E073B288AF70D00CCD402 /* YPImagePicker */,
+				AF68720228C10657008D12AE /* Toast */,
 			);
 			productName = BidderBidder;
 			productReference = D259B0A527FC5FDA0026DD9E /* BidderBidder.app */;
@@ -333,6 +336,7 @@
 				D214F58F28334FE7005AD768 /* XCRemoteSwiftPackageReference "TweeTextField" */,
 				D2075D18287EAEEB00EAB426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
+				AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = D259B0A627FC5FDA0026DD9E /* Products */;
 			projectDirPath = "";
@@ -762,6 +766,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Yummypets/YPImagePicker";
@@ -797,6 +809,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AF68720228C10657008D12AE /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
 		B38E073B288AF70D00CCD402 /* YPImagePicker */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */;

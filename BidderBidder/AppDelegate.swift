@@ -16,12 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: { didAllow, _ in
-            if didAllow {
-                print("Push: 권한 허용")
-            } else {
-                print("Push: 권한 거부")
-            }
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: { _, _ in
         })
         application.registerForRemoteNotifications()
         return true

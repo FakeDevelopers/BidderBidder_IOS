@@ -65,5 +65,7 @@ class RoundedCornerView: UIView {
         super.layoutSubviews()
         layer.cornerRadius = 15.0
         clipsToBounds = true
+        layer.borderColor = UIColor.gray.cgColor
+        layer.borderWidth = 1.0
     }
 }

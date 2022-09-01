@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct productInfo: Codable {
+struct ProductInfo: Codable {
     let productTitle: String
     let productContent: String
     let hopePrice: Int64?
