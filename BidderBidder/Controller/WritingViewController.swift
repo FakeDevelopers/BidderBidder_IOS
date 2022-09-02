@@ -77,6 +77,10 @@ class WritingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hopePriceTextField.delegate = self
+        openingBidTextField.delegate = self
+        tickTextField.delegate = self
+        
         // textField 변경 시 priceLabel 설정
         self.hopePriceTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         self.openingBidTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -100,7 +104,16 @@ class WritingViewController: UIViewController {
     // MARK: - FilesSelectButton
     @objc fileprivate func onFilesSelectButton() {
         print("ViewController - onFilesSelectButton() called")
-        filesPicker()
+        
+        //파일 첨부 개수 제한 및 alert
+        if filesCount < 10 {
+            filesPicker()
+        } else {
+            let alert = UIAlertController(title: "알림", message: "이미지는 최대 10장까지 첨부할 수 있어요", preferredStyle: UIAlertController.Style.alert)
+            let action = UIAlertAction(title: "닫기", style: .default)
+            alert.addAction(action)
+            present(alert, animated: false, completion: nil)
+        }
     }
 
     // MARK: - YPImagePicker
@@ -108,7 +121,14 @@ class WritingViewController: UIViewController {
         var config = YPImagePickerConfiguration()
 
         config.showsPhotoFilters = false
-        config.library.maxNumberOfItems = 3
+        //이미지 선택 개수 제한
+        config.library.maxNumberOfItems = {
+            if self.filesCount < 10 {
+                return (10-self.filesCount)
+            } else {
+                return 0
+            }
+                }()
         config.shouldSaveNewPicturesToAlbum = true
         config.startOnScreen = .library
         config.wordings.libraryTitle = "갤러리"
@@ -190,6 +210,40 @@ extension WritingViewController: UICollectionViewDataSource{
         }
         cell.files.image = arrFiles[indexPath.row]
         return cell
+    }
+}
+// MARK: - UITextFieldDelegate
+extension WritingViewController: UITextFieldDelegate {
+    // 숫자 콤마 입력
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.locale = Locale.current
+        formatter.maximumFractionDigits = 0
+        
+        if let removeAllSeprator = textField.text?.replacingOccurrences(of: formatter.groupingSeparator, with: ""){
+            var beforeForemattedString = removeAllSeprator + string
+            if formatter.number(from: string) != nil {
+                if let formattedNumber = formatter.number(from: beforeForemattedString), let formattedString = formatter.string(from: formattedNumber){
+                    textField.text = formattedString
+                    return false
+                }
+            }else{
+                if string == "" {
+                    let lastIndex = beforeForemattedString.index(beforeForemattedString.endIndex, offsetBy: -1)
+                    beforeForemattedString = String(beforeForemattedString[..<lastIndex])
+                    if let formattedNumber = formatter.number(from: beforeForemattedString), let formattedString = formatter.string(from: formattedNumber){
+                        textField.text = formattedString
+                        return false
+                    }
+                }else{
+                    return false
+                }
+            }
+
+        }
+        
+        return true
     }
 }
 

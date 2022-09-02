@@ -114,7 +114,7 @@
                                                 <rect key="frame" x="35" y="347" width="336" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYE-So-zxr" userLabel="line5">
                                                 <rect key="frame" x="19" y="325" width="352" height="1"/>
@@ -128,7 +128,7 @@
                                                 <rect key="frame" x="35" y="291" width="336" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="₩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sB1-b5-pz9" userLabel="₩2">
                                                 <rect key="frame" x="19" y="235" width="13" height="17"/>
@@ -149,7 +149,7 @@
                                                 <rect key="frame" x="35" y="235" width="336" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="₩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="crd-1F-XBr" userLabel="₩1">
                                                 <rect key="frame" x="19" y="291" width="13" height="17"/>
@@ -212,13 +212,6 @@
                                                     <constraint firstAttribute="height" constant="65" id="bFq-4P-4Vk"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FyM-h0-nhk" userLabel="filesCount">
-                                                <rect key="frame" x="41" y="61.333333333333329" width="21" height="11.333333333333332"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="10"/>
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="highlightedColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xIu-QL-ey8">
                                                 <rect key="frame" x="105" y="13" width="285" height="72"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -271,7 +264,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pft-yS-eQW">
-                                                <rect key="frame" x="30" y="20.333333333333325" width="43" height="53.666666666666657"/>
+                                                <rect key="frame" x="30" y="35" width="43" height="24.333333333333329"/>
                                                 <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="camera.fill" catalog="system" title="" buttonSize="mini"/>
@@ -284,11 +277,19 @@
                                                 <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyM-h0-nhk" userLabel="filesCount">
+                                                <rect key="frame" x="41" y="61" width="6" height="12"/>
+                                                <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="10"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="highlightedColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="TFd-zt-BBI" firstAttribute="leading" secondItem="FyM-h0-nhk" secondAttribute="trailing" id="1bm-Zz-3Jp"/>
                                             <constraint firstItem="eLt-oj-baH" firstAttribute="leading" secondItem="crd-1F-XBr" secondAttribute="trailing" constant="3" id="1ed-tq-pZD"/>
                                             <constraint firstItem="Pzx-VR-pOA" firstAttribute="leading" secondItem="Zv0-uw-zqn" secondAttribute="leading" constant="19" id="3Xc-QD-6A6"/>
+                                            <constraint firstItem="TFd-zt-BBI" firstAttribute="centerY" secondItem="FyM-h0-nhk" secondAttribute="centerY" id="3bC-ZK-nn8"/>
                                             <constraint firstItem="SOB-TI-HMg" firstAttribute="top" secondItem="8AJ-NU-rH9" secondAttribute="bottom" constant="55" id="4tp-0u-pv3"/>
                                             <constraint firstItem="wI1-0z-aXe" firstAttribute="leading" secondItem="Zv0-uw-zqn" secondAttribute="leading" constant="15" id="5Cg-Rb-kJX"/>
                                             <constraint firstItem="Buq-2U-hz0" firstAttribute="centerY" secondItem="Zv0-uw-zqn" secondAttribute="centerY" constant="-283.5" id="5tQ-wV-ooE"/>
@@ -311,7 +312,6 @@
                                             <constraint firstAttribute="trailing" secondItem="uRG-94-MxE" secondAttribute="trailing" constant="19" id="KVx-v2-mX8"/>
                                             <constraint firstItem="QYE-So-zxr" firstAttribute="top" secondItem="crd-1F-XBr" secondAttribute="bottom" constant="19" id="KZJ-Vq-50C"/>
                                             <constraint firstItem="xIu-QL-ey8" firstAttribute="top" secondItem="Zv0-uw-zqn" secondAttribute="top" constant="13" id="MXX-ZI-0Om"/>
-                                            <constraint firstItem="FyM-h0-nhk" firstAttribute="top" secondItem="Pft-yS-eQW" secondAttribute="bottom" constant="-12.67" id="N8i-4f-bWP"/>
                                             <constraint firstItem="QYE-So-zxr" firstAttribute="top" secondItem="eLt-oj-baH" secondAttribute="bottom" constant="19" id="NEQ-GX-hbi"/>
                                             <constraint firstItem="d0e-Na-cT9" firstAttribute="top" secondItem="SOB-TI-HMg" secondAttribute="bottom" constant="55" id="NV5-vb-REM"/>
                                             <constraint firstItem="91c-QH-WYl" firstAttribute="leading" secondItem="sB1-b5-pz9" secondAttribute="trailing" constant="3" id="NXj-xm-nPF"/>
