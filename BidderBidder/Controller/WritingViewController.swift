@@ -178,7 +178,7 @@ extension WritingViewController: UITextViewDelegate {
         placeholderLabel.isHidden = !textView.text.isEmpty
         var currentText = textView.text ?? ""
         
-        if currentText.count > 1000 {
+        if currentText.count >= 1000 {
             currentText.removeLast()
             textCountLabel.text = "1000/1000"
             textCountLabel.textColor = .systemRed
