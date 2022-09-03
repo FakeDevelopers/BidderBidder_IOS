@@ -38,7 +38,7 @@
 		B3C04AFA28B3C67A0086DA92 /* Pretendard-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3C04AE128B3C67A0086DA92 /* Pretendard-Thin.ttf */; };
 		B3C04AFB28B3C67A0086DA92 /* Pretendard-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3C04AE128B3C67A0086DA92 /* Pretendard-Thin.ttf */; };
 		B3C04AFC28B3C67A0086DA92 /* Pretendard-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3C04AE128B3C67A0086DA92 /* Pretendard-Thin.ttf */; };
-		B3DD02F228AFC8AE000D1E86 /* WritingFilesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DD02F128AFC8AE000D1E86 /* WritingFilesCell.swift */; };
+		B3EE1C2228C3ABBE00944CB8 /* WritingFilesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EE1C2128C3ABBE00944CB8 /* WritingFilesCell.swift */; };
 		B3EE5B5C289A391A0019386B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3EE5B5B289A391A0019386B /* GoogleService-Info.plist */; };
 		B3F5A60F2890257000965D33 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A60E2890257000965D33 /* NetworkResult.swift */; };
 		D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */; };
@@ -93,7 +93,7 @@
 		B3C04ADF28B3C6790086DA92 /* Pretendard-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.ttf"; sourceTree = "<group>"; };
 		B3C04AE028B3C67A0086DA92 /* Pretendard-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.ttf"; sourceTree = "<group>"; };
 		B3C04AE128B3C67A0086DA92 /* Pretendard-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.ttf"; sourceTree = "<group>"; };
-		B3DD02F128AFC8AE000D1E86 /* WritingFilesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingFilesCell.swift; sourceTree = "<group>"; };
+		B3EE1C2128C3ABBE00944CB8 /* WritingFilesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingFilesCell.swift; sourceTree = "<group>"; };
 		B3EE5B5B289A391A0019386B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3F5A60E2890257000965D33 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		D2075D1F287FD1F200EAB426 /* BidderBidder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BidderBidder.entitlements; sourceTree = "<group>"; };
@@ -257,7 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				D2FCCA182849B5AB002005BC /* ProductViewCell.swift */,
-				B3DD02F128AFC8AE000D1E86 /* WritingFilesCell.swift */,
+				B3EE1C2128C3ABBE00944CB8 /* WritingFilesCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -463,7 +463,7 @@
 				D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */,
 				D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */,
 				D214F5952834D06A005AD768 /* ColorManage.swift in Sources */,
-				B3DD02F228AFC8AE000D1E86 /* WritingFilesCell.swift in Sources */,
+				B3EE1C2228C3ABBE00944CB8 /* WritingFilesCell.swift in Sources */,
 				D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */,
 				D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */,
 				B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */,
