@@ -48,8 +48,8 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet var userIdTextField: UITextField!
     @IBOutlet var bidTextField: UITextField!
 
-    @IBOutlet var bidderViewContraint1: NSLayoutConstraint!
-    @IBOutlet var bidderViewContraint2: NSLayoutConstraint!
+    @IBOutlet var bidderViewConstraint1: NSLayoutConstraint!
+    @IBOutlet var bidderViewConstraint2: NSLayoutConstraint!
 
     @IBOutlet var estimateBidLabel: UILabel!
     @IBOutlet var minusBidButton: UIImageView!
@@ -97,7 +97,7 @@ class ProductDetailViewController: UIViewController {
 
             bottomPadding = view.safeAreaInsets.bottom
 
-            bidderViewContraint2.constant = -bottomPadding
+            bidderViewConstraint2.constant = -bottomPadding
         }
     }
 
@@ -120,27 +120,17 @@ class ProductDetailViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
-        var gesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-
-        view.addGestureRecognizer(gesture)
-        gesture = UITapGestureRecognizer(target: self, action: #selector(closeBidView))
-        closeBidViewButton.isUserInteractionEnabled = true
-        closeBidViewButton.addGestureRecognizer(gesture)
-
-        gesture = UITapGestureRecognizer(target: self, action: #selector(minusBid))
-        minusBidButton.isUserInteractionEnabled = true
-        minusBidButton.addGestureRecognizer(gesture)
-
-        gesture = UITapGestureRecognizer(target: self, action: #selector(addBid))
-        addBidderButton.isUserInteractionEnabled = true
-        addBidderButton.addGestureRecognizer(gesture)
+        view.addGesture(#selector(dismissKeyboard))
+        closeBidViewButton.addGesture(#selector(closeBidView))
+        minusBidButton.addGesture(#selector(minusBid))
+        addBidderButton.addGesture(#selector(addBid))
     }
 
     private func initiallizeInfo(_ value: Data) {
         productInfo = (try? JSONDecoder().decode(ProductInfo.self, from: value))!
 
         setMainImage()
-        setPriceInfo()
+        setPriceInfoView()
         setBidInfo()
     }
 
@@ -158,23 +148,24 @@ class ProductDetailViewController: UIViewController {
         }
     }
 
-    private func setPriceInfo() {
+    private func setPriceInfoView() {
         if productInfo.hopePrice == nil {
             hopePriceContainerView.isHidden = true
             hopePriceConstraint.isActive = false
             minimumPriceLabel.topAnchor.constraint(equalTo: productTitleLabel.topAnchor, constant: 50).isActive = true
         } else {
-            hopePriceLabel.text = Util.int64ToMoneyFormat(productInfo.hopePrice!) + "원"
+            hopePriceLabel.text = Util.int64ToMoneyWonFormat(productInfo.hopePrice!)
         }
 
         setBiddersInfo()
+        setPriceInfoValue()
 
-        let minimumPriceText = Util.int64ToMoneyFormat(minimumPrice) + "원"
+        let minimumPriceText = Util.int64ToMoneyWonFormat(minimumPrice)
 
         minimumPriceLabel.text = minimumPriceText
         bidMinimumPriceLabel.text = minimumPriceText
         tickLabel.forEach { label in
-            label.text = Util.int64ToMoneyFormat(tick) + "원"
+            label.text = Util.int64ToMoneyWonFormat(tick)
         }
     }
 
@@ -182,13 +173,13 @@ class ProductDetailViewController: UIViewController {
         bidders = productInfo.bids
 
         if bidders.count > 0 {
-            let gesture = UITapGestureRecognizer(target: self, action: #selector(showBidderRanking))
-            bidderListButtom.isUserInteractionEnabled = true
             bidderListButtom.gestureRecognizers?.forEach(bidderListButtom.removeGestureRecognizer(_:))
-            bidderListButtom.addGestureRecognizer(gesture)
+            bidderListButtom.addGesture(#selector(showBidderRanking))
             bidderRankingTableView.reloadData()
         }
+    }
 
+    private func setPriceInfoValue() {
         if bidders.count > 3 {
             minimumPrice = bidders[3].bid + productInfo.tick
         } else if bidders.count > 0 {
@@ -220,7 +211,7 @@ class ProductDetailViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] timer in
             let reaminTime = Util.getRemainTime(remainSeconds)
             if reaminTime == Constant.expiredMessage {
-                if bidderViewContraint1.isActive {
+                if bidderViewConstraint1.isActive {
                     closeBidView()
                 }
                 remainTimeLabel.isHidden = true
@@ -271,8 +262,8 @@ extension ProductDetailViewController {
     }
 
     @objc func closeBidView() {
-        bidderViewContraint1.isActive = false
-        bidderViewContraint2.isActive = true
+        bidderViewConstraint1.isActive = false
+        bidderViewConstraint2.isActive = true
 
         UIView.animate(withDuration: 0.5, animations: { [self] in
             self.bidView.frame = CGRect(x: bidViewX, y: bidViewY, width: bidViewWidth, height: bidViewHeight)
@@ -285,8 +276,8 @@ extension ProductDetailViewController {
     }
 
     @IBAction func showBidView(_: Any) {
-        bidderViewContraint2.isActive = false
-        bidderViewContraint1.isActive = true
+        bidderViewConstraint2.isActive = false
+        bidderViewConstraint1.isActive = true
 
         UIView.animate(withDuration: 0.5, animations: { [self] in
             self.bidView.frame = CGRect(x: bidViewX, y: bidViewY - bidViewHeight, width: bidViewWidth, height: bidViewHeight)

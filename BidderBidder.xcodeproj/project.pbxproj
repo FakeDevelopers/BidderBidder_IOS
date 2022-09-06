@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF29D68128C77221005E7F5D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF29D68028C77221005E7F5D /* UIView.swift */; };
 		AF3FF8D128BB671300C8F67B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CA28BB671300C8F67B /* Constant.swift */; };
 		AF3FF8D228BB671300C8F67B /* ProgressPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */; };
 		AF3FF8D328BB671300C8F67B /* ColorManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CC28BB671300C8F67B /* ColorManage.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF29D68028C77221005E7F5D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		AF3FF8CA28BB671300C8F67B /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressPopup.swift; sourceTree = "<group>"; };
 		AF3FF8CC28BB671300C8F67B /* ColorManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManage.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				AF3FF8CE28BB671300C8F67B /* UIViewController.swift */,
 				AF3FF8CF28BB671300C8F67B /* NetworkResult.swift */,
 				AF3FF8D028BB671300C8F67B /* UIImageView.swift */,
+				AF29D68028C77221005E7F5D /* UIView.swift */,
 			);
 			path = SupportingFile;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				AF3FF8D728BB671300C8F67B /* UIImageView.swift in Sources */,
 				B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */,
 				AF3FF8D228BB671300C8F67B /* ProgressPopup.swift in Sources */,
+				AF29D68128C77221005E7F5D /* UIView.swift in Sources */,
 				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
 				D0FF644B2C5879445873045D /* ProductDetailViewController.swift in Sources */,
 				AF3FF8D528BB671300C8F67B /* UIViewController.swift in Sources */,

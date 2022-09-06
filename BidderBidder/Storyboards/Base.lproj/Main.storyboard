@@ -227,7 +227,7 @@
                                 <rect key="frame" x="0.0" y="95" width="390" height="617"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yb4-Gs-kLo">
-                                    <rect key="frame" x="0.0" y="207.33333206176758" width="390" height="44"/>
+                                    <rect key="frame" x="0.0" y="207.33333206176761" width="390" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -872,8 +872,8 @@
                         <outlet property="bidderListButtom" destination="nL3-tS-XaD" id="cs1-jU-kt9"/>
                         <outlet property="bidderRankingTableView" destination="veJ-Fl-aft" id="KI4-8T-MlD"/>
                         <outlet property="bidderSizeLabel" destination="i1E-DQ-N7g" id="117-pL-VSs"/>
-                        <outlet property="bidderViewContraint1" destination="i0J-8e-BBL" id="D2Q-gC-TV3"/>
-                        <outlet property="bidderViewContraint2" destination="y4f-YX-o3P" id="Sqw-6S-oP8"/>
+                        <outlet property="bidderViewConstraint1" destination="i0J-8e-BBL" id="waE-dJ-KU9"/>
+                        <outlet property="bidderViewConstraint2" destination="y4f-YX-o3P" id="JVp-jt-U8P"/>
                         <outlet property="closeBidViewButton" destination="kLT-o9-3M1" id="KeP-nm-DmG"/>
                         <outlet property="estimateBidLabel" destination="2CM-aP-NNn" id="xuo-xV-zOc"/>
                         <outlet property="explainTextView" destination="ZmA-PL-bYp" id="zTd-lU-fDR"/>

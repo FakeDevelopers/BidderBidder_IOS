@@ -21,6 +21,10 @@ class Util {
         return numberFormatter.string(from: NSNumber(value: value))!
     }
 
+    static func int64ToMoneyWonFormat(_ value: Int64) -> String {
+        int64ToMoneyFormat(value) + "원"
+    }
+
     static func getRemainTime(_ remainSeconds: Int64) -> String {
         let day = remainSeconds / (24 * 60 * 60)
         let hour = (remainSeconds % (24 * 60 * 60)) / (60 * 60)
