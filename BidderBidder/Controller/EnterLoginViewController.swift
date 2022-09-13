@@ -13,7 +13,7 @@ class EnterLoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var errorMessageLabel: UILabel!
     @IBOutlet var loginButton: UIButton!
-    let urlLogin: String = "http://3.38.81.213:8080/user/login"
+    let urlLogin: String = Constant.domainURL
 
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
