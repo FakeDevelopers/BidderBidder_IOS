@@ -17,6 +17,7 @@ Pods/
 ### Firebase Patch ###
 .runtimeconfig.json
 .firebase/
+GoogleService-Info.plist
 
 ### macOS ###
 # General
@@ -55,10 +56,10 @@ Temporary Items
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-Info.plist
 
 ## User settings
 xcuserdata/
+
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
@@ -158,3 +159,4 @@ xcuserdata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift,swiftpackagemanager,swiftpm,firebase,macos,cocoapods
+BidderBidder/GoogleService-Info.plist

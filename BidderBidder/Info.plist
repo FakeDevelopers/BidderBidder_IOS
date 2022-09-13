@@ -39,5 +39,9 @@
 	</dict>
 	<key>UIBackgroundModes</key>
 	<array/>
+	<key>domainURL</key>
+	<string>$(domainURL)</string>
+	<key>writeURL</key>
+	<string>$(writeURL)</string>
 </dict>
 </plist>

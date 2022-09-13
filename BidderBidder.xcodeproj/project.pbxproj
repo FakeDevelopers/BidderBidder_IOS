@@ -7,29 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF29D68128C77221005E7F5D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF29D68028C77221005E7F5D /* UIView.swift */; };
+		AF3FF8D128BB671300C8F67B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CA28BB671300C8F67B /* Constant.swift */; };
+		AF3FF8D228BB671300C8F67B /* ProgressPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */; };
+		AF3FF8D328BB671300C8F67B /* ColorManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CC28BB671300C8F67B /* ColorManage.swift */; };
+		AF3FF8D428BB671300C8F67B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CD28BB671300C8F67B /* Util.swift */; };
+		AF3FF8D528BB671300C8F67B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CE28BB671300C8F67B /* UIViewController.swift */; };
+		AF3FF8D628BB671300C8F67B /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CF28BB671300C8F67B /* NetworkResult.swift */; };
+		AF3FF8D728BB671300C8F67B /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8D028BB671300C8F67B /* UIImageView.swift */; };
+		AF4EDD4C28B9CEC600D933D8 /* BidderRankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EDD4B28B9CEC600D933D8 /* BidderRankingCell.swift */; };
+		AF4EDD5128B9D05C00D933D8 /* Bidder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EDD5028B9D05C00D933D8 /* Bidder.swift */; };
+		AF4EDD5328B9D07300D933D8 /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EDD5228B9D07300D933D8 /* ProductInfo.swift */; };
+		AF68720328C10657008D12AE /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = AF68720228C10657008D12AE /* Toast */; };
+		B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350709C2881155D000A6CA1 /* WritingViewController.swift */; };
+		B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = B38E073B288AF70D00CCD402 /* YPImagePicker */; };
+		D0FF644B2C5879445873045D /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF68C364F656D55DEEFAEF /* ProductDetailViewController.swift */; };
 		D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */; };
 		D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D1B287EAEEB00EAB426 /* FirebaseAuth */; };
-		D2075D1E287EB04B00EAB426 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2075D1D287EB04B00EAB426 /* GoogleService-Info.plist */; };
 		D214F59128334FE7005AD768 /* TweeTextField in Frameworks */ = {isa = PBXBuildFile; productRef = D214F59028334FE7005AD768 /* TweeTextField */; };
-		D214F5952834D06A005AD768 /* ColorManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214F5942834D06A005AD768 /* ColorManage.swift */; };
+		D243699F28D0B0F7005052B4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B31E462D28A182F9008D9A5E /* .swiftlint.yml */; };
+		D24369A028D0B0F8005052B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */; };
+		D24369A128D0B0F8005052B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D259B0B127FC5FDB0026DD9E /* Assets.xcassets */; };
+		D24369A228D0B0F8005052B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D243699B28D0AE31005052B4 /* GoogleService-Info.plist */; };
+		D24369A328D0B0F8005052B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B0AE27FC5FDA0026DD9E /* Main.storyboard */; };
+		D24369A428D0B0F8005052B4 /* RecentlySearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A7E4D228A6116300D85FD0 /* RecentlySearchViewCell.xib */; };
+		D24369A628D0B19E005052B4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24369A528D0B19E005052B4 /* Model.swift */; };
 		D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */; };
 		D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */; };
-		D259B0B027FC5FDA0026DD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B0AE27FC5FDA0026DD9E /* Main.storyboard */; };
-		D259B0B227FC5FDB0026DD9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D259B0B127FC5FDB0026DD9E /* Assets.xcassets */; };
-		D259B0B527FC5FDB0026DD9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */; };
 		D259B0C027FC5FDB0026DD9E /* BidderBidderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0BF27FC5FDB0026DD9E /* BidderBidderTests.swift */; };
 		D259B0CA27FC5FDB0026DD9E /* BidderBidderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */; };
 		D259B0CC27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */; };
 		D264D858289248F100A4E8E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264D857289248F100A4E8E4 /* SearchViewController.swift */; };
-		D26AF735289CEC3500267A6B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AF734289CEC3500267A6B /* UIView.swift */; };
-		D289D7DB287D8429003CB987 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289D7DA287D8429003CB987 /* UIImageView.swift */; };
-		D289D7DD287D85F4003CB987 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289D7DC287D85F4003CB987 /* UIViewController.swift */; };
-		D289D7DF287D9665003CB987 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289D7DE287D9665003CB987 /* Constant.swift */; };
 		D2A7E4C828A4CAD900D85FD0 /* TagCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4C728A4CAD900D85FD0 /* TagCollectionViewController.swift */; };
 		D2A7E4CA28A4CBE800D85FD0 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4C928A4CBE800D85FD0 /* TagCollectionViewCell.swift */; };
-		D2A7E4CC28A4CC9E00D85FD0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4CB28A4CC9E00D85FD0 /* Model.swift */; };
 		D2A7E4D328A6116300D85FD0 /* RecentlySearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4D128A6116300D85FD0 /* RecentlySearchViewCell.swift */; };
-		D2A7E4D428A6116300D85FD0 /* RecentlySearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A7E4D228A6116300D85FD0 /* RecentlySearchViewCell.xib */; };
 		D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9427FD126A00D829DF /* LoginViewController.swift */; };
 		D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */; };
 		D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2E99F9A27FDA27100D829DF /* Alamofire */; };
@@ -55,9 +66,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D2075D1D287EB04B00EAB426 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF29D68028C77221005E7F5D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		AF3FF8CA28BB671300C8F67B /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressPopup.swift; sourceTree = "<group>"; };
+		AF3FF8CC28BB671300C8F67B /* ColorManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManage.swift; sourceTree = "<group>"; };
+		AF3FF8CD28BB671300C8F67B /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		AF3FF8CE28BB671300C8F67B /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		AF3FF8CF28BB671300C8F67B /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		AF3FF8D028BB671300C8F67B /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		AF4EDD4B28B9CEC600D933D8 /* BidderRankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderRankingCell.swift; sourceTree = "<group>"; };
+		AF4EDD5028B9D05C00D933D8 /* Bidder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bidder.swift; sourceTree = "<group>"; };
+		AF4EDD5228B9D07300D933D8 /* ProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfo.swift; sourceTree = "<group>"; };
+		B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debugConfig.xcconfig; sourceTree = "<group>"; };
+		B31E462D28A182F9008D9A5E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		B350709C2881155D000A6CA1 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
+		D0FF68C364F656D55DEEFAEF /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		D2075D1F287FD1F200EAB426 /* BidderBidder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BidderBidder.entitlements; sourceTree = "<group>"; };
-		D214F5942834D06A005AD768 /* ColorManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManage.swift; sourceTree = "<group>"; };
+		D243699B28D0AE31005052B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D24369A528D0B19E005052B4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D259B0A527FC5FDA0026DD9E /* BidderBidder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidderBidder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,13 +96,8 @@
 		D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITests.swift; sourceTree = "<group>"; };
 		D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D264D857289248F100A4E8E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		D26AF734289CEC3500267A6B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		D289D7DA287D8429003CB987 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		D289D7DC287D85F4003CB987 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		D289D7DE287D9665003CB987 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = ../../../../Documents/Constant.swift; sourceTree = "<group>"; };
 		D2A7E4C728A4CAD900D85FD0 /* TagCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewController.swift; sourceTree = "<group>"; };
 		D2A7E4C928A4CBE800D85FD0 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
-		D2A7E4CB28A4CC9E00D85FD0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D2A7E4D128A6116300D85FD0 /* RecentlySearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlySearchViewCell.swift; sourceTree = "<group>"; };
 		D2A7E4D228A6116300D85FD0 /* RecentlySearchViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentlySearchViewCell.xib; sourceTree = "<group>"; };
 		D2DEBBB32849BCD600437F3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,7 +112,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF68720328C10657008D12AE /* Toast in Frameworks */,
 				D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */,
+				B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */,
 				D214F59128334FE7005AD768 /* TweeTextField in Frameworks */,
 				D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */,
 				D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */,
@@ -115,9 +138,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF3FF8C928BB671300C8F67B /* SupportingFile */ = {
+			isa = PBXGroup;
+			children = (
+				D24369A528D0B19E005052B4 /* Model.swift */,
+				AF3FF8CA28BB671300C8F67B /* Constant.swift */,
+				AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */,
+				AF3FF8CC28BB671300C8F67B /* ColorManage.swift */,
+				AF3FF8CD28BB671300C8F67B /* Util.swift */,
+				AF3FF8CE28BB671300C8F67B /* UIViewController.swift */,
+				AF3FF8CF28BB671300C8F67B /* NetworkResult.swift */,
+				AF3FF8D028BB671300C8F67B /* UIImageView.swift */,
+				AF29D68028C77221005E7F5D /* UIView.swift */,
+			);
+			path = SupportingFile;
+			sourceTree = "<group>";
+		};
+		AF4EDD4F28B9D04900D933D8 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AF4EDD5028B9D05C00D933D8 /* Bidder.swift */,
+				AF4EDD5228B9D07300D933D8 /* ProductInfo.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		D259B09C27FC5FDA0026DD9E = {
 			isa = PBXGroup;
 			children = (
+				B31E462D28A182F9008D9A5E /* .swiftlint.yml */,
 				D259B0A727FC5FDA0026DD9E /* BidderBidder */,
 				D259B0BE27FC5FDB0026DD9E /* BidderBidderTests */,
 				D259B0C827FC5FDB0026DD9E /* BidderBidderUITests */,
@@ -138,15 +187,17 @@
 		D259B0A727FC5FDA0026DD9E /* BidderBidder */ = {
 			isa = PBXGroup;
 			children = (
+				AF3FF8C928BB671300C8F67B /* SupportingFile */,
+				AF4EDD4F28B9D04900D933D8 /* DTO */,
+				B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */,
 				D2075D1F287FD1F200EAB426 /* BidderBidder.entitlements */,
 				D2DEBBB32849BCD600437F3D /* Info.plist */,
-				D2075D1D287EB04B00EAB426 /* GoogleService-Info.plist */,
 				D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */,
 				D259B0A827FC5FDA0026DD9E /* AppDelegate.swift */,
 				D259B0AA27FC5FDA0026DD9E /* SceneDelegate.swift */,
 				D259B0B127FC5FDB0026DD9E /* Assets.xcassets */,
+				D243699B28D0AE31005052B4 /* GoogleService-Info.plist */,
 				D2E99F9E27FE66C200D829DF /* Storyboards */,
-				D2FCCA1628489B91002005BC /* Supporting File */,
 				D2E99F9827FDA1AD00D829DF /* Controller */,
 				D2FCCA1728489BB9002005BC /* Cell */,
 			);
@@ -178,6 +229,8 @@
 				D2E99F9C27FDA58100D829DF /* MainViewController.swift */,
 				D264D857289248F100A4E8E4 /* SearchViewController.swift */,
 				D2A7E4C728A4CAD900D85FD0 /* TagCollectionViewController.swift */,
+				B350709C2881155D000A6CA1 /* WritingViewController.swift */,
+				D0FF68C364F656D55DEEFAEF /* ProductDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,19 +243,6 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		D2FCCA1628489B91002005BC /* Supporting File */ = {
-			isa = PBXGroup;
-			children = (
-				D289D7DC287D85F4003CB987 /* UIViewController.swift */,
-				D214F5942834D06A005AD768 /* ColorManage.swift */,
-				D289D7DA287D8429003CB987 /* UIImageView.swift */,
-				D289D7DE287D9665003CB987 /* Constant.swift */,
-				D26AF734289CEC3500267A6B /* UIView.swift */,
-				D2A7E4CB28A4CC9E00D85FD0 /* Model.swift */,
-			);
-			path = "Supporting File";
-			sourceTree = "<group>";
-		};
 		D2FCCA1728489BB9002005BC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +250,7 @@
 				D2A7E4C928A4CBE800D85FD0 /* TagCollectionViewCell.swift */,
 				D2A7E4D128A6116300D85FD0 /* RecentlySearchViewCell.swift */,
 				D2A7E4D228A6116300D85FD0 /* RecentlySearchViewCell.xib */,
+				AF4EDD4B28B9CEC600D933D8 /* BidderRankingCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -221,9 +262,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D259B0CF27FC5FDB0026DD9E /* Build configuration list for PBXNativeTarget "BidderBidder" */;
 			buildPhases = (
+				B31E462C28A18217008D9A5E /* SwiftLint Script */,
 				D259B0A127FC5FDA0026DD9E /* Sources */,
 				D259B0A227FC5FDA0026DD9E /* Frameworks */,
-				D259B0A327FC5FDA0026DD9E /* Resources */,
+				D243699E28D0B0D6005052B4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +277,8 @@
 				D214F59028334FE7005AD768 /* TweeTextField */,
 				D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */,
 				D2075D1B287EAEEB00EAB426 /* FirebaseAuth */,
+				B38E073B288AF70D00CCD402 /* YPImagePicker */,
+				AF68720228C10657008D12AE /* Toast */,
 			);
 			productName = BidderBidder;
 			productReference = D259B0A527FC5FDA0026DD9E /* BidderBidder.app */;
@@ -312,6 +356,8 @@
 				D2E99F9927FDA27100D829DF /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D214F58F28334FE7005AD768 /* XCRemoteSwiftPackageReference "TweeTextField" */,
 				D2075D18287EAEEB00EAB426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
+				AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = D259B0A627FC5FDA0026DD9E /* Products */;
 			projectDirPath = "";
@@ -325,15 +371,16 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D259B0A327FC5FDA0026DD9E /* Resources */ = {
+		D243699E28D0B0D6005052B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D259B0B527FC5FDB0026DD9E /* LaunchScreen.storyboard in Resources */,
-				D2075D1E287EB04B00EAB426 /* GoogleService-Info.plist in Resources */,
-				D259B0B227FC5FDB0026DD9E /* Assets.xcassets in Resources */,
-				D259B0B027FC5FDA0026DD9E /* Main.storyboard in Resources */,
-				D2A7E4D428A6116300D85FD0 /* RecentlySearchViewCell.xib in Resources */,
+				D243699F28D0B0F7005052B4 /* .swiftlint.yml in Resources */,
+				D24369A028D0B0F8005052B4 /* LaunchScreen.storyboard in Resources */,
+				D24369A128D0B0F8005052B4 /* Assets.xcassets in Resources */,
+				D24369A228D0B0F8005052B4 /* GoogleService-Info.plist in Resources */,
+				D24369A328D0B0F8005052B4 /* Main.storyboard in Resources */,
+				D24369A428D0B0F8005052B4 /* RecentlySearchViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,27 +400,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B31E462C28A18217008D9A5E /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D259B0A127FC5FDA0026DD9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2A7E4CC28A4CC9E00D85FD0 /* Model.swift in Sources */,
-				D26AF735289CEC3500267A6B /* UIView.swift in Sources */,
-				D289D7DB287D8429003CB987 /* UIImageView.swift in Sources */,
 				D264D858289248F100A4E8E4 /* SearchViewController.swift in Sources */,
 				D2A7E4CA28A4CBE800D85FD0 /* TagCollectionViewCell.swift in Sources */,
 				D2FCCA192849B5AB002005BC /* ProductViewCell.swift in Sources */,
 				D2A7E4C828A4CAD900D85FD0 /* TagCollectionViewController.swift in Sources */,
-				D289D7DD287D85F4003CB987 /* UIViewController.swift in Sources */,
+				D2FCCA192849B5AB002005BC /* ProductViewCell.swift in Sources */,
+				AF4EDD4C28B9CEC600D933D8 /* BidderRankingCell.swift in Sources */,
+				AF3FF8D328BB671300C8F67B /* ColorManage.swift in Sources */,
+				AF4EDD5328B9D07300D933D8 /* ProductInfo.swift in Sources */,
 				D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */,
 				D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */,
-				D214F5952834D06A005AD768 /* ColorManage.swift in Sources */,
+				D24369A628D0B19E005052B4 /* Model.swift in Sources */,
 				D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */,
-				D289D7DF287D9665003CB987 /* Constant.swift in Sources */,
+				AF3FF8D428BB671300C8F67B /* Util.swift in Sources */,
 				D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */,
 				D2A7E4D328A6116300D85FD0 /* RecentlySearchViewCell.swift in Sources */,
+				AF4EDD5128B9D05C00D933D8 /* Bidder.swift in Sources */,
+				AF3FF8D728BB671300C8F67B /* UIImageView.swift in Sources */,
+				B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */,
+				AF3FF8D228BB671300C8F67B /* ProgressPopup.swift in Sources */,
+				AF29D68128C77221005E7F5D /* UIView.swift in Sources */,
 				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
+				D0FF644B2C5879445873045D /* ProductDetailViewController.swift in Sources */,
+				AF3FF8D528BB671300C8F67B /* UIViewController.swift in Sources */,
+				AF3FF8D628BB671300C8F67B /* NetworkResult.swift in Sources */,
+				AF3FF8D128BB671300C8F67B /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +622,7 @@
 		};
 		D259B0D027FC5FDB0026DD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -554,6 +632,9 @@
 				DEVELOPMENT_TEAM = KY55F55FY5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BidderBidder/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 사용 권한을 허용해주세요";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = yourWording;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "갤러리 사용 권한을 허용해주세요";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -583,6 +664,9 @@
 				DEVELOPMENT_TEAM = KY55F55FY5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BidderBidder/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 사용 권한을 허용해주세요";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = yourWording;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "갤러리 사용 권한을 허용해주세요";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -603,6 +687,7 @@
 		};
 		D259B0D327FC5FDB0026DD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -641,6 +726,7 @@
 		};
 		D259B0D627FC5FDB0026DD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -715,6 +801,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		D2075D18287EAEEB00EAB426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -742,6 +844,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AF68720228C10657008D12AE /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		B38E073B288AF70D00CCD402 /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
+		};
 		D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D2075D18287EAEEB00EAB426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

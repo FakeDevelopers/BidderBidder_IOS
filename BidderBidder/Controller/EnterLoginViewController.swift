@@ -13,7 +13,6 @@ class EnterLoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var errorMessageLabel: UILabel!
     @IBOutlet var loginButton: UIButton!
-    let urlLogin: String = Constant.domainURL
 
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -45,9 +44,9 @@ class EnterLoginViewController: UIViewController {
         vcName?.modalPresentationStyle = .fullScreen
         vcName?.modalTransitionStyle = .crossDissolve
 
-        if vaildEmailValidationResult{
+        if vaildEmailValidationResult {
             present(vcName!, animated: true, completion: nil)
-            sendRestRequest(url: urlLogin, params: ["email": idTextField.text, "passwd": passwordTextField.text] as Dictionary) {
+            sendRestRequest(url: Constant.domainURL, params: ["email": idTextField.text, "passwd": passwordTextField.text] as Dictionary) {
                 response in
                 switch response.result {
                 case .success:

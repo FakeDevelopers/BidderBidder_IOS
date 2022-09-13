@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
         getProductList()
         initRefresh()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = false
@@ -66,6 +66,15 @@ class MainViewController: UIViewController {
                         error.errorDescription))
                 }
         }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ProductDetailViewController{
+            let productViewController = segue.destination as! ProductDetailViewController
+            let indexPath = sender as! IndexPath
+            productViewController.productId = productList[indexPath.row].productId
+        }
+        
     }
 }
 
@@ -106,6 +115,10 @@ extension MainViewController: UITableViewDelegate {
             getProductList()
         }
     }
+
+    func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailProductSegue", sender: indexPath)
+    }
 }
 
 extension MainViewController: UITableViewDataSource {
@@ -120,6 +133,7 @@ extension MainViewController: UITableViewDataSource {
 
         cell.setCell(product: productList[indexPath.row])
         cell.selectionStyle = .none // 셀 선택시 회색으로 선택 표시해주는거 없애기
+
         return cell
     }
 }
