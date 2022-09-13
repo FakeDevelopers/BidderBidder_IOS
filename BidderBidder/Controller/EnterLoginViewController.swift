@@ -45,7 +45,7 @@ class EnterLoginViewController: UIViewController {
         vcName?.modalPresentationStyle = .fullScreen
         vcName?.modalTransitionStyle = .crossDissolve
 
-        if vaildEmailValidationResult == true {
+        if vaildEmailValidationResult{
             present(vcName!, animated: true, completion: nil)
             sendRestRequest(url: urlLogin, params: ["email": idTextField.text, "passwd": passwordTextField.text] as Dictionary) {
                 response in

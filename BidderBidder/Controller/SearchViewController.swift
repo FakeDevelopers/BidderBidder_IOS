@@ -30,8 +30,8 @@ class SearchViewController: UIViewController {
     }
 
     private func setupSearchController() {
-        var bounds = UIScreen.main.bounds
-        var width = bounds.size.width // 화면 너비
+        let bounds = UIScreen.main.bounds
+        let width = bounds.size.width // 화면 너비
         let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: width - 28, height: 0))
         searchBar.placeholder = "검색어를 입력해주세요."
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchBar)
@@ -53,9 +53,6 @@ class SearchViewController: UIViewController {
         tableView.separatorColor = .white
     }
 
-    private func hideContainerView() {
-        containerView.isHidden = true
-    }
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
@@ -104,7 +101,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         childVC?.dataArray.insert(searchBar.text!, at: 0)
         UserDefaults.standard.set(childVC?.dataArray, forKey: "searchHistory")
         print(childVC?.dataArray)
-        childVC?.RecentlyCollectionView.reloadData()
+        childVC?.recentlyCollectionView.reloadData()
         print(searchBar.text!)
     }
 }

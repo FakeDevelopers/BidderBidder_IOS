@@ -9,7 +9,7 @@ import UIKit
 
 class TagCollectionViewController: UIViewController {
     @IBOutlet var tagCollectionView: UICollectionView!
-    @IBOutlet var RecentlyCollectionView: UICollectionView!
+    @IBOutlet var recentlyCollectionView: UICollectionView!
     let tags = Tag.load()
     var dataArray: [String] = []
     let sectionInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
@@ -22,17 +22,16 @@ class TagCollectionViewController: UIViewController {
     }
 
     func setUpRecentlyCollectionView() {
-        // self.RecentlyCollectionView.delegate = self
-        RecentlyCollectionView.dataSource = self
+        recentlyCollectionView.dataSource = self
     }
 
     func registerCell() {
-        RecentlyCollectionView.register(UINib(nibName: "RecentlySearchViewCell", bundle: nil), forCellWithReuseIdentifier: "RecentlySearchViewCell")
+        recentlyCollectionView.register(UINib(nibName: "RecentlySearchViewCell", bundle: nil), forCellWithReuseIdentifier: "RecentlySearchViewCell")
     }
 
     @IBAction func clearCell(_: Any) {
         dataArray = []
-        RecentlyCollectionView.reloadData()
+        recentlyCollectionView.reloadData()
         for key in UserDefaults.standard.dictionaryRepresentation().keys {
             UserDefaults.standard.removeObject(forKey: "searchHistory")
         }
@@ -42,20 +41,20 @@ class TagCollectionViewController: UIViewController {
 extension TagCollectionViewController: UICollectionViewDataSource {
     // Wie viele Objekete soll es geben?
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        if collectionView == RecentlyCollectionView {
+        if collectionView == recentlyCollectionView {
             return dataArray.count
         }
         return tags.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == RecentlyCollectionView {
+        if collectionView == recentlyCollectionView {
             let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlySearchViewCell", for: indexPath) as! RecentlySearchViewCell
             cellA.setData(text: dataArray[indexPath.row])
             cellA.delete = { [unowned self] in
                 UserDefaults.standard.removeObject(forKey: "searchHistory")
                 self.dataArray.remove(at: indexPath.row)
-                self.RecentlyCollectionView.reloadData()
+                self.recentlyCollectionView.reloadData()
             }
 
             return cellA
