@@ -20,9 +20,16 @@
 		D259B0C027FC5FDB0026DD9E /* BidderBidderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0BF27FC5FDB0026DD9E /* BidderBidderTests.swift */; };
 		D259B0CA27FC5FDB0026DD9E /* BidderBidderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */; };
 		D259B0CC27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */; };
+		D264D858289248F100A4E8E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264D857289248F100A4E8E4 /* SearchViewController.swift */; };
+		D26AF735289CEC3500267A6B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AF734289CEC3500267A6B /* UIView.swift */; };
 		D289D7DB287D8429003CB987 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289D7DA287D8429003CB987 /* UIImageView.swift */; };
 		D289D7DD287D85F4003CB987 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289D7DC287D85F4003CB987 /* UIViewController.swift */; };
 		D289D7DF287D9665003CB987 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289D7DE287D9665003CB987 /* Constant.swift */; };
+		D2A7E4C828A4CAD900D85FD0 /* TagCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4C728A4CAD900D85FD0 /* TagCollectionViewController.swift */; };
+		D2A7E4CA28A4CBE800D85FD0 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4C928A4CBE800D85FD0 /* TagCollectionViewCell.swift */; };
+		D2A7E4CC28A4CC9E00D85FD0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4CB28A4CC9E00D85FD0 /* Model.swift */; };
+		D2A7E4D328A6116300D85FD0 /* RecentlySearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4D128A6116300D85FD0 /* RecentlySearchViewCell.swift */; };
+		D2A7E4D428A6116300D85FD0 /* RecentlySearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A7E4D228A6116300D85FD0 /* RecentlySearchViewCell.xib */; };
 		D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9427FD126A00D829DF /* LoginViewController.swift */; };
 		D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */; };
 		D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2E99F9A27FDA27100D829DF /* Alamofire */; };
@@ -62,9 +69,16 @@
 		D259B0C527FC5FDB0026DD9E /* BidderBidderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BidderBidderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITests.swift; sourceTree = "<group>"; };
 		D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D264D857289248F100A4E8E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D26AF734289CEC3500267A6B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D289D7DA287D8429003CB987 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		D289D7DC287D85F4003CB987 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		D289D7DE287D9665003CB987 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = ../../../../Documents/Constant.swift; sourceTree = "<group>"; };
+		D2A7E4C728A4CAD900D85FD0 /* TagCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewController.swift; sourceTree = "<group>"; };
+		D2A7E4C928A4CBE800D85FD0 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2A7E4CB28A4CC9E00D85FD0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D2A7E4D128A6116300D85FD0 /* RecentlySearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlySearchViewCell.swift; sourceTree = "<group>"; };
+		D2A7E4D228A6116300D85FD0 /* RecentlySearchViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentlySearchViewCell.xib; sourceTree = "<group>"; };
 		D2DEBBB32849BCD600437F3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2E99F9427FD126A00D829DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterLoginViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +176,8 @@
 				D2E99F9427FD126A00D829DF /* LoginViewController.swift */,
 				D2E99F9627FD98EE00D829DF /* EnterLoginViewController.swift */,
 				D2E99F9C27FDA58100D829DF /* MainViewController.swift */,
+				D264D857289248F100A4E8E4 /* SearchViewController.swift */,
+				D2A7E4C728A4CAD900D85FD0 /* TagCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,10 +193,12 @@
 		D2FCCA1628489B91002005BC /* Supporting File */ = {
 			isa = PBXGroup;
 			children = (
+				D289D7DC287D85F4003CB987 /* UIViewController.swift */,
 				D214F5942834D06A005AD768 /* ColorManage.swift */,
 				D289D7DA287D8429003CB987 /* UIImageView.swift */,
-				D289D7DC287D85F4003CB987 /* UIViewController.swift */,
 				D289D7DE287D9665003CB987 /* Constant.swift */,
+				D26AF734289CEC3500267A6B /* UIView.swift */,
+				D2A7E4CB28A4CC9E00D85FD0 /* Model.swift */,
 			);
 			path = "Supporting File";
 			sourceTree = "<group>";
@@ -189,6 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				D2FCCA182849B5AB002005BC /* ProductViewCell.swift */,
+				D2A7E4C928A4CBE800D85FD0 /* TagCollectionViewCell.swift */,
+				D2A7E4D128A6116300D85FD0 /* RecentlySearchViewCell.swift */,
+				D2A7E4D228A6116300D85FD0 /* RecentlySearchViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -312,6 +333,7 @@
 				D2075D1E287EB04B00EAB426 /* GoogleService-Info.plist in Resources */,
 				D259B0B227FC5FDB0026DD9E /* Assets.xcassets in Resources */,
 				D259B0B027FC5FDA0026DD9E /* Main.storyboard in Resources */,
+				D2A7E4D428A6116300D85FD0 /* RecentlySearchViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,8 +358,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A7E4CC28A4CC9E00D85FD0 /* Model.swift in Sources */,
+				D26AF735289CEC3500267A6B /* UIView.swift in Sources */,
 				D289D7DB287D8429003CB987 /* UIImageView.swift in Sources */,
+				D264D858289248F100A4E8E4 /* SearchViewController.swift in Sources */,
+				D2A7E4CA28A4CBE800D85FD0 /* TagCollectionViewCell.swift in Sources */,
 				D2FCCA192849B5AB002005BC /* ProductViewCell.swift in Sources */,
+				D2A7E4C828A4CAD900D85FD0 /* TagCollectionViewController.swift in Sources */,
 				D289D7DD287D85F4003CB987 /* UIViewController.swift in Sources */,
 				D2E99F9527FD126A00D829DF /* LoginViewController.swift in Sources */,
 				D259B0A927FC5FDA0026DD9E /* AppDelegate.swift in Sources */,
@@ -345,6 +372,7 @@
 				D259B0AB27FC5FDA0026DD9E /* SceneDelegate.swift in Sources */,
 				D289D7DF287D9665003CB987 /* Constant.swift in Sources */,
 				D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */,
+				D2A7E4D328A6116300D85FD0 /* RecentlySearchViewCell.swift in Sources */,
 				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

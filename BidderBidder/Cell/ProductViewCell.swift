@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Product: Codable{
+struct Product: Codable {
     var productId: Int64
     var thumbnail: String
     var productTitle: String
@@ -15,32 +15,32 @@ struct Product: Codable{
     var openingBid: Int64
     var tick: Int64
     var expirationDate: String
-    var bidderCount : Int
+    var bidderCount: Int
 }
 
 class ProductViewCell: UITableViewCell {
     static let identifier = "ProductViewCell"
-    @IBOutlet weak var thumbnail: UIImageView!
-    @IBOutlet weak var productName: UILabel!
-    @IBOutlet weak var hopePrice: UILabel!
-    @IBOutlet weak var openingBid: UILabel!
-    @IBOutlet weak var expirationDate: UILabel!
-    
-    @IBOutlet weak var bidder: UILabel!
-    
+    @IBOutlet var thumbnail: UIImageView!
+    @IBOutlet var productName: UILabel!
+    @IBOutlet var hopePrice: UILabel!
+    @IBOutlet var openingBid: UILabel!
+    @IBOutlet var expirationDate: UILabel!
+
+    @IBOutlet var bidder: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
     }
-    
+
     func setCell(product: Product) {
-        thumbnail.downloaded(from: Constant.domainURL+product.thumbnail)
+        thumbnail.downloaded(from: Constant.domainURL + product.thumbnail)
         productName.text = product.productTitle
         if product.hopePrice == nil {
             hopePrice.text = " "
