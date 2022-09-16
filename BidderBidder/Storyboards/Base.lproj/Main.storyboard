@@ -102,7 +102,7 @@
                                                 <rect key="frame" x="19" y="403" width="352" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXt-cF-hCc" userLabel="line6">
                                                 <rect key="frame" x="19" y="381" width="352" height="1"/>
@@ -244,6 +244,10 @@
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" image="closeBtn"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonSender:" destination="dEg-25-CcT" eventType="touchUpInside" id="gSa-SC-dL7"/>
+                                                                        <action selector="tappedRemoveButton:" destination="dEg-25-CcT" eventType="touchUpInside" id="U0T-oU-Pf8"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="대표사진" borderStyle="line" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K0e-ln-noh">
                                                                     <rect key="frame" x="0.0" y="52" width="63" height="19"/>
@@ -295,6 +299,7 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="TFd-zt-BBI" firstAttribute="leading" secondItem="FyM-h0-nhk" secondAttribute="trailing" id="1bm-Zz-3Jp"/>
                                             <constraint firstItem="eLt-oj-baH" firstAttribute="leading" secondItem="crd-1F-XBr" secondAttribute="trailing" constant="3" id="1ed-tq-pZD"/>
@@ -381,6 +386,9 @@
                                             <constraint firstItem="gXt-cF-hCc" firstAttribute="top" secondItem="QYE-So-zxr" secondAttribute="bottom" constant="55" id="zlY-rq-n8c"/>
                                             <constraint firstItem="4Ip-dR-Pc3" firstAttribute="top" secondItem="xIu-QL-ey8" secondAttribute="bottom" constant="16" id="zuM-2q-SpD"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="hJD-05-wKy" appends="YES" id="cUO-X4-N0u"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -489,6 +497,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZb-kz-uLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hJD-05-wKy"/>
             </objects>
             <point key="canvasLocation" x="861.53846153846155" y="1200"/>
         </scene>
