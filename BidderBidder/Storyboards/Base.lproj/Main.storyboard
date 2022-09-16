@@ -245,12 +245,21 @@
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" image="closeBtn"/>
                                                                 </button>
+                                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="대표사진" borderStyle="line" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K0e-ln-noh">
+                                                                    <rect key="frame" x="0.0" y="52" width="63" height="19"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="8"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
                                                             </subviews>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="73" height="71.666666666666671"/>
                                                         <connections>
                                                             <outlet property="files" destination="N2L-71-t06" id="Zbb-mO-Ih8"/>
                                                             <outlet property="removeButton" destination="MUL-LR-0ST" id="wUZ-OY-dbg"/>
+                                                            <outlet property="representPictureTextView" destination="K0e-ln-noh" id="GgU-y4-Lod"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>

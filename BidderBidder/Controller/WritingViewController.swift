@@ -208,6 +208,9 @@ extension WritingViewController: UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         cell.files.image = arrFiles[indexPath.row]
+        if indexPath.row != 0 {
+            cell.representPictureTextView.isHidden = true
+        }
         return cell
     }
 }
