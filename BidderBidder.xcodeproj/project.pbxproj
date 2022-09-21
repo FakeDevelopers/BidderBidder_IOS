@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2648DC28DB5C780058162B /* StreamChat in Frameworks */ = {isa = PBXBuildFile; productRef = AF2648DB28DB5C780058162B /* StreamChat */; };
+		AF2648DE28DB5C780058162B /* StreamChatUI in Frameworks */ = {isa = PBXBuildFile; productRef = AF2648DD28DB5C780058162B /* StreamChatUI */; };
+		AF2648E228DB5F400058162B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2648E128DB5F400058162B /* ChatViewController.swift */; };
+		AF2648E428DB619D0058162B /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2648E328DB619D0058162B /* Secrets.swift */; };
+		AF2648E628DB65AC0058162B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2648E528DB65AC0058162B /* SecondViewController.swift */; };
 		AF29D68128C77221005E7F5D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF29D68028C77221005E7F5D /* UIView.swift */; };
 		AF3FF8D128BB671300C8F67B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CA28BB671300C8F67B /* Constant.swift */; };
 		AF3FF8D228BB671300C8F67B /* ProgressPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */; };
@@ -60,6 +65,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF2648E128DB5F400058162B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		AF2648E328DB619D0058162B /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		AF2648E528DB65AC0058162B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		AF29D68028C77221005E7F5D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		AF3FF8CA28BB671300C8F67B /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressPopup.swift; sourceTree = "<group>"; };
@@ -104,7 +112,9 @@
 				D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */,
 				B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */,
 				D214F59128334FE7005AD768 /* TweeTextField in Frameworks */,
+				AF2648DC28DB5C780058162B /* StreamChat in Frameworks */,
 				D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */,
+				AF2648DE28DB5C780058162B /* StreamChatUI in Frameworks */,
 				D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +139,7 @@
 		AF3FF8C928BB671300C8F67B /* SupportingFile */ = {
 			isa = PBXGroup;
 			children = (
+				AF2648E328DB619D0058162B /* Secrets.swift */,
 				AF3FF8CA28BB671300C8F67B /* Constant.swift */,
 				AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */,
 				AF3FF8CC28BB671300C8F67B /* ColorManage.swift */,
@@ -216,6 +227,8 @@
 				D2E99F9C27FDA58100D829DF /* MainViewController.swift */,
 				B350709C2881155D000A6CA1 /* WritingViewController.swift */,
 				D0FF68C364F656D55DEEFAEF /* ProductDetailViewController.swift */,
+				AF2648E128DB5F400058162B /* ChatViewController.swift */,
+				AF2648E528DB65AC0058162B /* SecondViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +274,8 @@
 				D2075D1B287EAEEB00EAB426 /* FirebaseAuth */,
 				B38E073B288AF70D00CCD402 /* YPImagePicker */,
 				AF68720228C10657008D12AE /* Toast */,
+				AF2648DB28DB5C780058162B /* StreamChat */,
+				AF2648DD28DB5C780058162B /* StreamChatUI */,
 			);
 			productName = BidderBidder;
 			productReference = D259B0A527FC5FDA0026DD9E /* BidderBidder.app */;
@@ -340,6 +355,7 @@
 				D2075D18287EAEEB00EAB426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 				AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				AF2648DA28DB5C780058162B /* XCRemoteSwiftPackageReference "stream-chat-swift" */,
 			);
 			productRefGroup = D259B0A627FC5FDA0026DD9E /* Products */;
 			projectDirPath = "";
@@ -417,6 +433,8 @@
 				AF3FF8D428BB671300C8F67B /* Util.swift in Sources */,
 				D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */,
 				AF4EDD5128B9D05C00D933D8 /* Bidder.swift in Sources */,
+				AF2648E628DB65AC0058162B /* SecondViewController.swift in Sources */,
+				AF2648E228DB5F400058162B /* ChatViewController.swift in Sources */,
 				AF3FF8D728BB671300C8F67B /* UIImageView.swift in Sources */,
 				B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */,
 				AF3FF8D228BB671300C8F67B /* ProgressPopup.swift in Sources */,
@@ -426,6 +444,7 @@
 				AF3FF8D528BB671300C8F67B /* UIViewController.swift in Sources */,
 				AF3FF8D628BB671300C8F67B /* NetworkResult.swift in Sources */,
 				AF3FF8D128BB671300C8F67B /* Constant.swift in Sources */,
+				AF2648E428DB619D0058162B /* Secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +789,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AF2648DA28DB5C780058162B /* XCRemoteSwiftPackageReference "stream-chat-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GetStream/stream-chat-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
@@ -813,6 +840,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AF2648DB28DB5C780058162B /* StreamChat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF2648DA28DB5C780058162B /* XCRemoteSwiftPackageReference "stream-chat-swift" */;
+			productName = StreamChat;
+		};
+		AF2648DD28DB5C780058162B /* StreamChatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF2648DA28DB5C780058162B /* XCRemoteSwiftPackageReference "stream-chat-swift" */;
+			productName = StreamChatUI;
+		};
 		AF68720228C10657008D12AE /* Toast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */;
