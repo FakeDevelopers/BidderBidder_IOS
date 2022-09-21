@@ -38,14 +38,14 @@ class ChatViewController: UIViewController {
             response in
                 switch response.result {
                 case let .success(data):
-                    let token: Token =
-                        try! Token(rawValue: String(data: data!, encoding: .utf8)!)
+                    let token =
+                        try? Token(rawValue: String(data: data!, encoding: .utf8)!)
 
                     let config = ChatClientConfig(apiKey: .init(Secrets.chatApiKey))
                     chatClient = ChatClient(config: config)
                     chatClient.connectUser(
                         userInfo: .init(id: userId),
-                        token: token
+                        token: token!
                     ) { error in
                         if let error = error {
                             print("Connection failed with: \(error)")
@@ -66,7 +66,7 @@ class ChatViewController: UIViewController {
         messageTextField.text = ""
         channelController.createNewMessage(text: message) { [self] result in
             switch result {
-            case let .success(messageId):
+            case .success(_):
                 refreshMessageTableView()
 
             case let .failure(error):
@@ -96,7 +96,8 @@ class ChatViewController: UIViewController {
     }
 }
 
-extension ChatViewController: UITableViewDelegate {}
+extension ChatViewController: UITableViewDelegate { // 요건 지금 당장 사용하진 않지만 혹시나 해서 넣어뒀습니다
+}
 
 extension ChatViewController: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
