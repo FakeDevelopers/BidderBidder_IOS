@@ -19,6 +19,8 @@
 		AF4EDD5128B9D05C00D933D8 /* Bidder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EDD5028B9D05C00D933D8 /* Bidder.swift */; };
 		AF4EDD5328B9D07300D933D8 /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EDD5228B9D07300D933D8 /* ProductInfo.swift */; };
 		AF68720328C10657008D12AE /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = AF68720228C10657008D12AE /* Toast */; };
+		AFC26CCD28DA149D00B6B865 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = AFC26CCC28DA149D00B6B865 /* Sentry */; };
+		AFC26CCF28DA14DF00B6B865 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC26CCE28DA14DF00B6B865 /* Secrets.swift */; };
 		B31E462E28A182F9008D9A5E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B31E462D28A182F9008D9A5E /* .swiftlint.yml */; };
 		B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350709C2881155D000A6CA1 /* WritingViewController.swift */; };
 		B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = B38E073B288AF70D00CCD402 /* YPImagePicker */; };
@@ -71,6 +73,7 @@
 		AF4EDD4B28B9CEC600D933D8 /* BidderRankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderRankingCell.swift; sourceTree = "<group>"; };
 		AF4EDD5028B9D05C00D933D8 /* Bidder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bidder.swift; sourceTree = "<group>"; };
 		AF4EDD5228B9D07300D933D8 /* ProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfo.swift; sourceTree = "<group>"; };
+		AFC26CCE28DA14DF00B6B865 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debugConfig.xcconfig; sourceTree = "<group>"; };
 		B31E462D28A182F9008D9A5E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B350709C2881155D000A6CA1 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 				B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */,
 				D214F59128334FE7005AD768 /* TweeTextField in Frameworks */,
 				D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */,
+				AFC26CCD28DA149D00B6B865 /* Sentry in Frameworks */,
 				D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +141,7 @@
 				AF3FF8CF28BB671300C8F67B /* NetworkResult.swift */,
 				AF3FF8D028BB671300C8F67B /* UIImageView.swift */,
 				AF29D68028C77221005E7F5D /* UIView.swift */,
+				AFC26CCE28DA14DF00B6B865 /* Secrets.swift */,
 			);
 			path = SupportingFile;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				D2075D1B287EAEEB00EAB426 /* FirebaseAuth */,
 				B38E073B288AF70D00CCD402 /* YPImagePicker */,
 				AF68720228C10657008D12AE /* Toast */,
+				AFC26CCC28DA149D00B6B865 /* Sentry */,
 			);
 			productName = BidderBidder;
 			productReference = D259B0A527FC5FDA0026DD9E /* BidderBidder.app */;
@@ -340,6 +346,7 @@
 				D2075D18287EAEEB00EAB426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 				AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				AFC26CCB28DA149D00B6B865 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 			);
 			productRefGroup = D259B0A627FC5FDA0026DD9E /* Products */;
 			projectDirPath = "";
@@ -408,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2FCCA192849B5AB002005BC /* ProductViewCell.swift in Sources */,
+				AFC26CCF28DA14DF00B6B865 /* Secrets.swift in Sources */,
 				AF4EDD4C28B9CEC600D933D8 /* BidderRankingCell.swift in Sources */,
 				AF3FF8D328BB671300C8F67B /* ColorManage.swift in Sources */,
 				AF4EDD5328B9D07300D933D8 /* ProductInfo.swift in Sources */,
@@ -778,6 +786,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		AFC26CCB28DA149D00B6B865 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Yummypets/YPImagePicker";
@@ -817,6 +833,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		AFC26CCC28DA149D00B6B865 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFC26CCB28DA149D00B6B865 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
 		};
 		B38E073B288AF70D00CCD402 /* YPImagePicker */ = {
 			isa = XCSwiftPackageProductDependency;
