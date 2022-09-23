@@ -21,6 +21,7 @@ class ChatViewController: UIViewController {
     var userId: String!
     let channelId = ChannelId(type: .messaging, id: "bidderbidderTest")
     let chatLogCell = "chatLogCell"
+
     override func viewDidLoad() {
         messageTextField.isHidden = true
         sendButton.isHidden = true
