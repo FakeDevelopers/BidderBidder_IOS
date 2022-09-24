@@ -20,9 +20,9 @@ class WritingViewController: UIViewController {
     @IBOutlet weak var expirationDateTextField: UITextField!
     @IBOutlet weak var productContentTextView: UITextView!
     
-    @IBOutlet weak var priceLabel_1: UILabel!
-    @IBOutlet weak var priceLabel_2: UILabel!
-    @IBOutlet weak var priceLabel_3: UILabel!
+    @IBOutlet weak var hopePriceLabel: UILabel!
+    @IBOutlet weak var openingBidLabel: UILabel!
+    @IBOutlet weak var tickLabel: UILabel!
     
     @IBOutlet weak var textCountLabel: UILabel! = {
         let label = UILabel()
@@ -51,27 +51,27 @@ class WritingViewController: UIViewController {
     @objc func textFieldDidChange(textField: UITextField) {
         if textField == hopePriceTextField {
             if textField.text == "" {
-                priceLabel_1.textColor = .placeholderText
+                hopePriceLabel.textColor = .placeholderText
             } else {
                 hopePriceTextField.delegate = self
-                priceLabel_1.textColor = .black
+                hopePriceLabel.textColor = .black
                 
             }
         }
         else if textField == openingBidTextField {
             if textField.text == "" {
-                priceLabel_2.textColor = .placeholderText
+                openingBidLabel.textColor = .placeholderText
             } else {
                 openingBidTextField.delegate = self
-                priceLabel_2.textColor = .black
+                openingBidLabel.textColor = .black
                 
             }
         } else {
             if textField.text == "" {
-                priceLabel_3.textColor = .placeholderText
+                tickLabel.textColor = .placeholderText
             } else {
                 tickTextField.delegate = self
-                priceLabel_3.textColor = .black
+                tickLabel.textColor = .black
                 
             }
         }

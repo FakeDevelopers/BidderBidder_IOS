@@ -485,14 +485,14 @@
                         <outlet property="filesCollectionView" destination="xIu-QL-ey8" id="vtS-De-JMK"/>
                         <outlet property="filesCountLabel" destination="FyM-h0-nhk" id="TZ8-Fw-xzR"/>
                         <outlet property="filesSelectButton" destination="Pft-yS-eQW" id="5Hz-oe-Wmv"/>
+                        <outlet property="hopePriceLabel" destination="sB1-b5-pz9" id="33E-n1-qqh"/>
                         <outlet property="hopePriceTextField" destination="91c-QH-WYl" id="J1R-u9-k7Z"/>
+                        <outlet property="openingBidLabel" destination="crd-1F-XBr" id="kLh-dU-v8P"/>
                         <outlet property="openingBidTextField" destination="eLt-oj-baH" id="Qyz-Hg-bdX"/>
-                        <outlet property="priceLabel_1" destination="sB1-b5-pz9" id="33E-n1-qqh"/>
-                        <outlet property="priceLabel_2" destination="crd-1F-XBr" id="kLh-dU-v8P"/>
-                        <outlet property="priceLabel_3" destination="A6X-fR-9l6" id="oVa-hq-Lqo"/>
                         <outlet property="productContentTextView" destination="wI1-0z-aXe" id="tCe-Tv-nTb"/>
                         <outlet property="productTitleTextField" destination="Pzx-VR-pOA" id="ysw-VA-Din"/>
                         <outlet property="textCountLabel" destination="0oT-XG-UcT" id="ILM-oW-dxQ"/>
+                        <outlet property="tickLabel" destination="A6X-fR-9l6" id="oVa-hq-Lqo"/>
                         <outlet property="tickTextField" destination="uRG-94-MxE" id="2P2-s0-M9S"/>
                     </connections>
                 </viewController>
