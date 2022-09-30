@@ -61,9 +61,6 @@ Info.plist
 ## User settings
 xcuserdata/
 
-# URL
-Constant.swift
-
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
 *.xccheckout
@@ -162,5 +159,3 @@ xcuserdata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift,swiftpackagemanager,swiftpm,firebase,macos,cocoapods
-BidderBidder/GoogleService-Info.plist
-BidderBidder/Supporting File/Constant.swift

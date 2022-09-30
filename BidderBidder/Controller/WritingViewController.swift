@@ -43,6 +43,8 @@ class WritingViewController: UIViewController {
     var filesCount = 0
     
     // imageFiles
+    @IBOutlet weak var filesSelectButtonView: UIView!
+    
     @IBOutlet weak var filesSelectButton: UIButton!
     var arrFiles: [UIImage]! = []
     @IBOutlet weak var filesCollectionView: UICollectionView!
@@ -95,6 +97,10 @@ class WritingViewController: UIViewController {
         placeholderLabel.frame.origin = CGPoint(x: 5, y: (productContentTextView.font?.pointSize)! / 2)
         placeholderLabel.textColor = .tertiaryLabel
         placeholderLabel.isHidden = !productContentTextView.text.isEmpty
+        
+        filesSelectButtonView.layer.cornerRadius = 5
+        filesSelectButtonView.layer.borderWidth = 1.5
+        filesSelectButtonView.layer.borderColor = CGColor(red: 0.94, green: 0.94, blue: 0.94, alpha:1.00 )
         
         //filesSelectButton
         self.filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
