@@ -32,7 +32,6 @@ jobs:
           key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
           restore-keys: |
             ${{ runner.os }}-spm-
-
       - name: swift build
         run: |
           if [ -d ".build" ]; then
@@ -40,17 +39,16 @@ jobs:
               sudo cp -f .build/release/swift-format /usr/local/bin/swift-format
             fi
           else
-            git clone -b swift-5.2-branch https://github.com/apple/swift-format.git
+            git clone -b release/5.6 https://github.com/apple/swift-format.git
             cd swift-format
             swift build --disable-sandbox -c release
             mv .build .. && cd ..
             sudo cp -f .build/release/swift-format /usr/local/bin/swift-format
           fi
-
       - name: Lint
         uses: Iron-Ham/swift-format-linter-action@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # Optional parameters. Note that these are formatted as JSON array strings
-          # excludes: '["Generated/", "Pods/"]'
+          excludes: '["/home/runner/work/BidderBidder_IOS/BidderBidder_IOS/swift-format/"]'
           # exclude-types: '[".graphql.swift"]'

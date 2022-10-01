@@ -5,50 +5,49 @@
 //  Created by 김예림 on 2022/07/15.
 //
 
-import UIKit
 import Alamofire
-import YPImagePicker
-import SwiftUI
 import Foundation
+import SwiftUI
+import UIKit
+import YPImagePicker
 
 class WritingViewController: UIViewController {
-
     @IBOutlet weak var productTitleTextField: UITextField!
     @IBOutlet weak var hopePriceTextField: UITextField!
     @IBOutlet weak var openingBidTextField: UITextField!
     @IBOutlet weak var tickTextField: UITextField!
     @IBOutlet weak var expirationDateTextField: UITextField!
     @IBOutlet weak var productContentTextView: UITextView!
-    
+
     @IBOutlet weak var hopePriceLabel: UILabel!
     @IBOutlet weak var openingBidLabel: UILabel!
     @IBOutlet weak var tickLabel: UILabel!
-    
+
     @IBOutlet weak var textCountLabel: UILabel! = {
         let label = UILabel()
         label.textColor = .placeholderText
         label.text = "0/1000"
         return label
     }()
-    
+
     @IBOutlet weak var filesCountLabel: UILabel! = {
         let label = UILabel()
         label.textColor = .lightGray
         label.text = "0"
         return label
     }()
-    
+
     var placeholderLabel : UILabel!
-    
+
     var filesCount = 0
-    
+
     // imageFiles
     @IBOutlet weak var filesSelectButtonView: UIView!
-    
+
     @IBOutlet weak var filesSelectButton: UIButton!
     var arrFiles: [UIImage]! = []
     @IBOutlet weak var filesCollectionView: UICollectionView!
-    
+
     // MARK: - textFieldDidChange
     @objc func textFieldDidChange(textField: UITextField) {
         if textField == hopePriceTextField {
@@ -57,7 +56,7 @@ class WritingViewController: UIViewController {
             } else {
                 hopePriceTextField.delegate = self
                 hopePriceLabel.textColor = .black
-                
+
             }
         }
         else if textField == openingBidTextField {
@@ -66,7 +65,7 @@ class WritingViewController: UIViewController {
             } else {
                 openingBidTextField.delegate = self
                 openingBidLabel.textColor = .black
-                
+
             }
         } else {
             if textField.text == "" {
@@ -74,19 +73,19 @@ class WritingViewController: UIViewController {
             } else {
                 tickTextField.delegate = self
                 tickLabel.textColor = .black
-                
+
             }
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // textField 변경 시 priceLabel 설정
         self.hopePriceTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         self.openingBidTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         self.tickTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        
+
         //textViewPlaceholder
         productContentTextView.delegate = self
         placeholderLabel = UILabel()
@@ -97,19 +96,20 @@ class WritingViewController: UIViewController {
         placeholderLabel.frame.origin = CGPoint(x: 5, y: (productContentTextView.font?.pointSize)! / 2)
         placeholderLabel.textColor = .tertiaryLabel
         placeholderLabel.isHidden = !productContentTextView.text.isEmpty
-        
+
         filesSelectButtonView.layer.cornerRadius = 5
         filesSelectButtonView.layer.borderWidth = 1.5
         filesSelectButtonView.layer.borderColor = CGColor(red: 0.94, green: 0.94, blue: 0.94, alpha:1.00 )
-        
+
         //filesSelectButton
-        self.filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
+        filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
     }
 
     // MARK: - FilesSelectButton
+
     @objc fileprivate func onFilesSelectButton() {
         print("ViewController - onFilesSelectButton() called")
-        
+
         //파일 첨부 개수 제한 및 alert
         if filesCount < 10 {
             filesPicker()
@@ -122,6 +122,7 @@ class WritingViewController: UIViewController {
     }
 
     // MARK: - YPImagePicker
+
     func filesPicker() {
         var config = YPImagePickerConfiguration()
 
@@ -145,14 +146,13 @@ class WritingViewController: UIViewController {
         let picker = YPImagePicker(configuration: config)
 
         picker.didFinishPicking { [unowned picker] items, cancelled in
-            
+
             if cancelled {
                 picker.dismiss(animated: true, completion: nil)
                 return
             }
 
-            for index in 0..<items.count {
-
+            for index in 0 ..< items.count {
                 switch items[index] {
                 case .photo(let photo):
                     self.arrFiles.append(photo.image)
@@ -172,7 +172,8 @@ class WritingViewController: UIViewController {
     }
 
     // MARK: - tapSaveButton
-    @IBAction func tapSaveButton(_ sender: Any) {
+
+    @IBAction func tapSaveButton(_: Any) {
         postServer()
     }
 }
@@ -183,7 +184,7 @@ extension WritingViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         placeholderLabel.isHidden = !textView.text.isEmpty
         var currentText = textView.text ?? ""
-        
+
         if currentText.count >= 1000 {
             currentText.removeLast()
             textCountLabel.text = "1000/1000"
@@ -192,7 +193,7 @@ extension WritingViewController: UITextViewDelegate {
             textCountLabel.text = "\(currentText.count)/1000"
         }
     }
-    
+
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
     let newLength = textView.text.count - range.length + text.count
     if newLength > 1000 {
@@ -204,11 +205,11 @@ extension WritingViewController: UITextViewDelegate {
 
 // MARK: - collectionViewDataSource
 extension WritingViewController: UICollectionViewDataSource{
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         arrFiles.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WritingFilesCell", for: indexPath) as? WritingFilesCell else {
             return UICollectionViewCell()
@@ -228,7 +229,7 @@ extension WritingViewController: UITextFieldDelegate {
         formatter.numberStyle = .decimal
         formatter.locale = Locale.current
         formatter.maximumFractionDigits = 0
-        
+
         if let removeAllSeprator = textField.text?.replacingOccurrences(of: formatter.groupingSeparator, with: ""){
             var beforeForemattedString = removeAllSeprator + string
             if formatter.number(from: string) != nil {
@@ -250,14 +251,14 @@ extension WritingViewController: UITextFieldDelegate {
             }
 
         }
-        
+
         return true
     }
 }
 
 // MARK: - Server
-extension WritingViewController {
 
+extension WritingViewController {
     func postServer() {
         let productTitle = productTitleTextField.text
         let hopePrice: Int? = Int(hopePriceTextField.text ?? "")
@@ -278,42 +279,42 @@ extension WritingViewController {
 
         // expirationDate
         func timePlus() -> String {
-
             let now = Date()
             let addTime = now.addingTimeInterval(+(expirationDate! * 3600))
             let formatter = DateFormatter()
 
-            formatter.dateFormat = "yyyy-MM-dd HH:mm"
+            formatter.dateFormat = Constant.dateTimeFormat
             print(formatter.string(from: addTime))
 
             return formatter.string(from: addTime)
         }
 
         let params: [String: Any?] = [
-                    "category": 0,
-                    "expirationDate": timePlus(),
-                    "hopePrice": hopePrice,
-                    "openingBid": openingBid,
-                    "productContent": productContent,
-                    "productTitle": productTitle,
-                    "representPicture": 0,
-                    "tick": tick
-                ]
+            "category": 0,
+            "expirationDate": timePlus(),
+            "hopePrice": hopePrice,
+            "openingBid": openingBid,
+            "productContent": productContent,
+            "productTitle": productTitle,
+            "representPicture": 0,
+            "tick": tick,
+        ]
 
         // MARK: - ServerPost code
+
         postWritingData(url: Constant.domainURL + Constant.writeURL, params: params, files: imgList) { result in
             switch result {
-                        case .success(let msg):
-                            print("success", msg)
-                        case .requestErr(let msg):
-                            print("requestERR", msg)
-                        case .pathErr:
-                            print("pathERR")
-                        case .serverErr:
-                            print("serverERR")
-                        case .networkFail:
-                            print("networkFail")
-                        }
+            case let .success(msg):
+                print("success", msg)
+            case let .requestErr(msg):
+                print("requestERR", msg)
+            case .pathErr:
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
         }
     }
 }
