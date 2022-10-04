@@ -55,9 +55,9 @@ class SearchViewController: UIViewController {
     
     
     func findDuplicate(_ input: String) -> Bool {
-        var dataArr = (childVC?.dataArr)!
+        let dataArr = (childVC?.dataArr)!
         if dataArr.contains(input) {
-            var indexNum = dataArr.firstIndex(of: input)
+            let indexNum = dataArr.firstIndex(of: input)
             childVC?.dataArr.remove(at: indexNum!)
             return false
         }
