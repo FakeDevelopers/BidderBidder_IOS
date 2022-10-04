@@ -29,9 +29,4 @@ class RecentlySearchViewCell: UICollectionViewCell {
         self.index = index
         textLabel.text = parentVC.dataArr[index]
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 }
