@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
         getProductList()
         initRefresh()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = false
@@ -69,12 +69,11 @@ class MainViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is ProductDetailViewController{
+        if segue.destination is ProductDetailViewController {
             let productViewController = segue.destination as! ProductDetailViewController
             let indexPath = sender as! IndexPath
             productViewController.productId = productList[indexPath.row].productId
         }
-        
     }
 }
 

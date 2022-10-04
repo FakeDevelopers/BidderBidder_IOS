@@ -40,6 +40,7 @@ extension TagCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         collectionView == recentlyCollectionView ? dataArr.count : tags.count
     }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == recentlyCollectionView {
             let searchCell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlySearchViewCell", for: indexPath) as! RecentlySearchViewCell
@@ -66,6 +67,7 @@ extension TagCollectionViewController: UICollectionViewDelegateFlowLayout {
 
         return CGSize(width: cellWidth, height: cellHeight)
     }
+
     func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, insetForSectionAt _: Int) -> UIEdgeInsets {
         sectionInsets
     }
