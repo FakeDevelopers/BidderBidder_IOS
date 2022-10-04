@@ -9,15 +9,13 @@ import UIKit
 // Model file that holds logic for categories and feed
 struct Tag {
     let name: String
-
+    
     // Load data(Normally from database or so)
     static func load() -> [Tag] {
-        var tags: [Tag] = []
-        let names: [String] = ["Design", "Research", "Beauty", "Travel", "Makeup"]
-        for name in names {
-            tags.append(Tag(name: name))
-        }
-        tags.shuffle()
-        return tags
+        var tags: [Tag] =  ["Design", "Research", "Beauty", "Travel", "Makeup"].map({ name in
+            return Tag(name: name)
+        })
+        let randTags = tags.shuffled()
+        return randTags
     }
 }

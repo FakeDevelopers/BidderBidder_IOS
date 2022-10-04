@@ -7,6 +7,7 @@
 
 import FirebaseAuth
 import FirebaseCore
+import Sentry
 import UIKit
 import UserNotifications
 
@@ -19,6 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: { _, _ in
             // 디버깅용 로그찍는 로직밖에 없어서 지웠습니다 - 김한빈
         })
+
+        SentrySDK.start { options in
+            options.dsn = Secrets.sentryDsn
+            options.debug = true // Enabled debug when first installing is always helpful
+
+            // Set tracesSampleRate to 1.0 to capture 100% of transactions for performance monitoring.
+            // We recommend adjusting this value in production.
+            options.tracesSampleRate = 1.0
+
+            options.enableFileIOTracking = true
+            options.enableCoreDataTracking = true
+            options.enableUserInteractionTracing = true
+            options.enableAppHangTracking = true
+        }
         application.registerForRemoteNotifications()
         return true
     }

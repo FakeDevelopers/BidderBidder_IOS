@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2648DC28DB5C780058162B /* StreamChat in Frameworks */ = {isa = PBXBuildFile; productRef = AF2648DB28DB5C780058162B /* StreamChat */; };
+		AF2648DE28DB5C780058162B /* StreamChatUI in Frameworks */ = {isa = PBXBuildFile; productRef = AF2648DD28DB5C780058162B /* StreamChatUI */; };
+		AF2648E228DB5F400058162B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2648E128DB5F400058162B /* ChatViewController.swift */; };
+		AF2648E428DB619D0058162B /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2648E328DB619D0058162B /* Secrets.swift */; };
+		AF2648E628DB65AC0058162B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2648E528DB65AC0058162B /* SecondViewController.swift */; };
 		AF29D68128C77221005E7F5D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF29D68028C77221005E7F5D /* UIView.swift */; };
 		AF3FF8D128BB671300C8F67B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CA28BB671300C8F67B /* Constant.swift */; };
 		AF3FF8D228BB671300C8F67B /* ProgressPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */; };
@@ -19,6 +24,9 @@
 		AF4EDD5128B9D05C00D933D8 /* Bidder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EDD5028B9D05C00D933D8 /* Bidder.swift */; };
 		AF4EDD5328B9D07300D933D8 /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EDD5228B9D07300D933D8 /* ProductInfo.swift */; };
 		AF68720328C10657008D12AE /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = AF68720228C10657008D12AE /* Toast */; };
+		AFC26CCD28DA149D00B6B865 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = AFC26CCC28DA149D00B6B865 /* Sentry */; };
+		AFC26CCF28DA14DF00B6B865 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC26CCE28DA14DF00B6B865 /* Secrets.swift */; };
+		B31E462E28A182F9008D9A5E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B31E462D28A182F9008D9A5E /* .swiftlint.yml */; };
 		B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350709C2881155D000A6CA1 /* WritingViewController.swift */; };
 		B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = B38E073B288AF70D00CCD402 /* YPImagePicker */; };
 		D0FF644B2C5879445873045D /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF68C364F656D55DEEFAEF /* ProductDetailViewController.swift */; };
@@ -66,6 +74,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF2648E128DB5F400058162B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		AF2648E328DB619D0058162B /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		AF2648E528DB65AC0058162B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		AF29D68028C77221005E7F5D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		AF3FF8CA28BB671300C8F67B /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressPopup.swift; sourceTree = "<group>"; };
@@ -77,6 +88,7 @@
 		AF4EDD4B28B9CEC600D933D8 /* BidderRankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderRankingCell.swift; sourceTree = "<group>"; };
 		AF4EDD5028B9D05C00D933D8 /* Bidder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bidder.swift; sourceTree = "<group>"; };
 		AF4EDD5228B9D07300D933D8 /* ProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfo.swift; sourceTree = "<group>"; };
+		AFC26CCE28DA14DF00B6B865 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debugConfig.xcconfig; sourceTree = "<group>"; };
 		B31E462D28A182F9008D9A5E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B350709C2881155D000A6CA1 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +128,10 @@
 				D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */,
 				B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */,
 				D214F59128334FE7005AD768 /* TweeTextField in Frameworks */,
+				AF2648DC28DB5C780058162B /* StreamChat in Frameworks */,
 				D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */,
+				AF2648DE28DB5C780058162B /* StreamChatUI in Frameworks */,
+				AFC26CCD28DA149D00B6B865 /* Sentry in Frameworks */,
 				D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				D24369A528D0B19E005052B4 /* Model.swift */,
+				AF2648E328DB619D0058162B /* Secrets.swift */,
 				AF3FF8CA28BB671300C8F67B /* Constant.swift */,
 				AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */,
 				AF3FF8CC28BB671300C8F67B /* ColorManage.swift */,
@@ -150,6 +166,7 @@
 				AF3FF8CF28BB671300C8F67B /* NetworkResult.swift */,
 				AF3FF8D028BB671300C8F67B /* UIImageView.swift */,
 				AF29D68028C77221005E7F5D /* UIView.swift */,
+				AFC26CCE28DA14DF00B6B865 /* Secrets.swift */,
 			);
 			path = SupportingFile;
 			sourceTree = "<group>";
@@ -231,6 +248,8 @@
 				D2A7E4C728A4CAD900D85FD0 /* TagCollectionViewController.swift */,
 				B350709C2881155D000A6CA1 /* WritingViewController.swift */,
 				D0FF68C364F656D55DEEFAEF /* ProductDetailViewController.swift */,
+				AF2648E128DB5F400058162B /* ChatViewController.swift */,
+				AF2648E528DB65AC0058162B /* SecondViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -279,6 +298,9 @@
 				D2075D1B287EAEEB00EAB426 /* FirebaseAuth */,
 				B38E073B288AF70D00CCD402 /* YPImagePicker */,
 				AF68720228C10657008D12AE /* Toast */,
+				AF2648DB28DB5C780058162B /* StreamChat */,
+				AF2648DD28DB5C780058162B /* StreamChatUI */,
+				AFC26CCC28DA149D00B6B865 /* Sentry */,
 			);
 			productName = BidderBidder;
 			productReference = D259B0A527FC5FDA0026DD9E /* BidderBidder.app */;
@@ -358,6 +380,8 @@
 				D2075D18287EAEEB00EAB426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 				AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				AF2648DA28DB5C780058162B /* XCRemoteSwiftPackageReference "stream-chat-swift" */,
+				AFC26CCB28DA149D00B6B865 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 			);
 			productRefGroup = D259B0A627FC5FDA0026DD9E /* Products */;
 			projectDirPath = "";
@@ -431,6 +455,7 @@
 				D2FCCA192849B5AB002005BC /* ProductViewCell.swift in Sources */,
 				D2A7E4C828A4CAD900D85FD0 /* TagCollectionViewController.swift in Sources */,
 				D2FCCA192849B5AB002005BC /* ProductViewCell.swift in Sources */,
+				AFC26CCF28DA14DF00B6B865 /* Secrets.swift in Sources */,
 				AF4EDD4C28B9CEC600D933D8 /* BidderRankingCell.swift in Sources */,
 				AF3FF8D328BB671300C8F67B /* ColorManage.swift in Sources */,
 				AF4EDD5328B9D07300D933D8 /* ProductInfo.swift in Sources */,
@@ -442,6 +467,8 @@
 				D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */,
 				D2A7E4D328A6116300D85FD0 /* RecentlySearchViewCell.swift in Sources */,
 				AF4EDD5128B9D05C00D933D8 /* Bidder.swift in Sources */,
+				AF2648E628DB65AC0058162B /* SecondViewController.swift in Sources */,
+				AF2648E228DB5F400058162B /* ChatViewController.swift in Sources */,
 				AF3FF8D728BB671300C8F67B /* UIImageView.swift in Sources */,
 				B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */,
 				AF3FF8D228BB671300C8F67B /* ProgressPopup.swift in Sources */,
@@ -451,6 +478,7 @@
 				AF3FF8D528BB671300C8F67B /* UIViewController.swift in Sources */,
 				AF3FF8D628BB671300C8F67B /* NetworkResult.swift in Sources */,
 				AF3FF8D128BB671300C8F67B /* Constant.swift in Sources */,
+				AF2648E428DB619D0058162B /* Secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,12 +829,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AF2648DA28DB5C780058162B /* XCRemoteSwiftPackageReference "stream-chat-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GetStream/stream-chat-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.0;
+			};
+		};
+		AFC26CCB28DA149D00B6B865 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
 			};
 		};
 		B38E073A288AF70D00CCD402 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
@@ -844,10 +888,25 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AF2648DB28DB5C780058162B /* StreamChat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF2648DA28DB5C780058162B /* XCRemoteSwiftPackageReference "stream-chat-swift" */;
+			productName = StreamChat;
+		};
+		AF2648DD28DB5C780058162B /* StreamChatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF2648DA28DB5C780058162B /* XCRemoteSwiftPackageReference "stream-chat-swift" */;
+			productName = StreamChatUI;
+		};
 		AF68720228C10657008D12AE /* Toast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		AFC26CCC28DA149D00B6B865 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFC26CCB28DA149D00B6B865 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
 		};
 		B38E073B288AF70D00CCD402 /* YPImagePicker */ = {
 			isa = XCSwiftPackageProductDependency;

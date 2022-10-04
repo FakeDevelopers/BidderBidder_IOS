@@ -11,7 +11,7 @@ class TagCollectionViewController: UIViewController {
     @IBOutlet var tagCollectionView: UICollectionView!
     @IBOutlet var recentlyCollectionView: UICollectionView!
     let tags = Tag.load()
-    var dataArray: [String] = []
+    var dataArr: [String] = []
     let sectionInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
 
     override func viewDidLoad() {
@@ -30,39 +30,25 @@ class TagCollectionViewController: UIViewController {
     }
 
     @IBAction func clearCell(_: Any) {
-        dataArray = []
+        dataArr = []
         recentlyCollectionView.reloadData()
-        for key in UserDefaults.standard.dictionaryRepresentation().keys {
-            UserDefaults.standard.removeObject(forKey: "searchHistory")
-        }
+        UserDefaults.standard.removeObject(forKey: Constant.searchHistory)
     }
 }
 
 extension TagCollectionViewController: UICollectionViewDataSource {
-    // Wie viele Objekete soll es geben?
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        if collectionView == recentlyCollectionView {
-            return dataArray.count
-        }
-        return tags.count
+        collectionView == recentlyCollectionView ? dataArr.count : tags.count
     }
-
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == recentlyCollectionView {
-            let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlySearchViewCell", for: indexPath) as! RecentlySearchViewCell
-            cellA.setData(text: dataArray[indexPath.row])
-            cellA.delete = { [unowned self] in
-                UserDefaults.standard.removeObject(forKey: "searchHistory")
-                self.dataArray.remove(at: indexPath.row)
-                self.recentlyCollectionView.reloadData()
-            }
-
-            return cellA
+            let searchCell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlySearchViewCell", for: indexPath) as! RecentlySearchViewCell
+            searchCell.setData(viewController: self, index: indexPath.row)
+            return searchCell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! TagCollectionViewCell
-            let tag = tags[indexPath.item]
-            cell.tags = tag
-            return cell
+            let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! TagCollectionViewCell
+            categoryCell.tags = tags[indexPath.item]
+            return categoryCell
         }
     }
 }
@@ -80,7 +66,6 @@ extension TagCollectionViewController: UICollectionViewDelegateFlowLayout {
 
         return CGSize(width: cellWidth, height: cellHeight)
     }
-
     func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, insetForSectionAt _: Int) -> UIEdgeInsets {
         sectionInsets
     }
