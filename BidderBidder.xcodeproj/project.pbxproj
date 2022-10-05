@@ -45,7 +45,6 @@
 		D259B0CA27FC5FDB0026DD9E /* BidderBidderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */; };
 		D259B0CC27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */; };
 		D264D858289248F100A4E8E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264D857289248F100A4E8E4 /* SearchViewController.swift */; };
-		D29114D928EC3609000FFD3B /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = D29114D828EC3609000FFD3B /* SwiftSyntax */; };
 		D2A7E4C828A4CAD900D85FD0 /* TagCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4C728A4CAD900D85FD0 /* TagCollectionViewController.swift */; };
 		D2A7E4CA28A4CBE800D85FD0 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4C928A4CBE800D85FD0 /* TagCollectionViewCell.swift */; };
 		D2A7E4D328A6116300D85FD0 /* RecentlySearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4D128A6116300D85FD0 /* RecentlySearchViewCell.swift */; };
@@ -131,7 +130,6 @@
 				AF2648DC28DB5C780058162B /* StreamChat in Frameworks */,
 				D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */,
 				AF2648DE28DB5C780058162B /* StreamChatUI in Frameworks */,
-				D29114D928EC3609000FFD3B /* SwiftSyntax in Frameworks */,
 				AFC26CCD28DA149D00B6B865 /* Sentry in Frameworks */,
 				D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */,
 			);
@@ -302,7 +300,6 @@
 				AF2648DB28DB5C780058162B /* StreamChat */,
 				AF2648DD28DB5C780058162B /* StreamChatUI */,
 				AFC26CCC28DA149D00B6B865 /* Sentry */,
-				D29114D828EC3609000FFD3B /* SwiftSyntax */,
 			);
 			productName = BidderBidder;
 			productReference = D259B0A527FC5FDA0026DD9E /* BidderBidder.app */;
@@ -384,7 +381,6 @@
 				AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				AF2648DA28DB5C780058162B /* XCRemoteSwiftPackageReference "stream-chat-swift" */,
 				AFC26CCB28DA149D00B6B865 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
-				D29114D728EC3609000FFD3B /* XCRemoteSwiftPackageReference "swift-syntax" */,
 			);
 			productRefGroup = D259B0A627FC5FDA0026DD9E /* Products */;
 			projectDirPath = "";
@@ -880,14 +876,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		D29114D728EC3609000FFD3B /* XCRemoteSwiftPackageReference "swift-syntax" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-syntax";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		D2E99F9927FDA27100D829DF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -938,11 +926,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D214F58F28334FE7005AD768 /* XCRemoteSwiftPackageReference "TweeTextField" */;
 			productName = TweeTextField;
-		};
-		D29114D828EC3609000FFD3B /* SwiftSyntax */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D29114D728EC3609000FFD3B /* XCRemoteSwiftPackageReference "swift-syntax" */;
-			productName = SwiftSyntax;
 		};
 		D2E99F9A27FDA27100D829DF /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
