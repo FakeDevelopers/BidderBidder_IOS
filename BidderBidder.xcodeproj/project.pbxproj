@@ -385,6 +385,7 @@
 				AF2648DA28DB5C780058162B /* XCRemoteSwiftPackageReference "stream-chat-swift" */,
 				AFC26CCB28DA149D00B6B865 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				D29114D728EC3609000FFD3B /* XCRemoteSwiftPackageReference "swift-syntax" */,
+				D29114DA28ED4036000FFD3B /* XCRemoteSwiftPackageReference "StaticInternalSwiftSyntaxParser" */,
 			);
 			productRefGroup = D259B0A627FC5FDA0026DD9E /* Products */;
 			projectDirPath = "";
@@ -886,6 +887,14 @@
 			requirement = {
 				branch = main;
 				kind = branch;
+			};
+		};
+		D29114DA28ED4036000FFD3B /* XCRemoteSwiftPackageReference "StaticInternalSwiftSyntaxParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/keith/StaticInternalSwiftSyntaxParser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
 			};
 		};
 		D2E99F9927FDA27100D829DF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
