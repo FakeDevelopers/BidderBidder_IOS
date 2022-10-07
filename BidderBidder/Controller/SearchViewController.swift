@@ -18,7 +18,6 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchController()
-        setTableViewLayout()
         filteredArr = childVC?.dataArr
     }
     
@@ -31,13 +30,6 @@ class SearchViewController: UIViewController {
         tabBarController?.tabBar.isHidden = true
         tabBarController?.tabBar.isTranslucent = true
         searchBar.delegate = self
-    }
-    
-    private func setTableViewLayout() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.isHidden = true
-        tableView.separatorColor = .white
     }
     
     func findDuplicate(_ input: String) -> Bool {
@@ -74,8 +66,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
             tableView.isHidden = true
             containerView.isHidden = false
         } else {
+            var lowSearcText = searchText.lowercased()
             for dataArr in childVC?.dataArr ?? [] {
-                if dataArr.lowercased().contains(searchText.lowercased()) {
+                if dataArr.lowercased().contains(lowSearcText) {
                     filteredArr.append(dataArr)
                 }
             }
@@ -93,11 +86,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         if findDuplicate(searchBar.text!) {
             childVC?.dataArr.insert(searchBar.text!, at: 0)
             UserDefaults.standard.set(childVC?.dataArr, forKey: Constant.searchHistory)
-            childVC?.recentlyCollectionView.reloadData()
+            
         }
         else {
             childVC?.dataArr.insert(searchBar.text!, at: 0)
-            childVC?.recentlyCollectionView.reloadData()
         }
+        childVC?.recentlyCollectionView.reloadData()
     }
 }

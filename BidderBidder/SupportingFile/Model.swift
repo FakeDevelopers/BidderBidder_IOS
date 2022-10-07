@@ -15,7 +15,6 @@ struct Tag {
         var tags: [Tag] = ["Design", "Research", "Beauty", "Travel", "Makeup"].map { name in
             Tag(name: name)
         }
-        let randTags = tags.shuffled()
-        return randTags
+        return tags.shuffled()
     }
 }
