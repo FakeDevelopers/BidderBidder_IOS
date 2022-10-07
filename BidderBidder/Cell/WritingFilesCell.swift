@@ -14,8 +14,7 @@ class WritingFilesCell: UICollectionViewCell {
     
     @IBOutlet weak var files: UIImageView!
     @IBOutlet weak var removeButton: UIButton!
-    @IBOutlet var representImgTextView: RoundedCornerView!
-    @IBOutlet weak var representPictureTextView: UITextField!
+    @IBOutlet weak var representImgView: UIView!
     
     override func awakeFromNib() {
         super .awakeFromNib()
@@ -23,8 +22,8 @@ class WritingFilesCell: UICollectionViewCell {
         self.files.layer.cornerRadius = 5
         self.files.clipsToBounds = true
         
-        self.representPictureTextView.clipsToBounds = true
-        self.representPictureTextView.layer.cornerRadius = 5
-        self.representPictureTextView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMaxYCorner, .layerMaxXMaxYCorner)
+        self.representImgView.clipsToBounds = true
+        self.representImgView.layer.cornerRadius = 5
+        self.representImgView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMaxYCorner, .layerMaxXMaxYCorner)
     }
 }

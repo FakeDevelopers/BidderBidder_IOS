@@ -235,9 +235,8 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="73" height="71.666666666666671"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2L-71-t06">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2L-71-t06">
                                                                     <rect key="frame" x="0.0" y="7" width="63" height="63"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
                                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUL-LR-0ST">
                                                                     <rect key="frame" x="54" y="1" width="16" height="16"/>
@@ -250,21 +249,41 @@
                                                                         <action selector="tappedRemoveButton:" destination="dEg-25-CcT" eventType="touchUpInside" id="U0T-oU-Pf8"/>
                                                                     </connections>
                                                                 </button>
-                                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="대표사진" borderStyle="line" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K0e-ln-noh">
-                                                                    <rect key="frame" x="0.0" y="52" width="63" height="19"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-iA-HgE">
+                                                                    <rect key="frame" x="0.0" y="50" width="63" height="20"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대표사진" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGI-EG-Vlw">
+                                                                            <rect key="frame" x="17.666666666666668" y="5" width="28.000000000000004" height="10"/>
+                                                                            <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="8"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="8"/>
-                                                                    <textInputTraits key="textInputTraits"/>
-                                                                </textField>
+                                                                    <constraints>
+                                                                        <constraint firstItem="ZGI-EG-Vlw" firstAttribute="centerY" secondItem="iz9-iA-HgE" secondAttribute="centerY" id="MU1-7v-xPv"/>
+                                                                        <constraint firstAttribute="height" constant="20" id="N2Q-1q-LVF"/>
+                                                                        <constraint firstItem="ZGI-EG-Vlw" firstAttribute="centerX" secondItem="iz9-iA-HgE" secondAttribute="centerX" id="Tcp-gR-I6x"/>
+                                                                        <constraint firstAttribute="width" constant="63" id="uuv-G0-CWK"/>
+                                                                    </constraints>
+                                                                </view>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="N2L-71-t06" secondAttribute="bottom" constant="1.6699999999999999" id="6wm-Hh-FeS"/>
+                                                                <constraint firstItem="iz9-iA-HgE" firstAttribute="centerX" secondItem="N2L-71-t06" secondAttribute="centerX" id="G5W-yM-V2l"/>
+                                                                <constraint firstItem="iz9-iA-HgE" firstAttribute="bottom" secondItem="N2L-71-t06" secondAttribute="bottom" id="G9H-ZS-Bf1"/>
+                                                                <constraint firstAttribute="trailing" secondItem="N2L-71-t06" secondAttribute="trailing" constant="10" id="Hbe-Lg-hOX"/>
+                                                                <constraint firstAttribute="trailing" secondItem="iz9-iA-HgE" secondAttribute="trailing" constant="10" id="MUn-eC-qZ8"/>
+                                                                <constraint firstItem="iz9-iA-HgE" firstAttribute="leading" secondItem="VMv-zl-45X" secondAttribute="leading" id="bTW-IW-fJt"/>
+                                                                <constraint firstItem="N2L-71-t06" firstAttribute="leading" secondItem="VMv-zl-45X" secondAttribute="leading" id="gC3-dp-7Z4"/>
+                                                                <constraint firstItem="N2L-71-t06" firstAttribute="top" secondItem="VMv-zl-45X" secondAttribute="top" constant="7" id="yxz-Q7-v3Q"/>
+                                                            </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="73" height="71.666666666666671"/>
                                                         <connections>
                                                             <outlet property="files" destination="N2L-71-t06" id="Zbb-mO-Ih8"/>
                                                             <outlet property="removeButton" destination="MUL-LR-0ST" id="wUZ-OY-dbg"/>
-                                                            <outlet property="representPictureTextView" destination="K0e-ln-noh" id="GgU-y4-Lod"/>
+                                                            <outlet property="representImgView" destination="iz9-iA-HgE" id="U3Z-Ke-IVY"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
