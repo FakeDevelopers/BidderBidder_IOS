@@ -66,9 +66,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
             tableView.isHidden = true
             containerView.isHidden = false
         } else {
-            var lowSearcText = searchText.lowercased()
+            let lowSearchText = searchText.lowercased()
             for dataArr in childVC?.dataArr ?? [] {
-                if dataArr.lowercased().contains(lowSearcText) {
+                if dataArr.lowercased().contains(lowSearchText) {
                     filteredArr.append(dataArr)
                 }
             }
