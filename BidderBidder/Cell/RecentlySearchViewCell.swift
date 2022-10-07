@@ -8,7 +8,7 @@
 import UIKit
 
 class RecentlySearchViewCell: UICollectionViewCell {
-    private var index: Int!
+    private var collectionIndex: Int!
 
     private var parentVC: TagCollectionViewController!
 
@@ -18,15 +18,15 @@ class RecentlySearchViewCell: UICollectionViewCell {
 
     @IBAction func deleteCell(_: Any) {
         var histories = UserDefaults.standard.array(forKey: Constant.searchHistory)
-        histories?.remove(at: index)
+        histories?.remove(at: collectionIndex)
         UserDefaults.standard.set(histories, forKey: Constant.searchHistory)
-        parentVC.dataArr.remove(at: index)
+        parentVC.dataArr.remove(at: collectionIndex)
         collectionView.reloadData()
     }
 
     func setData(viewController: TagCollectionViewController, index: Int) {
         parentVC = viewController
-        self.index = index
+        self.collectionIndex = index
         textLabel.text = parentVC.dataArr[index]
     }
 }

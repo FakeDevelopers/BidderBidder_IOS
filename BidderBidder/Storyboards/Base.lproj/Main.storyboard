@@ -511,7 +511,7 @@
                     </view>
                     <connections>
                         <outlet property="RecentlyCollectionView" destination="Yc3-R7-zps" id="1TQ-TC-Qfa"/>
-                        <outlet property="recentlyCollectionView" destination="Yc3-R7-zps" id="6OF-jd-QdO"/>
+                        <outlet property="recentlyCollectionView" destination="Yc3-R7-zps" id="QsP-BB-x9e"/>
                         <outlet property="tagCollectionView" destination="0Vz-kG-Bn8" id="Ehn-jS-Dtc"/>
                     </connections>
                 </viewController>

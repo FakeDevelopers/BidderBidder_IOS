@@ -13,16 +13,16 @@ class TagCollectionViewController: UIViewController {
     let tags = Tag.load()
     var dataArr: [String] = []
     let sectionInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+    let itemsPerRow: CGFloat = 2
+    let itemsPerColumn: CGFloat = 10
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tagCollectionView.dataSource = self
-        setUpRecentlyCollectionView()
         registerCell()
-    }
-
-    func setUpRecentlyCollectionView() {
-        recentlyCollectionView.dataSource = self
+        if let data = UserDefaults.standard.object(forKey: Constant.searchHistory) as? [String] {
+            dataArr = data
+        }
     }
 
     func registerCell() {
@@ -58,9 +58,7 @@ extension TagCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt _: IndexPath) -> CGSize {
         let width = collectionView.frame.width
         let height = collectionView.frame.height
-        let itemsPerRow: CGFloat = 2
         let widthPadding = sectionInsets.left * (itemsPerRow + 1)
-        let itemsPerColumn: CGFloat = 10
         let heightPadding = sectionInsets.top * (itemsPerColumn + 1)
         let cellWidth = (width - widthPadding) / itemsPerRow
         let cellHeight = (height - heightPadding) / itemsPerColumn

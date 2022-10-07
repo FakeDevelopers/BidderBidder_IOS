@@ -22,8 +22,6 @@ class TagCollectionViewCell: UICollectionViewCell {
             container.makeRoundedWithBorder(radius: container.frame.height / 2, color: UIColor.black.cgColor)
             container.backgroundColor = .white
             label.text = tag.name
-        } else {
-            print("ERROR")
         }
     }
 }
