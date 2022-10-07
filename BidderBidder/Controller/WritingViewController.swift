@@ -12,13 +12,16 @@ import UIKit
 import YPImagePicker
 
 class WritingViewController: UIViewController {
+    
+    //product Info
     @IBOutlet weak var productTitleTextField: UITextField!
     @IBOutlet weak var hopePriceTextField: UITextField!
     @IBOutlet weak var openingBidTextField: UITextField!
     @IBOutlet weak var tickTextField: UITextField!
     @IBOutlet weak var expirationDateTextField: UITextField!
     @IBOutlet weak var productContentTextView: UITextView!
-
+    
+    //'₩' label
     @IBOutlet weak var hopePriceLabel: UILabel!
     @IBOutlet weak var openingBidLabel: UILabel!
     @IBOutlet weak var tickLabel: UILabel!
@@ -39,15 +42,14 @@ class WritingViewController: UIViewController {
 
     var placeholderLabel : UILabel!
 
-    var filesCount = 0
-
     // imageFiles
+    var filesCount = 0
+    
     @IBOutlet weak var filesSelectButtonView: UIView!
-
     @IBOutlet weak var filesSelectButton: UIButton!
     var arrFiles: [UIImage]! = []
     @IBOutlet weak var filesCollectionView: UICollectionView!
-
+    
     // MARK: - textFieldDidChange
     @objc func textFieldDidChange(textField: UITextField) {
         if textField == hopePriceTextField {

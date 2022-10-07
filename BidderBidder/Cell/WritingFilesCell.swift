@@ -9,10 +9,12 @@ import Foundation
 import SwiftUI
 import UIKit
 
+
 class WritingFilesCell: UICollectionViewCell {
     
     @IBOutlet weak var files: UIImageView!
     @IBOutlet weak var removeButton: UIButton!
+    @IBOutlet var representImgTextView: RoundedCornerView!
     @IBOutlet weak var representPictureTextView: UITextField!
     
     override func awakeFromNib() {

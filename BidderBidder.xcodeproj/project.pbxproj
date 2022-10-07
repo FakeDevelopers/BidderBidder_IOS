@@ -37,6 +37,7 @@
 		B31E462E28A182F9008D9A5E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B31E462D28A182F9008D9A5E /* .swiftlint.yml */; };
 		B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350709C2881155D000A6CA1 /* WritingViewController.swift */; };
 		B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = B38E073B288AF70D00CCD402 /* YPImagePicker */; };
+		B3CD727D28E931180011BBA0 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD727C28E931180011BBA0 /* Secrets.swift */; };
 		B3EE5B5C289A391A0019386B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3EE5B5B289A391A0019386B /* GoogleService-Info.plist */; };
 		D0FF644B2C5879445873045D /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF68C364F656D55DEEFAEF /* ProductDetailViewController.swift */; };
 		D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */; };
@@ -101,6 +102,7 @@
 		B302BC7428A29B5600B0EC4B /* debugConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debugConfig.xcconfig; sourceTree = "<group>"; };
 		B31E462D28A182F9008D9A5E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B350709C2881155D000A6CA1 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
+		B3CD727C28E931180011BBA0 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		B3EE5B5B289A391A0019386B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D0FF68C364F656D55DEEFAEF /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		D2075D1F287FD1F200EAB426 /* BidderBidder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BidderBidder.entitlements; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				AF3FF8CA28BB671300C8F67B /* Constant.swift */,
+				B3CD727C28E931180011BBA0 /* Secrets.swift */,
 				AF3FF8CB28BB671300C8F67B /* ProgressPopup.swift */,
 				AF3FF8CC28BB671300C8F67B /* ColorManage.swift */,
 				AF3FF8CD28BB671300C8F67B /* Util.swift */,
@@ -491,6 +494,7 @@
 				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
 				D0FF644B2C5879445873045D /* ProductDetailViewController.swift in Sources */,
 				AF3FF8D528BB671300C8F67B /* UIViewController.swift in Sources */,
+				B3CD727D28E931180011BBA0 /* Secrets.swift in Sources */,
 				AF3FF8D628BB671300C8F67B /* NetworkResult.swift in Sources */,
 				AF3FF8D128BB671300C8F67B /* Constant.swift in Sources */,
 			);
