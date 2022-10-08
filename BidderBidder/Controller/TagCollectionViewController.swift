@@ -17,6 +17,10 @@ class TagCollectionViewController: UIViewController {
     let itemsPerColumn: CGFloat = 10
     lazy var width = recentlyCollectionView.frame.width
     lazy var height = recentlyCollectionView.frame.height
+    lazy var widthPadding = sectionInsets.left * (itemsPerRow + 1)
+    lazy var heightPadding = sectionInsets.top * (itemsPerColumn + 1)
+    lazy var cellWidth = (width - widthPadding) / itemsPerRow
+    lazy var cellHeight = (height - heightPadding) / itemsPerColumn
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,10 +62,6 @@ extension TagCollectionViewController: UICollectionViewDataSource {
 
 extension TagCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt _: IndexPath) -> CGSize {
-        let widthPadding = sectionInsets.left * (itemsPerRow + 1)
-        let heightPadding = sectionInsets.top * (itemsPerColumn + 1)
-        let cellWidth = (width - widthPadding) / itemsPerRow
-        let cellHeight = (height - heightPadding) / itemsPerColumn
 
         return CGSize(width: cellWidth, height: cellHeight)
     }

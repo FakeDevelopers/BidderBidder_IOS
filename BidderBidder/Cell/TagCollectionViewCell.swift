@@ -13,15 +13,11 @@ class TagCollectionViewCell: UICollectionViewCell {
 
     var tags: Tag! {
         didSet {
-            update()
-        }
-    }
-
-    func update() {
-        if let tag = tags {
-            container.makeRoundedWithBorder(radius: container.frame.height / 2, color: UIColor.black.cgColor)
-            container.backgroundColor = .white
-            label.text = tag.name
+            if let tag = tags {
+                container.makeRoundedWithBorder(radius: container.frame.height / 2, color: UIColor.black.cgColor)
+                container.backgroundColor = .white
+                label.text = tag.name
+            }
         }
     }
 }
