@@ -125,11 +125,7 @@ class WritingViewController: UIViewController {
         config.showsPhotoFilters = false
         //이미지 선택 개수 제한
         config.library.maxNumberOfItems = {
-            if self.filesCount < 10 {
                 return (10-self.filesCount)
-            } else {
-                return 0
-            }
                 }()
         config.shouldSaveNewPicturesToAlbum = true
         config.startOnScreen = .library
