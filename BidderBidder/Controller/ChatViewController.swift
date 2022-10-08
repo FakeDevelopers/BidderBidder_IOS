@@ -67,7 +67,7 @@ class ChatViewController: UIViewController {
         messageTextField.text = ""
         channelController.createNewMessage(text: message) { [self] result in
             switch result {
-            case .success(_):
+            case .success:
                 refreshMessageTableView()
 
             case let .failure(error):

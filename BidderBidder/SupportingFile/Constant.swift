@@ -15,4 +15,6 @@ struct Constant {
     static let expiredMessage = "마감"
 
     static let dateTimeFormat = "yyyy-MM-dd HH:mm"
+
+    static let searchHistory = "searchHistory"
 }

@@ -8,7 +8,6 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
     @IBAction func showChatViewController(_: Any) {
         performSegue(withIdentifier: "ChatViewControllerSegue", sender: nil)
     }

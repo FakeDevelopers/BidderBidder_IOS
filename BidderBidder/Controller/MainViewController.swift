@@ -28,6 +28,10 @@ class MainViewController: UIViewController {
         initRefresh()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
+
     @IBAction func loadMore(_: Any) {
         getProductList()
         checkBool = true
@@ -64,9 +68,11 @@ class MainViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let productViewController = segue.destination as! ProductDetailViewController
-        let indexPath = sender as! IndexPath
-        productViewController.productId = productList[indexPath.row].productId
+        if segue.destination is ProductDetailViewController {
+            let productViewController = segue.destination as! ProductDetailViewController
+            let indexPath = sender as! IndexPath
+            productViewController.productId = productList[indexPath.row].productId
+        }
     }
 }
 
