@@ -56,26 +56,20 @@ class WritingViewController: UIViewController {
             if textField.text == "" {
                 hopePriceLabel.textColor = .placeholderText
             } else {
-                hopePriceTextField.delegate = self
                 hopePriceLabel.textColor = .black
-
             }
         }
         else if textField == openingBidTextField {
             if textField.text == "" {
                 openingBidLabel.textColor = .placeholderText
             } else {
-                openingBidTextField.delegate = self
                 openingBidLabel.textColor = .black
-
             }
         } else {
             if textField.text == "" {
                 tickLabel.textColor = .placeholderText
             } else {
-                tickTextField.delegate = self
                 tickLabel.textColor = .black
-
             }
         }
     }
@@ -84,7 +78,7 @@ class WritingViewController: UIViewController {
         super.viewDidLoad()
 
         // textField 변경 시 priceLabel 설정
-        self.hopePriceTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        self.hopePriceTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.allEditingEvents)
         self.openingBidTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         self.tickTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
 
