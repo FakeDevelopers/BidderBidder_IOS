@@ -51,36 +51,32 @@ class WritingViewController: UIViewController {
     @IBOutlet weak var filesCollectionView: UICollectionView!
     
     // MARK: - textFieldDidChange
-    @objc func textFieldDidChange(textField: UITextField) {
-        if textField == hopePriceTextField {
-            if textField.text == "" {
-                hopePriceLabel.textColor = .placeholderText
-            } else {
-                hopePriceLabel.textColor = .black
-            }
-        }
-        else if textField == openingBidTextField {
-            if textField.text == "" {
-                openingBidLabel.textColor = .placeholderText
-            } else {
-                openingBidLabel.textColor = .black
-            }
+    
+    func setLabel(changeTextField: UITextField, label: UILabel){
+        if (changeTextField.text == "") {
+            label.textColor = .placeholderText
         } else {
-            if textField.text == "" {
-                tickLabel.textColor = .placeholderText
-            } else {
-                tickLabel.textColor = .black
-            }
+            label.textColor = .black
         }
     }
-
+    
+    func textFieldDidChange(textField: UITextField) {
+            if textField == hopePriceTextField {
+                setLabel(changeTextField: hopePriceTextField, label: hopePriceLabel)
+            } else if textField == openingBidTextField {
+                setLabel(changeTextField: openingBidTextField, label: openingBidLabel)
+            } else {
+                setLabel(changeTextField: tickTextField, label: tickLabel)
+            }
+        }
+   
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // textField 변경 시 priceLabel 설정
-        self.hopePriceTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.allEditingEvents)
-        self.openingBidTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        self.tickTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
+        self.hopePriceTextField.delegate = self
+        self.openingBidTextField.delegate = self
+        self.tickTextField.delegate = self
 
         //textViewPlaceholder
         productContentTextView.delegate = self
@@ -96,7 +92,7 @@ class WritingViewController: UIViewController {
         filesSelectButtonView.layer.cornerRadius = 5
         filesSelectButtonView.layer.borderWidth = 1.5
         filesSelectButtonView.layer.borderColor = CGColor(red: 0.94, green: 0.94, blue: 0.94, alpha:1.00 )
-
+        
         //filesSelectButton
         filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
     }
@@ -215,38 +211,59 @@ extension WritingViewController: UICollectionViewDataSource{
 }
 // MARK: - UITextFieldDelegate
 extension WritingViewController: UITextFieldDelegate {
-    // 숫자 콤마 입력
+    // 숫자 콤마 입력, 라벨 색 변화
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.locale = Locale.current
-        formatter.maximumFractionDigits = 0
-
-        if let removeAllSeprator = textField.text?.replacingOccurrences(of: formatter.groupingSeparator, with: ""){
-            var beforeForemattedString = removeAllSeprator + string
-            if formatter.number(from: string) != nil {
-                if let formattedNumber = formatter.number(from: beforeForemattedString), let formattedString = formatter.string(from: formattedNumber){
-                    textField.text = formattedString
-                    return false
-                }
-            }else{
-                if string == "" {
-                    let lastIndex = beforeForemattedString.index(beforeForemattedString.endIndex, offsetBy: -1)
-                    beforeForemattedString = String(beforeForemattedString[..<lastIndex])
-                    if let formattedNumber = formatter.number(from: beforeForemattedString), let formattedString = formatter.string(from: formattedNumber){
-                        textField.text = formattedString
-                        return false
+            
+        textFieldDidChange(textField: textField)
+        
+            guard var text = textField.text else {
+                return true
+            }
+            
+            text = text.replacingOccurrences(of: ",", with: "")
+            
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            
+           
+        
+            if (string.isEmpty) {
+                // delete
+                if text.count > 1 {
+                    guard let price = Int("\(text.prefix(text.count - 1))") else {
+                        return true
                     }
-                }else{
-                    return false
+                    guard let result = numberFormatter.string(from: NSNumber(value:price)) else {
+                        return true
+                    }
+                    textField.text = "\(result)"
+                }
+                else {
+                    textField.text = ""
+                    textFieldDidChange(textField: textField)
                 }
             }
-
+            else {
+                // add
+                
+                guard let price = Int("\(text)\(string)") else {
+                    return true
+                }
+                guard let result = numberFormatter.string(from: NSNumber(value:price)) else {
+                    return true
+                }
+                
+                textField.text = "\(result)"
+            }
+        textFieldDidChange(textField: textField)
+            return false
+        
         }
-
-        return true
-    }
-}
+        
+//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//            return true
+//        }
+     }
 
 // MARK: - Server
 
