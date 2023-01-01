@@ -106,11 +106,35 @@ class WritingViewController: UIViewController {
         if filesCount < 10 {
             filesPicker()
         } else {
-            let alert = UIAlertController(title: "알림", message: "이미지는 최대 10장까지 첨부할 수 있어요", preferredStyle: UIAlertController.Style.alert)
-            let action = UIAlertAction(title: "닫기", style: .default)
-            alert.addAction(action)
-            present(alert, animated: false, completion: nil)
+//            let alert = UIAlertController(title: "알림", message: "이미지는 최대 10장까지 첨부할 수 있어요", preferredStyle: UIAlertController.Style.alert)
+//            let action = UIAlertAction(title: "닫기", style: .default)
+//            alert.addAction(action)
+//            present(alert, animated: false, completion: nil)
+            showToast(message: "이미지는 최대 10장까지 첨부할 수 있어요", width: 300, height: 35, withDuration: 2, delay: 1.5)
         }
+    }
+    
+    func showToast(message: String, width: CGFloat, height: CGFloat, withDuration: Double, delay: Double){
+        
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 150, y: self.view.frame.size.height - 100, width: width, height: height))
+        
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+            toastLabel.textColor = UIColor.white
+            toastLabel.font = UIFont.systemFont(ofSize: 14.0)
+            toastLabel.textAlignment = .center
+            toastLabel.text = message
+            toastLabel.alpha = 1.0
+            toastLabel.layer.cornerRadius = 16
+            toastLabel.clipsToBounds  =  true
+                
+            self.view.addSubview(toastLabel)
+                
+            UIView.animate(withDuration: withDuration, delay: delay, options: .curveEaseOut, animations: {
+                toastLabel.alpha = 0.0
+            }, completion: {(isCompleted) in
+                toastLabel.removeFromSuperview()
+            })
+        
     }
 
     // MARK: - YPImagePicker
