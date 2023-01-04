@@ -46,7 +46,7 @@ struct Terms {
         let terms2: [Terms] = [
             .init(
                 termsID: "2",
-                title: "비더비더 이용약관",
+                title: "비더비더 이용약관2",
                 contents: "blabla",
                 isMandatory: true,
                 type: .main
@@ -56,7 +56,7 @@ struct Terms {
         let terms3: [Terms] = [
             .init(
                 termsID: "3",
-                title: "비더비더 이용약관",
+                title: "비더비더 이용약관3",
                 contents: "blabla",
                 isMandatory: true,
                 type: .main
@@ -65,7 +65,7 @@ struct Terms {
         let terms4: [Terms] = [
             .init(
                 termsID: "4",
-                title: "비더비더 이용약관",
+                title: "비더비더 이용약관4",
                 contents: "blabla",
                 isMandatory: false,
                 type: .main
