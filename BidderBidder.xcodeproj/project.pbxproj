@@ -32,6 +32,14 @@
 		D2075D1A287EAEEB00EAB426 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D19287EAEEB00EAB426 /* FirebaseAnalytics */; };
 		D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D2075D1B287EAEEB00EAB426 /* FirebaseAuth */; };
 		D214F59128334FE7005AD768 /* TweeTextField in Frameworks */ = {isa = PBXBuildFile; productRef = D214F59028334FE7005AD768 /* TweeTextField */; };
+		D2403F3B292748BE00AB0C13 /* AgreeTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2403F3A292748BE00AB0C13 /* AgreeTermsViewController.swift */; };
+		D2403F3F2927656D00AB0C13 /* TermsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2403F3D2927656D00AB0C13 /* TermsCell.swift */; };
+		D2403F402927656D00AB0C13 /* TermsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2403F3E2927656D00AB0C13 /* TermsCell.xib */; };
+		D2403F432927681300AB0C13 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D2403F422927681300AB0C13 /* RxCocoa */; };
+		D2403F452927681300AB0C13 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2403F442927681300AB0C13 /* RxSwift */; };
+		D2403F47292769A300AB0C13 /* AgreeTermViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2403F46292769A300AB0C13 /* AgreeTermViewModel.swift */; };
+		D2403F4929276A2200AB0C13 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2403F4829276A2200AB0C13 /* Reactive.swift */; };
+		D2403F4B29276A3A00AB0C13 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2403F4A29276A3A00AB0C13 /* UIButton.swift */; };
 		D243699F28D0B0F7005052B4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B31E462D28A182F9008D9A5E /* .swiftlint.yml */; };
 		D24369A028D0B0F8005052B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D259B0B327FC5FDB0026DD9E /* LaunchScreen.storyboard */; };
 		D24369A128D0B0F8005052B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D259B0B127FC5FDB0026DD9E /* Assets.xcassets */; };
@@ -93,6 +101,12 @@
 		B350709C2881155D000A6CA1 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		D0FF68C364F656D55DEEFAEF /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		D2075D1F287FD1F200EAB426 /* BidderBidder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BidderBidder.entitlements; sourceTree = "<group>"; };
+		D2403F3A292748BE00AB0C13 /* AgreeTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeTermsViewController.swift; sourceTree = "<group>"; };
+		D2403F3D2927656D00AB0C13 /* TermsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsCell.swift; sourceTree = "<group>"; };
+		D2403F3E2927656D00AB0C13 /* TermsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsCell.xib; sourceTree = "<group>"; };
+		D2403F46292769A300AB0C13 /* AgreeTermViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeTermViewModel.swift; sourceTree = "<group>"; };
+		D2403F4829276A2200AB0C13 /* Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
+		D2403F4A29276A3A00AB0C13 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D243699B28D0AE31005052B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D24369A528D0B19E005052B4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D259B0A527FC5FDA0026DD9E /* BidderBidder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidderBidder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +139,7 @@
 			files = (
 				AF68720328C10657008D12AE /* Toast in Frameworks */,
 				D2E99F9B27FDA27100D829DF /* Alamofire in Frameworks */,
+				D2403F432927681300AB0C13 /* RxCocoa in Frameworks */,
 				B38E073C288AF70D00CCD402 /* YPImagePicker in Frameworks */,
 				D214F59128334FE7005AD768 /* TweeTextField in Frameworks */,
 				AF2648DC28DB5C780058162B /* StreamChat in Frameworks */,
@@ -132,6 +147,7 @@
 				AF2648DE28DB5C780058162B /* StreamChatUI in Frameworks */,
 				AFC26CCD28DA149D00B6B865 /* Sentry in Frameworks */,
 				D2075D1C287EAEEB00EAB426 /* FirebaseAuth in Frameworks */,
+				D2403F452927681300AB0C13 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +182,8 @@
 				AF3FF8D028BB671300C8F67B /* UIImageView.swift */,
 				AF29D68028C77221005E7F5D /* UIView.swift */,
 				AFC26CCE28DA14DF00B6B865 /* Secrets.swift */,
+				D2403F4829276A2200AB0C13 /* Reactive.swift */,
+				D2403F4A29276A3A00AB0C13 /* UIButton.swift */,
 			);
 			path = SupportingFile;
 			sourceTree = "<group>";
@@ -249,6 +267,8 @@
 				D0FF68C364F656D55DEEFAEF /* ProductDetailViewController.swift */,
 				AF2648E128DB5F400058162B /* ChatViewController.swift */,
 				AF2648E528DB65AC0058162B /* SecondViewController.swift */,
+				D2403F3A292748BE00AB0C13 /* AgreeTermsViewController.swift */,
+				D2403F46292769A300AB0C13 /* AgreeTermViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +289,8 @@
 				D2A7E4D128A6116300D85FD0 /* RecentlySearchViewCell.swift */,
 				D2A7E4D228A6116300D85FD0 /* RecentlySearchViewCell.xib */,
 				AF4EDD4B28B9CEC600D933D8 /* BidderRankingCell.swift */,
+				D2403F3D2927656D00AB0C13 /* TermsCell.swift */,
+				D2403F3E2927656D00AB0C13 /* TermsCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -300,6 +322,8 @@
 				AF2648DB28DB5C780058162B /* StreamChat */,
 				AF2648DD28DB5C780058162B /* StreamChatUI */,
 				AFC26CCC28DA149D00B6B865 /* Sentry */,
+				D2403F422927681300AB0C13 /* RxCocoa */,
+				D2403F442927681300AB0C13 /* RxSwift */,
 			);
 			productName = BidderBidder;
 			productReference = D259B0A527FC5FDA0026DD9E /* BidderBidder.app */;
@@ -381,6 +405,7 @@
 				AF68720128C10657008D12AE /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				AF2648DA28DB5C780058162B /* XCRemoteSwiftPackageReference "stream-chat-swift" */,
 				AFC26CCB28DA149D00B6B865 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				D2403F412927681300AB0C13 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = D259B0A627FC5FDA0026DD9E /* Products */;
 			projectDirPath = "";
@@ -403,6 +428,7 @@
 				D24369A128D0B0F8005052B4 /* Assets.xcassets in Resources */,
 				D24369A228D0B0F8005052B4 /* GoogleService-Info.plist in Resources */,
 				D24369A328D0B0F8005052B4 /* Main.storyboard in Resources */,
+				D2403F402927656D00AB0C13 /* TermsCell.xib in Resources */,
 				D24369A428D0B0F8005052B4 /* RecentlySearchViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +492,9 @@
 				D2E99F9727FD98EE00D829DF /* EnterLoginViewController.swift in Sources */,
 				D2A7E4D328A6116300D85FD0 /* RecentlySearchViewCell.swift in Sources */,
 				AF4EDD5128B9D05C00D933D8 /* Bidder.swift in Sources */,
+				D2403F4B29276A3A00AB0C13 /* UIButton.swift in Sources */,
 				AF2648E628DB65AC0058162B /* SecondViewController.swift in Sources */,
+				D2403F3B292748BE00AB0C13 /* AgreeTermsViewController.swift in Sources */,
 				AF2648E228DB5F400058162B /* ChatViewController.swift in Sources */,
 				AF3FF8D728BB671300C8F67B /* UIImageView.swift in Sources */,
 				B350709D2881155D000A6CA1 /* WritingViewController.swift in Sources */,
@@ -474,6 +502,9 @@
 				AF29D68128C77221005E7F5D /* UIView.swift in Sources */,
 				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
 				D0FF644B2C5879445873045D /* ProductDetailViewController.swift in Sources */,
+				D2403F3F2927656D00AB0C13 /* TermsCell.swift in Sources */,
+				D2403F4929276A2200AB0C13 /* Reactive.swift in Sources */,
+				D2403F47292769A300AB0C13 /* AgreeTermViewModel.swift in Sources */,
 				AF3FF8D528BB671300C8F67B /* UIViewController.swift in Sources */,
 				AF3FF8D628BB671300C8F67B /* NetworkResult.swift in Sources */,
 				AF3FF8D128BB671300C8F67B /* Constant.swift in Sources */,
@@ -876,6 +907,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		D2403F412927681300AB0C13 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		D2E99F9927FDA27100D829DF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -926,6 +965,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D214F58F28334FE7005AD768 /* XCRemoteSwiftPackageReference "TweeTextField" */;
 			productName = TweeTextField;
+		};
+		D2403F422927681300AB0C13 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2403F412927681300AB0C13 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		D2403F442927681300AB0C13 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2403F412927681300AB0C13 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 		D2E99F9A27FDA27100D829DF /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
