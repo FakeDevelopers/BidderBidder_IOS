@@ -11,7 +11,7 @@ import RxSwift
 class TermsCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var btnCheck: UIButton!
+    @IBOutlet weak var CheckButton: UIButton!
     @IBOutlet weak var lblOption: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
 
@@ -31,13 +31,13 @@ class TermsCell: UITableViewCell {
 
         switch data.type {
         case .main:
-            let mandatoryName = data.isMandatory ? "(필수)" : "(선택)"
+            let mandatoryName = data.isMandatory ? "\(Constant.requiredKR)" : "\(Constant.choiceKR)"
             lblOption.isHidden = false
             lblOption.text = mandatoryName
         case .sub:
             lblOption.isHidden = true
         }
-        let checkImageName = data.isAccept ? "checkmark.circle.fill" : "checkmark.circle"
-        btnCheck.setImage(UIImage(systemName: checkImageName), for: .normal)
+        let checkImageName = data.isAccept ? "\(Constant.checkmarkCircleFill)" : "\(Constant.checkmarkCircle)"
+        CheckButton.setImage(UIImage(systemName: checkImageName), for: .normal)
     }
 }

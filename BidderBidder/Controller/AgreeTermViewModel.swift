@@ -46,15 +46,13 @@ class AgreeTermViewModel {
                 dataSource[indexPath.section][row].isAccept = dataSource[indexPath.section][0].isAccept
             }
         } else { // sub cell을 선택한 경우 - sub cell에 따라 main cell 업데이트
-            dataSource[indexPath.section][indexPath.row].isAccept.toggle()
+            dataSource[indexPath.section][0].isAccept.toggle()
 
-            for row in 1 ..< dataSource[indexPath.section].count {
-                if !dataSource[indexPath.section][row].isAccept {
+            for row in 1 ..< dataSource[indexPath.section].count where !dataSource[indexPath.section][row].isAccept {
                     dataSource[indexPath.section][0].isAccept = false
                     break
-                }
-                dataSource[indexPath.section][0].isAccept = true
             }
+            dataSource[indexPath.section][0].isAccept = true
         }
 
         updateTermsContents.accept(())

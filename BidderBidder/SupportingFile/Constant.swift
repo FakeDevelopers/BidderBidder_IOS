@@ -17,4 +17,10 @@ struct Constant {
     static let dateTimeFormat = "yyyy-MM-dd HH:mm"
 
     static let searchHistory = "searchHistory"
+    
+    static let checkmarkCircleFill = "checkmark.circle.fill"
+    static let checkmarkCircle = "checkmark.circle"
+    
+    static let requiredKR = "(필수)"
+    static let choiceKR = "(선택)"
 }

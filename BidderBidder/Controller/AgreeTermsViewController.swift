@@ -12,15 +12,15 @@ import RxCocoa
 class AgreeTermsViewController: UIViewController {
 
     @IBOutlet weak var tblTerms: UITableView!
-    @IBOutlet weak var btnAllAccept: UIButton!
-    @IBOutlet weak var btnConfirm: UIButton!
+    @IBOutlet weak var AllAcceptButton: UIButton!
+    @IBOutlet weak var ConfirmButton: UIButton!
     
     var viewModel = AgreeTermViewModel()
     let bag = DisposeBag()
     var isCheckedBtnAllAccept: Bool = false {
         didSet {
-            let checkImageName = isCheckedBtnAllAccept ? "checkmark.circle.fill" : "checkmark.circle"
-            btnAllAccept.setImage(UIImage(systemName: checkImageName), for: .normal)
+            let checkImageName = isCheckedBtnAllAccept ? "\(Constant.checkmarkCircleFill)" : "\(Constant.checkmarkCircle)"
+            AllAcceptButton.setImage(UIImage(systemName: checkImageName), for: .normal)
         }
     }
 
@@ -37,8 +37,8 @@ class AgreeTermsViewController: UIViewController {
         let nibName = String(describing: TermsCell.self)
         tblTerms.register(UINib(nibName: nibName, bundle: nil), forCellReuseIdentifier: nibName)
 
-        btnConfirm.setBackgroundColor(.blue, for: .normal)
-        btnConfirm.setBackgroundColor(.lightGray, for: .disabled)
+        ConfirmButton.setBackgroundColor(.blue, for: .normal)
+        ConfirmButton.setBackgroundColor(.lightGray, for: .disabled)
     }
 
     private func setupInputBinding() {
@@ -47,7 +47,7 @@ class AgreeTermsViewController: UIViewController {
                 self?.viewModel.viewWillAppear()
             }).disposed(by: bag)
 
-        btnAllAccept.rx.tap.asDriver(onErrorRecover: {_ in return .never()})
+        AllAcceptButton.rx.tap.asDriver(onErrorRecover: {_ in return .never()})
             .drive(onNext: { [weak self] in
                 self?.isCheckedBtnAllAccept.toggle()
                 self?.viewModel.acceptAllTerms(self?.isCheckedBtnAllAccept)
@@ -62,7 +62,7 @@ class AgreeTermsViewController: UIViewController {
 
         viewModel.satisfyTermsPermission.asDriver(onErrorRecover: {_ in return .never()})
             .drive(onNext: { [weak self] isSatisfy in
-                self?.btnConfirm.isEnabled = isSatisfy
+                self?.ConfirmButton.isEnabled = isSatisfy
             }).disposed(by: bag)
 
         viewModel.acceptAllTerms.asDriver(onErrorRecover: {_ in return .never()})
@@ -85,7 +85,7 @@ extension AgreeTermsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TermsCell.self)) as! TermsCell
         cell.selectionStyle = .none
         cell.bind(viewModel.dataSource[indexPath.section][indexPath.row])
-        cell.btnCheck.rx.tap.asDriver(onErrorRecover: { _ in return .never()})
+        cell.CheckButton.rx.tap.asDriver(onErrorRecover: { _ in return .never()})
             .drive(onNext: { [weak self] in
                 self?.viewModel.didSelectTermsCell(indexPath: indexPath)
             }).disposed(by: cell.bag)

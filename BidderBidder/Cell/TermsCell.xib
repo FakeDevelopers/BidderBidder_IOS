@@ -66,7 +66,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="9AS-1H-4J2"/>
             <connections>
-                <outlet property="btnCheck" destination="QiN-hO-uos" id="FR4-Op-mo5"/>
+                <outlet property="CheckButton" destination="QiN-hO-uos" id="D3O-hE-6he"/>
                 <outlet property="containerView" destination="92s-JD-ZAL" id="93a-7g-ERI"/>
                 <outlet property="lblOption" destination="6Vp-Gm-eBo" id="M0t-Ho-BLw"/>
                 <outlet property="lblTitle" destination="brH-7a-zsh" id="rFJ-3t-Z1b"/>
