@@ -11,7 +11,7 @@ import RxSwift
 class TermsCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var CheckButton: UIButton!
+    @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var lblOption: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
 
@@ -38,6 +38,6 @@ class TermsCell: UITableViewCell {
             lblOption.isHidden = true
         }
         let checkImageName = data.isAccept ? "\(Constant.checkmarkCircleFill)" : "\(Constant.checkmarkCircle)"
-        CheckButton.setImage(UIImage(systemName: checkImageName), for: .normal)
+        checkButton.setImage(UIImage(systemName: checkImageName), for: .normal)
     }
 }
