@@ -26,6 +26,9 @@ class WritingViewController: UIViewController {
     @IBOutlet weak var openingBidLabel: UILabel!
     @IBOutlet weak var tickLabel: UILabel!
     
+    let textViewLetters = 1000
+    let imagesCount = 10
+    
     @IBOutlet weak var textCountLabel: UILabel! = {
         let label = UILabel()
         label.textColor = .placeholderText
@@ -47,7 +50,7 @@ class WritingViewController: UIViewController {
     
     @IBOutlet weak var filesSelectButtonView: UIView!
     @IBOutlet weak var filesSelectButton: UIButton!
-    var arrFiles: [UIImage]! = []
+    var filesArray: [UIImage]! = []
     @IBOutlet weak var filesCollectionView: UICollectionView!
     
     // MARK: - textFieldDidChange
@@ -167,7 +170,7 @@ class WritingViewController: UIViewController {
             for index in 0 ..< items.count {
                 switch items[index] {
                 case .photo(let photo):
-                    self.arrFiles.append(photo.image)
+                    self.filesArray.append(photo.image)
                     DispatchQueue.main.async {
                         self.filesCollectionView.reloadData()
                     }
@@ -197,21 +200,18 @@ extension WritingViewController: UITextViewDelegate {
         placeholderLabel.isHidden = !textView.text.isEmpty
         var currentText = textView.text ?? ""
         
-        if currentText.count >= 1000 {
+        if currentText.count >= textViewLetters {
             currentText.removeLast()
-            textCountLabel.text = "1000/1000"
+            textCountLabel.text = "\(textViewLetters)/\(textViewLetters)"
             textCountLabel.textColor = .systemRed
         } else {
-            textCountLabel.text = "\(currentText.count)/1000"
+            textCountLabel.text = "\(currentText.count)/\(textViewLetters)"
         }
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let newLength = textView.text.count - range.length + text.count
-        if newLength > 1000 {
-            return false
-        }
-        return true
+        return newLength <= textViewLetters
     }
 }
 
@@ -219,14 +219,14 @@ extension WritingViewController: UITextViewDelegate {
 extension WritingViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        arrFiles.count
+        filesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WritingFilesCell", for: indexPath) as? WritingFilesCell else {
             return UICollectionViewCell()
         }
-        cell.files.image = arrFiles[indexPath.row]
+        cell.files.image = filesArray[indexPath.row]
         if indexPath.row != 0 {
             cell.representImgView.isHidden = true
         }
@@ -299,11 +299,8 @@ extension WritingViewController {
         // files
         var imgList: [UIImage] = []
         
-        for img in arrFiles {
-            
-            if img != nil {
+        for img in filesArray.compactMap({$0}) {
                 imgList.append(img)
-            }
         }
         
         // expirationDate
