@@ -94,7 +94,7 @@ class WritingViewController: UIViewController {
         
         filesSelectButtonView.layer.cornerRadius = 5
         filesSelectButtonView.layer.borderWidth = 1.5
-        filesSelectButtonView.layer.borderColor = CGColor(red: 0.94, green: 0.94, blue: 0.94, alpha:1.00 )
+        filesSelectButtonView.layer.borderColor = UIColor.lightGray?.cgColor
         
         //filesSelectButton
         filesSelectButton.addTarget(self, action: #selector(onFilesSelectButton), for: .touchUpInside)
@@ -176,7 +176,7 @@ class WritingViewController: UIViewController {
             }
             picker.dismiss(animated: true)
             self.filesCount += items.count
-            self.filesCountLabel.textColor = UIColor(red: 0.13, green: 0.81, blue: 1.00, alpha: 1.00)
+            self.filesCountLabel.textColor = UIColor.skyBlue
             self.filesCountLabel.text = "\(self.filesCount)"
         }
         present(picker, animated: true, completion: nil)

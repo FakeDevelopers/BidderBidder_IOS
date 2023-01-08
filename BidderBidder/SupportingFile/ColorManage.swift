@@ -21,4 +21,10 @@ extension UIColor {
             blue: UInt8(rgb & 0xFF)
         )
     }
+    
+    class var lightGray: UIColor? { return UIColor(named: "lightGray")}
+    
+    class var skyBlue: UIColor? { return
+        UIColor(named: "skyBlue")
+    }
 }
