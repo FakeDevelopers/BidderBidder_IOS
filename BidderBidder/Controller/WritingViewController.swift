@@ -109,10 +109,6 @@ class WritingViewController: UIViewController {
         if filesCount < 10 {
             filesPicker()
         } else {
-            //            let alert = UIAlertController(title: "알림", message: "이미지는 최대 10장까지 첨부할 수 있어요", preferredStyle: UIAlertController.Style.alert)
-            //            let action = UIAlertAction(title: "닫기", style: .default)
-            //            alert.addAction(action)
-            //            present(alert, animated: false, completion: nil)
             showToast(message: "이미지는 최대 10장까지 첨부할 수 있어요", width: 300, height: 35, withDuration: 2, delay: 1.5)
         }
     }
@@ -229,7 +225,7 @@ extension WritingViewController: UICollectionViewDataSource{
         cell.files.image = filesArray[indexPath.row]
         if indexPath.row != 0 {
             cell.representImgView.isHidden = true
-        }
+        } else { cell.representImgView.isHidden = false }
         return cell
     }
 }
