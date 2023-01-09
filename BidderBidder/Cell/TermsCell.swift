@@ -26,18 +26,18 @@ class TermsCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    func bind(_ data: Terms) {
-        lblTitle.text = data.title.precomposedStringWithCanonicalMapping // NFD -> NFC
+    func bind(_ data: Term) {
+        lblTitle.text = data.termName.precomposedStringWithCanonicalMapping // NFD -> NFC
 
         switch data.type {
         case .main:
-            let mandatoryName = data.isMandatory ? "\(Constant.requiredKR)" : "\(Constant.choiceKR)"
+            let mandatoryName = data.isRequired ? Constant.requiredKR : Constant.choiceKR
             lblOption.isHidden = false
             lblOption.text = mandatoryName
         case .sub:
             lblOption.isHidden = true
         }
-        let checkImageName = data.isAccept ? "\(Constant.checkmarkCircleFill)" : "\(Constant.checkmarkCircle)"
+        let checkImageName = data.isAccept ? Constant.checkmarkCircleFill : Constant.checkmarkCircle
         checkButton.setImage(UIImage(systemName: checkImageName), for: .normal)
     }
 }

@@ -15,11 +15,11 @@ class AgreeTermViewModel {
     let satisfyTermsPermission = PublishRelay<Bool>()
     let acceptAllTerms = PublishRelay<Bool>()
 
-    var dataSource = [[Terms]]()
+    var dataSource = [Term]()
     let bag = DisposeBag()
 
     func viewWillAppear() {
-        dataSource = Terms.loadSampleData()
+        dataSource = Term.loadSampleData()
     }
 
     func acceptAllTerms(_ isCheckedBtnAllAccept: Bool?) {
@@ -29,9 +29,7 @@ class AgreeTermViewModel {
         }
 
         for section in 0 ..< dataSource.count {
-            for row in 0 ..< dataSource[section].count {
-                dataSource[section][row].isAccept = isCheckedBtnAllAccept
-            }
+                dataSource[section].isAccept = isCheckedBtnAllAccept
         }
 
         updateTermsContents.accept(())
@@ -40,19 +38,17 @@ class AgreeTermViewModel {
 
     func didSelectTermsCell(indexPath: IndexPath) {
 
-        if indexPath.row == 0 { // main cell을 선택한 경우 - sub cell모두 main cell과 동일한 상태로 업데이트
-            dataSource[indexPath.section][0].isAccept.toggle()
-            for row in 1 ..< dataSource[indexPath.section].count {
-                dataSource[indexPath.section][row].isAccept = dataSource[indexPath.section][0].isAccept
-            }
-        } else { // sub cell을 선택한 경우 - sub cell에 따라 main cell 업데이트
-            dataSource[indexPath.section][0].isAccept.toggle()
+        // main cell을 선택한 경우 - sub cell모두 main cell과 동일한 상태로 업데이트
+            dataSource[indexPath.section].isAccept.toggle()
+            dataSource[indexPath.section].isAccept = dataSource[indexPath.section].isAccept
+        
+        if indexPath.row != 0 { // sub cell을 선택한 경우 - sub cell에 따라 main cell 업데이트
+            dataSource[indexPath.section].isAccept.toggle()
 
-            for row in 1 ..< dataSource[indexPath.section].count where !dataSource[indexPath.section][row].isAccept {
-                    dataSource[indexPath.section][0].isAccept = false
-                    break
+            if !dataSource[indexPath.section].isAccept {
+                dataSource[indexPath.section].isAccept = false
             }
-            dataSource[indexPath.section][0].isAccept = true
+            dataSource[indexPath.section].isAccept = true
         }
 
         updateTermsContents.accept(())
@@ -61,8 +57,8 @@ class AgreeTermViewModel {
     }
 
     private func checkSatisfyTerms() {
-        for termsList in dataSource {
-            for terms in termsList where terms.isMandatory && !terms.isAccept {
+        for termList in dataSource {
+            if termList.isRequired && !termList.isAccept {
                 satisfyTermsPermission.accept(false)
                 return
             }
@@ -71,8 +67,8 @@ class AgreeTermViewModel {
     }
 
     private func checkAcceptAllTerms() {
-        for termsList in dataSource {
-            for terms in termsList where !terms.isAccept {
+        for termList in dataSource {
+            if !termList.isAccept {
                 acceptAllTerms.accept(false)
                 return
             }
