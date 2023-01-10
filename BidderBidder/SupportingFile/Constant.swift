@@ -21,6 +21,6 @@ struct Constant {
     static let checkmarkCircleFill = "checkmark.circle.fill"
     static let checkmarkCircle = "checkmark.circle"
     
-    static let requiredKR = "(필수)"
-    static let choiceKR = "(선택)"
+    static let requiredText = "(필수)"
+    static let choiceText = "(선택)"
 }

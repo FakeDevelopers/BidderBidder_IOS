@@ -18,10 +18,6 @@ struct Tag {
     }
 }
 
-enum TermType {
-    case main
-    case sub
-}
 
 struct Term {
     let id: String?
@@ -29,40 +25,34 @@ struct Term {
     let term: String?
     let isRequired: Bool
     var isAccept: Bool = false
-    let type: TermType
     
-    //To-be
     static func loadSampleData() -> [Term] {
         let term1: Term = Term(
             id: "1",
             termName: "비더비더 이용약관1",
             term: "blabla",
-            isRequired: true,
-            type: .main
+            isRequired: true
         )
         
         let term2: Term = Term(
             id: "2",
             termName: "비더비더 이용약관2",
             term: "blabla",
-            isRequired: true,
-            type: .main
+            isRequired: true
         )
         
         let term3: Term = Term(
             id: "3",
             termName: "비더비더 이용약관3",
             term: "blabla",
-            isRequired: true,
-            type: .main
+            isRequired: true
         )
         
         let term4: Term = Term(
             id: "4",
             termName: "비더비더 이용약관4",
             term: "blabla",
-            isRequired: false,
-            type: .main
+            isRequired: false
         )
         
         
