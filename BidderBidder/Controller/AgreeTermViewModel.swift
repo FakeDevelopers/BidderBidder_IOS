@@ -43,10 +43,6 @@ class AgreeTermViewModel {
         
         if indexPath.row != 0 { // sub cell을 선택한 경우 - sub cell에 따라 main cell 업데이트
             dataSource[indexPath.section].isAccept.toggle()
-            
-            if !dataSource[indexPath.section].isAccept {
-                dataSource[indexPath.section].isAccept = false
-            }
             dataSource[indexPath.section].isAccept = true
         }
         
