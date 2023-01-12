@@ -37,15 +37,7 @@ class AgreeTermViewModel {
     }
     
     func didSelectTermsCell(indexPath: IndexPath) {
-        
-        // main cell을 선택한 경우 - sub cell모두 main cell과 동일한 상태로 업데이트
-        dataSource[indexPath.section].isAccept.toggle()
-        
-        if indexPath.row != 0 { // sub cell을 선택한 경우 - sub cell에 따라 main cell 업데이트
-            dataSource[indexPath.section].isAccept.toggle()
-            dataSource[indexPath.section].isAccept = true
-        }
-        
+        dataSource[indexPath.row].isAccept.toggle()
         updateTermsContents.accept(())
         checkSatisfyTerms()
         checkAcceptAllTerms()

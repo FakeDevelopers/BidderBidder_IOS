@@ -73,18 +73,14 @@ class AgreeTermsViewController: UIViewController {
 }
 
 extension AgreeTermsViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        viewModel.dataSource.count
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        viewModel.dataSource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TermsCell.self)) as! TermsCell
         cell.selectionStyle = .none
-        cell.bind(viewModel.dataSource[indexPath.section])
+        cell.bind(viewModel.dataSource[indexPath.row])
         cell.checkButton.rx.tap.asDriver(onErrorRecover: { _ in return .never()})
             .drive(onNext: { [weak self] in
                 self?.viewModel.didSelectTermsCell(indexPath: indexPath)
