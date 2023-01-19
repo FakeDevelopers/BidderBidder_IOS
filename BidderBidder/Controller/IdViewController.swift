@@ -24,7 +24,7 @@ class IdViewController: UIViewController {
     
     @IBAction func emailWhileEditing(_ sender: UITextField) {
         let email = sender.text
-        if checkEmail(str: email!) == false {
+        if checkEmail(str: email!) != true {
             emailLabel.text = "이메일 형식이 다릅니다."
             emailLabel.textColor = .red
         } else {
