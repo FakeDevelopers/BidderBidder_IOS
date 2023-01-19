@@ -53,6 +53,7 @@
 		D259B0CA27FC5FDB0026DD9E /* BidderBidderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */; };
 		D259B0CC27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */; };
 		D264D858289248F100A4E8E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264D857289248F100A4E8E4 /* SearchViewController.swift */; };
+		D265D6242978DD3E000C3FE4 /* IdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265D6232978DD3D000C3FE4 /* IdViewController.swift */; };
 		D2A7E4C828A4CAD900D85FD0 /* TagCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4C728A4CAD900D85FD0 /* TagCollectionViewController.swift */; };
 		D2A7E4CA28A4CBE800D85FD0 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4C928A4CBE800D85FD0 /* TagCollectionViewCell.swift */; };
 		D2A7E4D328A6116300D85FD0 /* RecentlySearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E4D128A6116300D85FD0 /* RecentlySearchViewCell.swift */; };
@@ -121,6 +122,7 @@
 		D259B0C927FC5FDB0026DD9E /* BidderBidderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITests.swift; sourceTree = "<group>"; };
 		D259B0CB27FC5FDB0026DD9E /* BidderBidderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderBidderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D264D857289248F100A4E8E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D265D6232978DD3D000C3FE4 /* IdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdViewController.swift; sourceTree = "<group>"; };
 		D2A7E4C728A4CAD900D85FD0 /* TagCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewController.swift; sourceTree = "<group>"; };
 		D2A7E4C928A4CBE800D85FD0 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2A7E4D128A6116300D85FD0 /* RecentlySearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlySearchViewCell.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				AF2648E528DB65AC0058162B /* SecondViewController.swift */,
 				D2403F3A292748BE00AB0C13 /* AgreeTermsViewController.swift */,
 				D2403F46292769A300AB0C13 /* AgreeTermViewModel.swift */,
+				D265D6232978DD3D000C3FE4 /* IdViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				AF29D68128C77221005E7F5D /* UIView.swift in Sources */,
 				D2E99F9D27FDA58100D829DF /* MainViewController.swift in Sources */,
 				D0FF644B2C5879445873045D /* ProductDetailViewController.swift in Sources */,
+				D265D6242978DD3E000C3FE4 /* IdViewController.swift in Sources */,
 				D2403F3F2927656D00AB0C13 /* TermsCell.swift in Sources */,
 				D2403F4929276A2200AB0C13 /* Reactive.swift in Sources */,
 				D2403F47292769A300AB0C13 /* AgreeTermViewModel.swift in Sources */,
